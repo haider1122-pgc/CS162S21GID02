@@ -16,6 +16,8 @@ public class Carrefour {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        ClientForm cf = new ClientForm();
+        cf.setVisible(true);
     }
     
 }
