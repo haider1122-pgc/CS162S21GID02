@@ -68,12 +68,7 @@ public class ManagerForm extends javax.swing.JFrame {
         sideMenu = new javax.swing.JPanel();
         Logo = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        sss = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
         lhome = new javax.swing.JLabel();
         lmail = new javax.swing.JLabel();
         lpayment = new javax.swing.JLabel();
@@ -81,6 +76,14 @@ public class ManagerForm extends javax.swing.JFrame {
         lsale = new javax.swing.JLabel();
         linfo = new javax.swing.JLabel();
         labout = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jLabel12 = new javax.swing.JLabel();
         centerBackground = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
@@ -123,50 +126,6 @@ public class ManagerForm extends javax.swing.JFrame {
             }
         });
 
-        sss.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrefour/coins_35px.png"))); // NOI18N
-        sss.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        sss.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                sssMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                sssMouseExited(evt);
-            }
-        });
-
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrefour/shopping_cart_35px.png"))); // NOI18N
-        jLabel11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel11MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel11MouseExited(evt);
-            }
-        });
-
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrefour/information_35px.png"))); // NOI18N
-        jLabel12.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel12.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel12MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel12MouseExited(evt);
-            }
-        });
-
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrefour/about_35px.png"))); // NOI18N
-        jLabel13.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel13.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel13MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel13MouseExited(evt);
-            }
-        });
-
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrefour/email_35px.png"))); // NOI18N
         jLabel14.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel14.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -175,17 +134,6 @@ public class ManagerForm extends javax.swing.JFrame {
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel14MouseExited(evt);
-            }
-        });
-
-        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrefour/male_user_35px.png"))); // NOI18N
-        jLabel16.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel16.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel16MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel16MouseExited(evt);
             }
         });
 
@@ -210,6 +158,36 @@ public class ManagerForm extends javax.swing.JFrame {
         labout.setFont(new java.awt.Font("Tahoma", 2, 11)); // NOI18N
         labout.setForeground(new java.awt.Color(255, 0, 0));
 
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrefour/req.png"))); // NOI18N
+        jLabel10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrefour/clients.png"))); // NOI18N
+        jLabel15.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrefour/Shops.png"))); // NOI18N
+        jLabel17.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrefour/sales.png"))); // NOI18N
+        jLabel18.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrefour/double_left_20px.png"))); // NOI18N
+
+        jButton3.setText("exit");
+        jButton3.setBorder(null);
+        jButton3.setBorderPainted(false);
+        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        jButton4.setText("save");
+        jButton4.setBorder(null);
+        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrefour/save_20px.png"))); // NOI18N
+
         javax.swing.GroupLayout sideMenuLayout = new javax.swing.GroupLayout(sideMenu);
         sideMenu.setLayout(sideMenuLayout);
         sideMenuLayout.setHorizontalGroup(
@@ -223,39 +201,41 @@ public class ManagerForm extends javax.swing.JFrame {
                         .addContainerGap()
                         .addGroup(sideMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(linfo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(labout, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE))
-                        .addGap(6, 6, 6)
-                        .addGroup(sideMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel12)
-                            .addComponent(jLabel13))))
+                            .addComponent(labout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, sideMenuLayout.createSequentialGroup()
+            .addGroup(sideMenuLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(sideMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, sideMenuLayout.createSequentialGroup()
-                        .addComponent(lmail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel14))
+                .addGroup(sideMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(sideMenuLayout.createSequentialGroup()
+                        .addComponent(lmail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(120, 120, 120))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, sideMenuLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(sideMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(sideMenuLayout.createSequentialGroup()
-                                .addComponent(lsale, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel11))
-                            .addGroup(sideMenuLayout.createSequentialGroup()
-                                .addComponent(lgeneral, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel16))
+                            .addComponent(jLabel17)
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel14)
+                            .addComponent(jLabel10)
                             .addGroup(sideMenuLayout.createSequentialGroup()
                                 .addComponent(lpayment, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(sss))
+                                .addComponent(jLabel15))
+                            .addComponent(jLabel18)
                             .addGroup(sideMenuLayout.createSequentialGroup()
-                                .addComponent(lhome, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(sideMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(lsale, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lhome, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lgeneral, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(41, 41, 41))
+                            .addGroup(sideMenuLayout.createSequentialGroup()
+                                .addGroup(sideMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel11)
+                                    .addComponent(jLabel12))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel9)))))
-                .addGap(79, 79, 79))
+                                .addGroup(sideMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(45, 45, 45))))
         );
         sideMenuLayout.setVerticalGroup(
             sideMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -266,32 +246,41 @@ public class ManagerForm extends javax.swing.JFrame {
                 .addGroup(sideMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel9)
                     .addComponent(lhome))
-                .addGap(26, 26, 26)
-                .addGroup(sideMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel14)
-                    .addComponent(lmail))
-                .addGap(26, 26, 26)
-                .addGroup(sideMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lpayment)
-                    .addComponent(sss))
                 .addGap(18, 18, 18)
-                .addGroup(sideMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel16, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lgeneral, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addComponent(jLabel14)
+                .addGap(0, 0, 0)
+                .addComponent(lmail)
                 .addGap(18, 18, 18)
+                .addComponent(jLabel10)
+                .addGap(18, 18, 18)
+                .addComponent(lpayment)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel15)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel17)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel18)
+                .addGap(54, 54, 54)
+                .addComponent(lgeneral)
+                .addGap(67, 67, 67)
                 .addGroup(sideMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, sideMenuLayout.createSequentialGroup()
+                    .addGroup(sideMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(linfo)
+                        .addGroup(sideMenuLayout.createSequentialGroup()
+                            .addComponent(lsale)
+                            .addGap(51, 51, 51)))
+                    .addGroup(sideMenuLayout.createSequentialGroup()
+                        .addGap(51, 51, 51)
                         .addGroup(sideMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lsale, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel12))
-                    .addComponent(linfo, javax.swing.GroupLayout.Alignment.TRAILING))
+                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel12))))
                 .addGap(18, 18, 18)
-                .addGroup(sideMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel13)
-                    .addComponent(labout))
-                .addContainerGap())
+                .addGroup(sideMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel11))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addComponent(labout)
+                .addGap(49, 49, 49))
         );
 
         jPanel2.add(sideMenu, java.awt.BorderLayout.WEST);
@@ -414,7 +403,7 @@ public class ManagerForm extends javax.swing.JFrame {
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 365, Short.MAX_VALUE)
+            .addGap(0, 376, Short.MAX_VALUE)
         );
 
         centerBackground.add(jPanel4, java.awt.BorderLayout.LINE_END);
@@ -433,81 +422,34 @@ public class ManagerForm extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jLabel9MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseEntered
+    private void jLabel14MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseExited
         // TODO add your handling code here:
-        lhome.setText("Home");
-    }//GEN-LAST:event_jLabel9MouseEntered
-
-    private void jLabel9MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseExited
-        // TODO add your handling code here:
-        lhome.setText("");
-    }//GEN-LAST:event_jLabel9MouseExited
+        lmail.setText("");
+    }//GEN-LAST:event_jLabel14MouseExited
 
     private void jLabel14MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseEntered
         // TODO add your handling code here:
         lmail.setText("Email");
     }//GEN-LAST:event_jLabel14MouseEntered
 
-    private void jLabel14MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseExited
+    private void jLabel9MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseExited
         // TODO add your handling code here:
-        lmail.setText("");
-    }//GEN-LAST:event_jLabel14MouseExited
+        lhome.setText("");
+    }//GEN-LAST:event_jLabel9MouseExited
 
-    private void sssMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sssMouseEntered
+    private void jLabel9MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseEntered
         // TODO add your handling code here:
-        lpayment.setText("Payment");
-    }//GEN-LAST:event_sssMouseEntered
-
-    private void sssMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sssMouseExited
-        // TODO add your handling code here:
-        lpayment.setText("");
-    }//GEN-LAST:event_sssMouseExited
-
-    private void jLabel16MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel16MouseEntered
-        // TODO add your handling code here:
-        lgeneral.setText("General");
-    }//GEN-LAST:event_jLabel16MouseEntered
-
-    private void jLabel16MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel16MouseExited
-        // TODO add your handling code here:
-        lgeneral.setText("");
-    }//GEN-LAST:event_jLabel16MouseExited
-
-    private void jLabel11MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseEntered
-        // TODO add your handling code here:
-        lsale.setText("Sale");
-    }//GEN-LAST:event_jLabel11MouseEntered
-
-    private void jLabel11MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseExited
-        // TODO add your handling code here:
-        lsale.setText("");
-    }//GEN-LAST:event_jLabel11MouseExited
-
-    private void jLabel12MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseEntered
-        // TODO add your handling code here:
-        linfo.setText("Info");
-    }//GEN-LAST:event_jLabel12MouseEntered
-
-    private void jLabel12MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseExited
-        // TODO add your handling code here:
-         linfo.setText("");
-       
-    }//GEN-LAST:event_jLabel12MouseExited
-
-    private void jLabel13MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseEntered
-        // TODO add your handling code here:
-        labout.setText("About");
-    }//GEN-LAST:event_jLabel13MouseEntered
-
-    private void jLabel13MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseExited
-        // TODO add your handling code here:
-        labout.setText("");
-    }//GEN-LAST:event_jLabel13MouseExited
+        lhome.setText("Home");
+    }//GEN-LAST:event_jLabel9MouseEntered
 
     private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
         // TODO add your handling code here:
-       
+
     }//GEN-LAST:event_jLabel9MouseClicked
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -550,12 +492,16 @@ public class ManagerForm extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Logo;
     private javax.swing.JPanel centerBackground;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -579,6 +525,5 @@ public class ManagerForm extends javax.swing.JFrame {
     private javax.swing.JLabel lpayment;
     private javax.swing.JLabel lsale;
     private javax.swing.JPanel sideMenu;
-    private javax.swing.JLabel sss;
     // End of variables declaration//GEN-END:variables
 }
