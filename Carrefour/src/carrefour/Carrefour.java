@@ -30,7 +30,7 @@ public class Carrefour {
 
 //        ClientForm cf = new ClientForm();
 //        cf.setVisible(true);
-        WelcomePage w = new WelcomePage();
+        ManagerForm w = new ManagerForm();
         w.setVisible(true);
 
     }
