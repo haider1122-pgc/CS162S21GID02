@@ -5,6 +5,8 @@
  */
 package carrefour;
 
+import javax.swing.UIManager;
+
 /**
  *
  * @author Windows 10
@@ -16,7 +18,16 @@ public class Carrefour {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        ManagerForm cf =new ManagerForm();
+//        ManagerForm m = new ManagerForm();
+//        m.setVisible(true);
+        try{
+        // TODO code application logic here
+         UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel"); 
+        }catch(Exception ex)
+        {
+            System.out.println("Hellp1");
+        }
+        ClientForm cf = new ClientForm();
         cf.setVisible(true);
     }
     
