@@ -28,10 +28,10 @@ public class Carrefour {
             System.out.println("Hellp1");
         }
 
-        ClientForm cf = new ClientForm();
-        cf.setVisible(true);
-        //ManagerForm w = new ManagerForm();
-        //w.setVisible(true);
+//        ClientForm cf = new ClientForm();
+//        cf.setVisible(true);
+        ManagerForm w = new ManagerForm();
+        w.setVisible(true);
 
     }
     
