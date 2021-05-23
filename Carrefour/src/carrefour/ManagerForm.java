@@ -14,12 +14,12 @@ import javax.swing.JButton;
  *
  * @author Windows 10
  */
-public class ClientForm extends javax.swing.JFrame {
+public class ManagerForm extends javax.swing.JFrame {
 
     /**
      * Creates new form ClienyForm
      */
-    public ClientForm() {
+    public ManagerForm() {
         initComponents();
       // JButton [] button = {HomeButton,mailButton,paymentButton,generalButton,saleButton,infoButton,aboutButton};
 //        for (JButton jButton : button) {
@@ -300,7 +300,7 @@ public class ClientForm extends javax.swing.JFrame {
         centerBackground.setLayout(new java.awt.BorderLayout());
         centerBackground.add(jLabel1, java.awt.BorderLayout.CENTER);
 
-        jPanel1.setBackground(new java.awt.Color(36, 40, 44));
+        jPanel1.setBackground(new java.awt.Color(102, 102, 102));
         jPanel1.setPreferredSize(new java.awt.Dimension(813, 150));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -375,7 +375,7 @@ public class ClientForm extends javax.swing.JFrame {
                         .addContainerGap()
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel6Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(0, 0, Short.MAX_VALUE)
                                 .addComponent(jLabel6)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel7))
@@ -386,7 +386,7 @@ public class ClientForm extends javax.swing.JFrame {
 
         jPanel3.add(jPanel6, java.awt.BorderLayout.PAGE_END);
 
-        jPanel7.setBackground(new java.awt.Color(36, 40, 44));
+        jPanel7.setBackground(new java.awt.Color(102, 102, 102));
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -526,21 +526,23 @@ public class ClientForm extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ClientForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ManagerForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ClientForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ManagerForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ClientForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ManagerForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ClientForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ManagerForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ClientForm().setVisible(true);
+                new ManagerForm().setVisible(true);
             }
         });
     }
