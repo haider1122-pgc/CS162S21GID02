@@ -27,8 +27,12 @@ public class Carrefour {
         {
             System.out.println("Hellp1");
         }
-        ManagerForm cf = new ManagerForm();
-        cf.setVisible(true);
+
+//        ClientForm cf = new ClientForm();
+//        cf.setVisible(true);
+        WelcomePage w = new WelcomePage();
+        w.setVisible(true);
+
     }
     
 }
