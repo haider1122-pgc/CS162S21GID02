@@ -9,7 +9,7 @@ package carrefour;
  *
  * @author Haider
  */
-abstract class Person {
+ class Person {
 
     //declearing datamembers
     private String name;
