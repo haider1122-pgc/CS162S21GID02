@@ -9,34 +9,36 @@ package carrefour;
  *
  * @author Haider
  */
-public class CEO extends Person{
+public class CEO extends Person {
+
     private String ceoId;
     private String ceoPassword;
     boolean test;
-    
-    //getters
 
+    //getters
     /**
      * getter for CEO id
+     *
      * @return String
      */
     public String getCeoId() {
         return ceoId;
     }
-     
+
     /**
      * getter for CEO Password
+     *
      * @return String
      */
     public String getCeoPassword() {
         return ceoPassword;
     }
-    
+
     //setters
- 
     /**
      * setter for CEO Id
-     * @param ceoId 
+     *
+     * @param ceoId
      */
     public void setCeoId(String ceoId) {
         boolean check1 = false, check = true;
@@ -60,7 +62,7 @@ public class CEO extends Person{
         }
         if (check1 == true && check == true) {
             this.ceoId = ceoId;
-            test= true;
+            test = true;
 
         } else {
 
@@ -72,20 +74,22 @@ public class CEO extends Person{
 
     /**
      * setter for CEO Password
-     * @param ceoPassword 
+     *
+     * @param ceoPassword
      */
     public void setCeoPassword(String ceoPassword) {
         this.ceoPassword = ceoPassword;
     }
-    
+
     /**
      * function to check whether the CEO id is valid or not
-     * @return 
+     *
+     * @return
      */
     public boolean ceoIdValidation() {
-        
+
         return test == true;
 
     }
-    
+
 }

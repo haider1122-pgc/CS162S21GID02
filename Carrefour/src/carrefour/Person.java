@@ -9,7 +9,7 @@ package carrefour;
  *
  * @author Haider
  */
- class Person {
+class Person {
 
     //declearing datamembers
     private String name;
@@ -194,10 +194,11 @@ package carrefour;
             t3 = false;
         }
     }
- 
+
     /**
-     * setter for gender 
-     * @param gender 
+     * setter for gender
+     *
+     * @param gender
      */
     public void setGender(char gender) {
         this.gender = gender;
@@ -234,7 +235,6 @@ package carrefour;
         }
     }
 
-
     /**
      * setter for phone number
      *
@@ -265,22 +265,26 @@ package carrefour;
 
     /**
      * setter for address
-     * @param address 
+     *
+     * @param address
      */
     public void setAddress(String address) {
         this.address = address;
     }
-    
+
     /**
      * setter for country
-     * @param country 
+     *
+     * @param country
      */
     public void setCountry(String country) {
         this.country = country;
     }
+
     /**
      * setter for city
-     * @param city 
+     *
+     * @param city
      */
     public void setCity(String city) {
         this.city = city;
@@ -288,12 +292,13 @@ package carrefour;
 
     /**
      * setter for dob
-     * @param dob 
+     *
+     * @param dob
      */
     public void setDob(String dob) {
         this.dob = dob;
     }
-    
+
     //function to test whether all data is validated or not
     /**
      * function to validate that all the data is authentic
