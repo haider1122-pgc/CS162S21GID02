@@ -40,6 +40,10 @@ public class ClientForm extends javax.swing.JFrame {
         addProductPanal.repaint();
         addProductPanal.revalidate();
         
+        addProductPanal.add(addProduct);
+        addProductPanal.repaint();
+        addProductPanal.revalidate();
+        
      
         
         

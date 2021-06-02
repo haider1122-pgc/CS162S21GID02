@@ -1666,7 +1666,6 @@
                                       <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="ename5" min="-2" pref="168" max="-2" attributes="0"/>
                                   <Component id="ename4" min="-2" pref="168" max="-2" attributes="0"/>

@@ -1394,7 +1394,6 @@ public class ManagerForm extends javax.swing.JFrame {
                     .addGroup(mailPanalLayout.createSequentialGroup()
                         .addComponent(jLabel48)
                         .addGap(7, 7, 7)))
-                .addGap(18, 18, 18)
                 .addGroup(mailPanalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(ename5, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ename4, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3966,8 +3965,6 @@ public class ManagerForm extends javax.swing.JFrame {
     private javax.swing.JLabel homeLable;
     private javax.swing.JPanel homePanal;
     private javax.swing.JPanel infoPane;
-    private javax.swing.JPanel infoPane1;
-    private javax.swing.JPanel infoPane2;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
@@ -4051,27 +4048,9 @@ public class ManagerForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel34;
-    private javax.swing.JLabel jLabel35;
-    private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
@@ -4143,7 +4122,6 @@ public class ManagerForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel99;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
@@ -4165,7 +4143,6 @@ public class ManagerForm extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
@@ -4225,8 +4202,6 @@ public class ManagerForm extends javax.swing.JFrame {
     private javax.swing.JLabel tableAdd;
     private javax.swing.JLabel tableToAdd;
     private javax.swing.JLabel viewTable;
-    private javax.swing.JLabel viewTable1;
-    private javax.swing.JLabel viewTable2;
     private javax.swing.JLabel viewTable3;
     private javax.swing.JLabel viewTable4;
     private javax.swing.JLabel viewTable5;
