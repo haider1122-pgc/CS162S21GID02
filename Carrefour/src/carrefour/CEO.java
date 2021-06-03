@@ -69,7 +69,7 @@ public class CEO extends Person {
             test = false;
 
         }
-        this.ceoId = ceoId;
+       
     }
 
     /**
