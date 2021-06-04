@@ -85,8 +85,8 @@ public class Client extends Person {
         boolean check1 = false, check = true;
         int size = clientId.length();
         if (clientId.charAt(0) == 'C') {
-            if (clientId.charAt(1) == 'E') {
-                if (clientId.charAt(2) == 'O') {
+            if (clientId.charAt(1) == 'L') {
+                if (clientId.charAt(2) == 'T') {
                     if (clientId.charAt(3) == '-') {
                         check1 = true;
                     }
@@ -160,7 +160,7 @@ public class Client extends Person {
     }
 
     /**
-     * function to check whether the CEO id is valid or not
+     * function to check whether the client id is valid or not
      *
      * @return
      */

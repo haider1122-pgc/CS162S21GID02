@@ -84,9 +84,9 @@ public class Manager extends Management {
     }
 
     /**
-     * function to check whether the CEO id is valid or not
+     * function to check whether the manager id is valid or not
      *
-     * @return
+     * @return boolean
      */
     public boolean managerIdValidation() {
 
