@@ -18,7 +18,8 @@ public class Carrefour {
      */
     public static void main(String[] args) {
         
-       
+       Email e =new Email();
+       e.sendEmail();
         // TODO code application logic here
 //        ManagerForm m = new ManagerForm();
 //        m.setVisible(true);
