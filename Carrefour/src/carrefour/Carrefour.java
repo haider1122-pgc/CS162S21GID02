@@ -12,6 +12,27 @@ import javax.swing.UIManager;
  * @author Windows 10
  */
 public class Carrefour {
+    
+    /**
+     * to let the office class behaves singleton behavior
+     *
+     * @return Office
+     */
+    static Carrefour c = null;
+    public static Carrefour getInstance() {
+        if (c == null) {
+            c = new Carrefour();
+            return c;
+
+        }
+        return c;
+
+    }
+    //make the carrefour constructor private
+
+    private Carrefour() {
+
+    }
 
     /**
      * @param args the command line arguments
