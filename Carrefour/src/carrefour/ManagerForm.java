@@ -3162,6 +3162,7 @@ public class ManagerForm extends javax.swing.JFrame {
         rentPannel.setAutoscrolls(true);
         rentPannel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         rentPannel.setPreferredSize(new java.awt.Dimension(500, 365));
+        rentPannel.setRequestFocusEnabled(false);
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

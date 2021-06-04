@@ -9,6 +9,6 @@ package carrefour;
  *
  * @author Haider
  */
-public class Request {
+ abstract class Request extends Person{
     
 }

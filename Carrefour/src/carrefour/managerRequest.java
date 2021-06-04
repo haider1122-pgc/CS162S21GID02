@@ -9,7 +9,7 @@ package carrefour;
  *
  * @author Haider
  */
-public class managerRequest {
+public class managerRequest extends Request {
     private String education;
     private String experience;
     private String previousWorkPlace;

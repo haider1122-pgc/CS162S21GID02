@@ -23,7 +23,7 @@ public class Email {
     private String sender;
     private String recever;
     private String subject;
-    private String message;
+    private String messageContent;
     
     //setters
     
@@ -53,10 +53,10 @@ public class Email {
 
     /**
      * setter for message
-     * @param message 
+     * @param messageContent 
      */
-    public void setMessage(String message) {
-        this.message = message;
+    public void setMessage(String messageContent) {
+        this.messageContent = messageContent;
     }
     
     

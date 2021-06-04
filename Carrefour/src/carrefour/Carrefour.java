@@ -17,9 +17,10 @@ public class Carrefour {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
-       Email e =new Email();
-       e.sendEmail();
+        clientRequestForm c = new clientRequestForm();
+        c.setVisible(true);
+//       Email e =new Email();
+//       e.sendEmail();
         // TODO code application logic here
 //        ManagerForm m = new ManagerForm();
 //        m.setVisible(true);
@@ -31,8 +32,8 @@ public class Carrefour {
             System.out.println("Hellp1");
         }
 
-        ClientForm cf = new ClientForm();
-        cf.setVisible(true);
+//        ClientForm cf = new ClientForm();
+//        cf.setVisible(true);
 //        ManagerForm w = new ManagerForm();
 //        w.setVisible(true);
 
