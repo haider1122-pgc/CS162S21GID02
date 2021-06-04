@@ -44,7 +44,7 @@ public class ClientForm extends javax.swing.JFrame {
         addProductPanal.repaint();
         addProductPanal.revalidate();
         
-     
+        
         
         
         //JLabel []JlabelButtone = {homeLable,mailLable,aboutLable,generalLable,payLable,saleLable,infoLable}; 
@@ -237,6 +237,8 @@ public class ClientForm extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Carrefour - Multinational Corporation (Client)");
+        setBackground(new java.awt.Color(1, 1, 1));
+        setFont(new java.awt.Font("Palatino Linotype", 0, 12)); // NOI18N
         setPreferredSize(new java.awt.Dimension(1080, 650));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));

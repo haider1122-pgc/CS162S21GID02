@@ -5,6 +5,8 @@
  */
 package carrefour;
 
+import java.util.Date;
+
 /**
  *
  * @author Haider
@@ -21,8 +23,8 @@ class Person {
     private String address;
     private String country;
     private String city;
-    private String dob;
-    boolean t1, t2, t3, t4, t5;
+    private Date dob;
+    protected boolean t1, t2, t3, t4, t5;
 
     //creating getters for all data members
     /**
@@ -111,7 +113,7 @@ class Person {
      *
      * @return String
      */
-    public String getDob() {
+    public Date getDob() {
         return dob;
     }
 
@@ -295,7 +297,7 @@ class Person {
      *
      * @param dob
      */
-    public void setDob(String dob) {
+    public void setDob(Date dob) {
         this.dob = dob;
     }
 
