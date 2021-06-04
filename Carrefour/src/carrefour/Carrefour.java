@@ -5,6 +5,8 @@
  */
 package carrefour;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
 import javax.swing.UIManager;
 
 /**
@@ -12,6 +14,28 @@ import javax.swing.UIManager;
  * @author Windows 10
  */
 public class Carrefour {
+    //declerations of lists
+    private final LinkedList<Manager> mgr = new LinkedList<>();
+    private final LinkedList<Client> client = new LinkedList<>();
+    private final LinkedList<CEO> ceo = new LinkedList<>();
+
+    //getter for lists
+    public LinkedList<Manager> getMgr() {
+        return mgr;
+    }
+
+    public LinkedList<Client> getClient() {
+        return client;
+    }
+
+    public LinkedList<CEO> getCeo() {
+        return ceo;
+    }
+    
+    
+    
+    
+    
     
     /**
      * to let the office class behaves singleton behavior
