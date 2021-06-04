@@ -20,6 +20,8 @@ public class Carrefour {
     private final LinkedList<CEO> ceo = new LinkedList<>();
     private final LinkedList<workers> wkr = new LinkedList<>();
     private final LinkedList<Cashier> cshr = new LinkedList<>();
+    private final ArrayList<managerRequest> mgrReq = new ArrayList<>();
+    private final ArrayList<clientRequest> cltReq = new ArrayList<>();
 
     //getter for lists
     public LinkedList<Manager> getMgr() {
@@ -36,6 +38,18 @@ public class Carrefour {
 
     public LinkedList<workers> getWkr() {
         return wkr;
+    }
+
+    public LinkedList<Cashier> getCshr() {
+        return cshr;
+    }
+
+    public ArrayList<managerRequest> getMgrReq() {
+        return mgrReq;
+    }
+
+    public ArrayList<clientRequest> getCltReq() {
+        return cltReq;
     }
     
     
