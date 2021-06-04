@@ -6,12 +6,9 @@
 package carrefour;
 
 /**
- *
- * @author Windows 10
+ * @author Haider
  */
-public class Request extends Person{
-    
-    
-    
+ abstract class Request extends Person{
+
     
 }

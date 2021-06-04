@@ -1,61 +1,125 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package carrefour;
 
-import java.util.*;
-import javax.mail.*;
-import javax.mail.internet.*;
-import javax.activation.*;
+
+package carrefour;
+import java.util.Properties;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage; 
 
 /**
  *
- * @author Windows 10
+ * @author Haider
  */
+
 public class Email {
-    public static void main(String [] args) {    
-      // Recipient's email ID needs to be mentioned.
-      String to = "abcd@gmail.com";
+    private String sender;
+    private String recever;
+    private String subject;
+    private String messageContent;
+    
+    //setters
+    
+    /**
+     * setter for sender email
+     * @param sender 
+     */
+    public void setSender(String sender) {
+        this.sender = sender;
+    }
 
-      // Sender's email ID needs to be mentioned
-      String from = "web@gmail.com";
+    /**
+     * setter for receiver email
+     * @param recever 
+     */
+    public void setRecever(String recever) {
+        this.recever = recever;
+    }
 
-      // Assuming you are sending email from localhost
-      String host = "localhost";
+    /**
+     * setter for subject of mail
+     * @param subject 
+     */
+    public void setSubject(String subject) {
+        this.subject = subject;
+    }
 
-      // Get system properties
-      Properties properties = System.getProperties();
+    /**
+     * setter for message
+     * @param messageContent 
+     */
+    public void setMessage(String messageContent) {
+        this.messageContent = messageContent;
+    }
+    
+    
+    /**
+     * function used to send email
+     */
+    public void sendEmail(){
+        // Recipient's email ID needs to be mentioned.
+        String to = "haider441ali@gmail.com";
 
-      // Setup mail server
-      properties.setProperty("mail.smtp.host", host);
+        // Sender's email ID needs to be mentioned
+        String from = "haider441ali@gmail.com";
 
-      // Get the default Session object.
-      Session session = Session.getDefaultInstance(properties);
+        // Assuming you are sending email from through gmails smtp
+        String host = "smtp.gmail.com";
 
-      try {
-         // Create a default MimeMessage object.
-         MimeMessage message = new MimeMessage(session);
+        // Get system properties
+        Properties properties = System.getProperties();
 
-         // Set From: header field of the header.
-         message.setFrom(new InternetAddress(from));
+        // Setup mail server
+        properties.put("mail.smtp.host", host);
+        properties.put("mail.smtp.port", "465");
+        properties.put("mail.smtp.ssl.enable", "true");
+        properties.put("mail.smtp.auth", "true");
 
-         // Set To: header field of the header.
-         message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
+        // Get the Session object.// and pass username and password
+        Session session = Session.getInstance(properties, new javax.mail.Authenticator() {
 
-         // Set Subject: header field
-         message.setSubject("This is the Subject Line!");
+            @Override
+            protected PasswordAuthentication getPasswordAuthentication() {
 
-         // Now set the actual message
-         message.setText("This is actual message");
+                return new PasswordAuthentication("haider441ali@gmail.com", "HA12@@al");
 
-         // Send message
-         Transport.send(message);
-         System.out.println("Sent message successfully....");
-      } catch (MessagingException mex) {
-         mex.printStackTrace();
-      }
-   }
+            }
+
+        });
+
+        // Used to debug SMTP issues
+        session.setDebug(true);
+
+        try {
+            // Create a default MimeMessage object.
+            MimeMessage message = new MimeMessage(session);
+
+            // Set From: header field of the header.
+            message.setFrom(new InternetAddress(from));
+
+            // Set To: header field of the header.
+            message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
+
+            // Set Subject: header field
+            message.setSubject("This is the Subject Line!");
+
+            // Now set the actual message
+            message.setText("This is actual message");
+
+            System.out.println("sending...");
+            // Send message
+            Transport.send(message);
+            System.out.println("Sent message successfully....");
+        } catch (MessagingException mex) {
+        }
+
+    }
     
 }
+        
+    
+
+
