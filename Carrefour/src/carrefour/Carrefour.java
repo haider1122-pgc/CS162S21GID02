@@ -7,6 +7,8 @@ package carrefour;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.PriorityQueue;
+import java.util.Queue;
 import javax.swing.UIManager;
 
 /**
@@ -22,6 +24,11 @@ public class Carrefour {
     private final LinkedList<Cashier> cshr = new LinkedList<>();
     private final ArrayList<managerRequest> mgrReq = new ArrayList<>();
     private final ArrayList<clientRequest> cltReq = new ArrayList<>();
+    private final ArrayList<floor> flr = new ArrayList<>();
+    private final Queue <Shops> shop = new PriorityQueue<>();
+    private final LinkedList<Products> pro = new LinkedList<>();
+    
+    
 
     //getter for lists
     public LinkedList<Manager> getMgr() {
@@ -50,6 +57,18 @@ public class Carrefour {
 
     public ArrayList<clientRequest> getCltReq() {
         return cltReq;
+    }
+
+    public ArrayList<floor> getFlr() {
+        return flr;
+    }
+
+    public Queue<Shops> getShop() {
+        return shop;
+    }
+
+    public LinkedList<Products> getPro() {
+        return pro;
     }
     
     
