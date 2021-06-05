@@ -12,7 +12,7 @@ package carrefour;
 public class Shops {
     
     private String shopNumber;
-    private String floorNumber;
+    private char floorNumber;
     private String shopId;
     private int shopRent;
     
@@ -28,7 +28,7 @@ public class Shops {
      * @param floorNumber
      * @param shopRent 
      */
-    public Shops(String shopNumber, String floorNumber, int shopRent) {
+    public Shops(String shopNumber, char floorNumber, int shopRent) {
         this.shopNumber = shopNumber;
         this.floorNumber = floorNumber;
         this.shopRent = shopRent;
@@ -51,7 +51,7 @@ public class Shops {
      * 
      * @return 
      */
-    public String getFloorNumber() {
+    public char getFloorNumber() {
         return floorNumber;
     }
     

@@ -5,60 +5,122 @@
  */
 package carrefour;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author Haider
  */
 public class floor {
-     private String floorName;
-     private int floorNumber;
-     private int noShops;
      
-     //getters
-/**
- * getter for floor name
- * @return string
- */
-    public String getFloorName() {
-        return floorName;
+    private List <Shops> Floor1 = new ArrayList<Shops>();
+    private List <Shops> Floor2 = new ArrayList<Shops>();
+    private List <Shops> Floor3 = new ArrayList<Shops>();
+    
+    //Methods
+    
+    public boolean addShop(Shops s)
+    {
+        if(s.getFloorNumber() == '1')
+        {
+            Floor1.add(s);
+            return true;
+        }
+        else if(s.getFloorNumber() == '2')
+        {
+            Floor2.add(s);
+            return true;
+        }
+        else if(s.getFloorNumber() == '3')
+        {
+            Floor3.add(s);
+            return true;
+        }
+            
+        return false;
+    
     }
-/**
- * getter for floor number
- * @return int
- */
-    public int getFloorNumber() {
-        return floorNumber;
+
+    public boolean deleteShop(Shops s)
+    {
+        if(s.getFloorNumber() == '1')
+        {
+            Floor1.remove(getIndex(s));
+            return true;
+
+        }
+        else if(s.getFloorNumber() == '2')
+        {
+            Floor2.remove(getIndex(s));
+            return true;
+           
+        }
+        else if(s.getFloorNumber() == '3')
+        {
+            Floor3.remove(getIndex(s));
+            return true;
+        }
+            
+        return false;
+        
     }
-/**
- * getter for floor no of shops
- * @return int
- */
-    public int getNoShops() {
-        return noShops;
+    public boolean updateShop(Shops s)
+    {
+        if(s.getFloorNumber() == '1')
+        {
+            Floor1.set(getIndex(s), s);
+            return true;
+
+        }
+        else if(s.getFloorNumber() == '2')
+        {
+            Floor2.set(getIndex(s), s);
+            return true;
+           
+        }
+        else if(s.getFloorNumber() == '3')
+        {
+            Floor3.set(getIndex(s), s);
+            return true;
+        }
+            
+        return false;
     }
-     
-    //setters
-/**
- * setter for floor name
- * @param floorName 
- */
-    public void setFloorName(String floorName) {
-        this.floorName = floorName;
-    }
-/**
- * setter for floor number
- * @param floorNumber 
- */
-    public void setFloorNumber(int floorNumber) {
-        this.floorNumber = floorNumber;
-    }
-/**
- * setter for floor no of shops
- * @param noShops 
- */
-    public void setNoShops(int noShops) {
-        this.noShops = noShops;
+    
+    public int getIndex(Shops s)
+    {
+        if(s.getFloorNumber() == '1')
+        {
+            for (int i = 0; i < Floor1.size(); i++) {
+                if (s.getShopId().equals(Floor1.get(i).getShopId())) {
+                    
+                    return i;
+                }
+            }
+        }
+        else if(s.getFloorNumber() == '2')
+        {
+            for (int i = 0; i < Floor2.size(); i++) {
+                if (s.getShopId().equals(Floor2.get(i).getShopId())) {
+                    
+                    return i;
+                }
+            }
+        }
+        else if(s.getFloorNumber() == '3')
+        {
+            for (int i = 0; i < Floor3.size(); i++) {
+                if (s.getShopId().equals(Floor3.get(i).getShopId())) {
+                    return i;
+                }
+            }
+        }
+            
+        
+        return -1;
     }
     
     
+     
 }
