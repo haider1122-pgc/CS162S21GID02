@@ -101,8 +101,8 @@ public class Carrefour {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        clientRequestForm c = new clientRequestForm();
-        c.setVisible(true);
+//        clientRequestForm c = new clientRequestForm();
+ //       c.setVisible(true);
 //       Email e =new Email();
 //       e.sendEmail();
         // TODO code application logic here
@@ -116,8 +116,8 @@ public class Carrefour {
             System.out.println("Hellp1");
         }
 
-//        ClientForm cf = new ClientForm();
-//        cf.setVisible(true);
+        ClientForm cf = new ClientForm();
+        cf.setVisible(true);
 //        ManagerForm w = new ManagerForm();
 //        w.setVisible(true);
 
