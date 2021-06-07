@@ -30,6 +30,7 @@ public class Management extends Person {
      * @return
      */
     public int getSalary() {
+        
         return salary;
     }
 

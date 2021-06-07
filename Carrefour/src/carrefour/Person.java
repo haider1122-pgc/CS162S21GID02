@@ -5,6 +5,8 @@
  */
 package carrefour;
 
+import java.util.Date;
+
 /**
  *
  * @author Haider
@@ -20,9 +22,8 @@ class Person {
     private String phone;
     private String address;
     private String country;
-    private String city;
-    private String dob;
-    boolean t1, t2, t3, t4, t5;
+    private Date dob;
+
 
     //creating getters for all data members
     /**
@@ -30,6 +31,22 @@ class Person {
      *
      * @return String
      */
+    public Person()
+    {}
+
+    public Person(String name, String fatherName, String cnic, char gender, String email, String phone, String address, String country, Date dob) {
+        this.name = name;
+        this.fatherName = fatherName;
+        this.cnic = cnic;
+        this.gender = gender;
+        this.email = email;
+        this.phone = phone;
+        this.address = address;
+        this.country = country;
+        this.dob = dob;
+        
+    }
+    
     public String getName() {
         return name;
     }
@@ -102,16 +119,14 @@ class Person {
      *
      * @return String
      */
-    public String getCity() {
-        return city;
-    }
+    
 
     /**
      * getter for date of birth
      *
      * @return String
      */
-    public String getDob() {
+    public Date getDob() {
         return dob;
     }
 
@@ -122,77 +137,16 @@ class Person {
      * @param name
      */
     public void setName(String name) {
-        boolean flag = true;
-        if (name.length() <= 50) {
-            for (int i = 0; i < name.length(); i++) {
-                if (!((name.charAt(i) >= 'a' && name.charAt(i) <= 'z') || (name.charAt(i) >= 'A' && name.charAt(i) <= 'Z') || (name.charAt(i) == ' '))) {
-                    flag = false;
-                }
-
-            }
-        }
-        if (flag == true) {
-            this.name = name;
-            t1 = true;
-
-        } else {
-
-            t1 = false;
-        }
+        this.name = name;
     }
-
-    /**
-     * setter for father name
-     *
-     * @param fatherName
-     */
-    public void setFatherName(String fatherName) {
-        boolean flag = true;
-        if (fatherName.length() <= 50) {
-            for (int i = 0; i < fatherName.length(); i++) {
-                if (!((fatherName.charAt(i) >= 'a' && fatherName.charAt(i) <= 'z') || (fatherName.charAt(i) >= 'A' && fatherName.charAt(i) <= 'Z') || (fatherName.charAt(i) == ' '))) {
-                    flag = false;
-                }
-
-            }
-        }
-        if (flag == true) {
-            this.fatherName = fatherName;
-            t2 = true;
-
-        } else {
-
-            t2 = false;
-        }
-
-    }
-
+    
     /**
      * setter for CNIC
      *
      * @param cnic
      */
     public void setCnic(String cnic) {
-        int size = cnic.length();
-
-        boolean check = true;
-        if (size == 13) {
-            for (int i = 0; i < size; i++) {
-                if (!(cnic.charAt(i) >= '0' && cnic.charAt(i) <= '9')) {
-                    check = false;
-                    break;
-                }
-            }
-            if (check == true) {
-                this.cnic = cnic;
-                t3 = true;
-            } else {
-                t3 = false;
-            }
-
-        } else {
-            t3 = false;
-        }
+        this.cnic = cnic;
     }
 
     /**
@@ -210,29 +164,7 @@ class Person {
      * @param email
      */
     public void setEmail(String email) {
-        int size = email.length();
-        int index = 0;
-        boolean check = true;
-        if (email.charAt(0) == '@') {
-            check = false;
-        } else {
-            for (int i = 1; i < size; i++) {
-                if (email.charAt(i) == '@') {
-                    index = i;
-                    break;
-                }
-            }
-            if (email.charAt(index) == '.') {
-                check = false;
-            }
-        }
-        if (check == true) {
-            this.email = email;
-            t4 = true;
-        } else {
-            t4 = false;
-
-        }
+        this.email = email;
     }
 
     /**
@@ -241,26 +173,7 @@ class Person {
      * @param phone
      */
     public void setPhone(String phone) {
-        int size = phone.length();
-
-        boolean check = true;
-        if (size == 11) {
-            for (int i = 0; i < size; i++) {
-                if (!(phone.charAt(i) >= '0' && phone.charAt(i) <= '9')) {
-                    check = false;
-                    break;
-                }
-            }
-            if (check == true) {
-                this.phone = phone;
-                t5 = true;
-            } else {
-                t5 = false;
-            }
-
-        } else {
-            t5 = false;
-        }
+        this.phone = phone;
     }
 
     /**
@@ -281,21 +194,14 @@ class Person {
         this.country = country;
     }
 
-    /**
-     * setter for city
-     *
-     * @param city
-     */
-    public void setCity(String city) {
-        this.city = city;
-    }
+  
 
     /**
      * setter for dob
      *
      * @param dob
      */
-    public void setDob(String dob) {
+    public void setDob(Date dob) {
         this.dob = dob;
     }
 
@@ -305,10 +211,88 @@ class Person {
      *
      * @return Boolean
      */
-    public boolean validation() {
-        //JOptionPane.showMessageDialog(null,t1+"\n"+t2+"\n"+t3+"\n"+t4+"\n"+t5+"\n");
-        return t1 == true && t2 == true && t3 == true && t4 == true && t5 == true;
-
+   
+    
+    
+    
+    
+    ///////// Validators
+    
+    public boolean nameValidator(String name)
+    {
+        if(name.length()<=50)
+        {
+            for(int i = 0; i < name.length(); i++)
+            {
+                if (!((name.charAt(i) >= 'a' && name.charAt(i) <= 'z') || (name.charAt(i) >= 'A' && name.charAt(i) <= 'Z') || (name.charAt(i) == ' '))) {
+                    return false;
+                }
+            }
+        }
+        
+        return true;
     }
+    
+    
+    /**
+     * 
+     * @param number
+     * @return 
+     */
+    public boolean numberValidator(String number)
+    {
+        for (int i = 0; i < number.length(); i++) {
+            if (!(phone.charAt(i) >= '0' && phone.charAt(i) <= '9')) {
+                return false;
+            }
+        }
+        return true;
+        
+    }
+    /**
+     * Overloading
+     * @param number
+     * @param size
+     * @return 
+     */
+    public boolean numberValidator(String number, int size)
+    {
+        if (number.length() == size) {
+            for (int i = 0; i < number.length(); i++) {
+                if (!(phone.charAt(i) >= '0' && phone.charAt(i) <= '9')) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        else{
+            return false;
+        }
+        
+    }
+    
+    public boolean emailValidator(String email)
+    {
+        int size = email.length();
+        int index = 0;
+        boolean check = true;
+        if (email.charAt(0) == '@') {
+            check = false;
+        } else {
+            for (int i = 1; i < size; i++) {
+                if (email.charAt(i) == '@') {
+                    index = i;
+                    break;
+                }
+            }
+            if (email.charAt(index) == '.' || email.charAt(index+1) == '.') {
+                check = false;
+            }
+        }
+        return check;
+    }
+    
+    
+            
 
 }

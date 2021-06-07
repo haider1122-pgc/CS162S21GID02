@@ -6,9 +6,9 @@
 package carrefour;
 
 /**
- *
  * @author Haider
  */
  abstract class Request extends Person{
+
     
 }
