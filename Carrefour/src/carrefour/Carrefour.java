@@ -101,23 +101,21 @@ public class Carrefour {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-//        clientRequestForm c = new clientRequestForm();
-//        c.setVisible(true);
-//       Email e =new Email();
-//       e.sendEmail();
+//      Email e =new Email();
+//      e.sendEmail();
         // TODO code application logic here
-//        ManagerForm m = new ManagerForm();
-//        m.setVisible(true);
-        
-        try{
-        // TODO code application logic here
-         UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel"); 
-        }catch(Exception ex)
-        {
-            System.out.println("Hellp1");
-        }
-        LoginPage l = new LoginPage();
-        l.setVisible(true);
+
+        ManagerForm m = new ManagerForm();
+        m.setVisible(true);
+//        try{
+//        // TODO code application logic here
+//         UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel"); 
+//        }catch(Exception ex)
+//        {
+//            System.out.println("Hellp1");
+//        }
+//
+
 //        ClientForm cf = new ClientForm();
 //        cf.setVisible(true);
 //        ManagerForm w = new ManagerForm();
