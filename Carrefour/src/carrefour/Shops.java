@@ -5,18 +5,24 @@
  */
 package carrefour;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  *
  * @author Haider
  */
 public class Shops {
     
+    private String shopName;
     private String shopId;
     private String floorNumber;
-    private int shopRent;
-    private int tax;
-    private int arae;
-    private String shopType;
+    private String shopNumber;
+    private double shopRent;
+    private double tax;
+    
+    
+    Set<Products> products = new HashSet<Products>();
     
   
     /**
@@ -26,24 +32,42 @@ public class Shops {
     }
     /**
      * 
-     * @param shopId
-     * @param shopType
-     * @param floor
-     * @param area
-     * @param rent
-     * @param tax 
+     * @param shopNumber
+     * @param floorNumber
+     * @param rent 
      */
-    public Shops(String shopId,String shopType,String floor,int area,int rent,int tax) {
-        this.shopId=shopId;
-        this.shopType=shopType;
-        this.arae=area;
-        this.floorNumber=floor;
-        this.shopRent=rent;
-        this.tax=tax;
-        
-      
+    public Shops(String shopNumber, String floorNumber, int rent) {
+        this.shopId = floorNumber + " " + shopNumber;
+        this.shopNumber = shopNumber;
+        this.floorNumber = floorNumber;
+        this.shopRent = rent;
     }
-
+    /**
+     * 
+     * @param shopName 
+     */
+    public void setShopName(String shopName) {
+        this.shopName = shopName;
+    }
+    /**
+     * 
+     * @return 
+     */
+    public String getShopName() {
+        return shopName;
+    }
+    
+    
+    /**
+     * 
+     * @return 
+     */
+    public String getShopNumber() {
+        return shopNumber;
+    }
+    
+    
+    
     /**
      * 
      * @return string
@@ -64,7 +88,7 @@ public class Shops {
      * 
      * @return int
      */
-    public int getShopRent() {
+    public double getShopRent() {
         return shopRent;
     }
 
@@ -72,27 +96,13 @@ public class Shops {
      * 
      * @return int
      */
-    public int getTax() {
+    public double getTax() {
         return tax;
     }
 
-    /**
-     * 
-     * @return int
-     */
-    public int getArae() {
-        return arae;
-    }
-
-    /**
-     * 
-     * @return string
-     */
-    public String getShopType() {
-        return shopType;
-    }
+   
     
-    
+    //  Methods 
     
     
     

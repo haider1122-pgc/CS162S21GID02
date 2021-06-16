@@ -22,17 +22,17 @@ public class floor {
     
     public boolean addShop(Shops s)
     {
-        if(s.getFloorNumber() == '1')
+        if(s.getFloorNumber().equals( "1"))
         {
             Floor1.add(s);
             return true;
         }
-        else if(s.getFloorNumber() == '2')
+        else if(s.getFloorNumber().equals( "2"))
         {
             Floor2.add(s);
             return true;
         }
-        else if(s.getFloorNumber() == '3')
+        else if(s.getFloorNumber().equals( "3"))
         {
             Floor3.add(s);
             return true;
@@ -44,19 +44,19 @@ public class floor {
 
     public boolean deleteShop(Shops s)
     {
-        if(s.getFloorNumber() == '1')
+        if(s.getFloorNumber().equals( "1"))
         {
             Floor1.remove(getIndex(s));
             return true;
 
         }
-        else if(s.getFloorNumber() == '2')
+        else if(s.getFloorNumber().equals( "2"))
         {
             Floor2.remove(getIndex(s));
             return true;
            
         }
-        else if(s.getFloorNumber() == '3')
+        else if(s.getFloorNumber().equals( "3"))
         {
             Floor3.remove(getIndex(s));
             return true;
@@ -67,19 +67,19 @@ public class floor {
     }
     public boolean updateShop(Shops s)
     {
-        if(s.getFloorNumber() == '1')
+        if(s.getFloorNumber().equals("1"))
         {
             Floor1.set(getIndex(s), s);
             return true;
 
         }
-        else if(s.getFloorNumber() == '2')
+        else if(s.getFloorNumber().equals( "2"))
         {
             Floor2.set(getIndex(s), s);
             return true;
            
         }
-        else if(s.getFloorNumber() == '3')
+        else if(s.getFloorNumber().equals( "3"))
         {
             Floor3.set(getIndex(s), s);
             return true;
@@ -90,7 +90,7 @@ public class floor {
     
     public int getIndex(Shops s)
     {
-        if(s.getFloorNumber() == '1')
+        if(s.getFloorNumber().equals( "1"))
         {
             for (int i = 0; i < Floor1.size(); i++) {
                 if (s.getShopId().equals(Floor1.get(i).getShopId())) {
@@ -99,7 +99,7 @@ public class floor {
                 }
             }
         }
-        else if(s.getFloorNumber() == '2')
+        else if(s.getFloorNumber().equals( "2"))
         {
             for (int i = 0; i < Floor2.size(); i++) {
                 if (s.getShopId().equals(Floor2.get(i).getShopId())) {
@@ -108,7 +108,7 @@ public class floor {
                 }
             }
         }
-        else if(s.getFloorNumber() == '3')
+        else if(s.getFloorNumber().equals("3"))
         {
             for (int i = 0; i < Floor3.size(); i++) {
                 if (s.getShopId().equals(Floor3.get(i).getShopId())) {

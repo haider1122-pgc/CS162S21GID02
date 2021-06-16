@@ -25,7 +25,7 @@ public class LoginPage2 extends javax.swing.JFrame {
      */
     public LoginPage2() {
         initComponents();
-        this.add(background);
+//        this.add(background);
         this.repaint();
         this.revalidate();
     }

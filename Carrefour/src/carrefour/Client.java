@@ -5,6 +5,8 @@
  */
 package carrefour;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Haider
@@ -18,7 +20,8 @@ public class Client extends Person {
     private int gst;
     private int shopTax;
     private int amount;
-    boolean test1;
+    private Shops shop;
+    
 
     //getters
     /**
@@ -169,4 +172,13 @@ public class Client extends Person {
         return test1 == true;
 
     }
+    
+    
+    //Methods
+    public void addProduct(Products p)
+    {
+        shop.products.add(p);
+        JOptionPane.showMessageDialog(null, "Product Added Successfully", "Adding Product", 2);
+    }
+            
 }
