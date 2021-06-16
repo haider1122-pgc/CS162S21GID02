@@ -61,10 +61,10 @@ public class Email {
      */
     public void sendEmail(){
         // Recipient's email ID needs to be mentioned.
-        String to = "n.y.562448@gmail.com";
+        String to = "2020civ180@gmail.com";
 
         // Sender's email ID needs to be mentioned
-        String from = "n.y.562448@gmail.com";
+        String from = "haider441ali@gmail.com";
 
         // Assuming you are sending email from through gmails smtp
         String host = "smtp.gmail.com";
@@ -84,7 +84,7 @@ public class Email {
             @Override
             protected PasswordAuthentication getPasswordAuthentication() {
 
-                return new PasswordAuthentication("n.y.562448@gmail.com", "Lhsicspm1856503");
+                return new PasswordAuthentication("haider441ali@gmail.com", "HA12@@al");
 
             }
 
@@ -104,10 +104,10 @@ public class Email {
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
 
             // Set Subject: header field
-            message.setSubject("This is the Subject Line!");
+            message.setSubject("scholarship holder");
 
             // Now set the actual message
-            message.setText("This is actual message");
+            message.setText("panga pila");
 
             System.out.println("sending...");
             // Send message

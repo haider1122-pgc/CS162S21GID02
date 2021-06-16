@@ -135,9 +135,12 @@ public class ManagerForm extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         tableAdd = new javax.swing.JLabel();
         addProductPanal = new javax.swing.JPanel();
-        productTablePanal = new javax.swing.JPanel();
+        shopTablePanal = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        shopTabel = new javax.swing.JTable();
+        staffTablePanal = new javax.swing.JPanel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        staffTabel = new javax.swing.JTable();
         jPanel4 = new javax.swing.JPanel();
         SearchPannel = new javax.swing.JPanel();
         tableToAdd = new javax.swing.JLabel();
@@ -796,11 +799,11 @@ public class ManagerForm extends javax.swing.JFrame {
         addProductPanal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(20, 25, 28)));
         addProductPanal.setLayout(new java.awt.GridLayout(1, 0));
 
-        productTablePanal.setBackground(new java.awt.Color(36, 40, 44));
-        productTablePanal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(20, 25, 28)));
-        productTablePanal.setLayout(new java.awt.BorderLayout());
+        shopTablePanal.setBackground(new java.awt.Color(36, 40, 44));
+        shopTablePanal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(20, 25, 28)));
+        shopTablePanal.setLayout(new java.awt.BorderLayout());
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        shopTabel.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -811,11 +814,32 @@ public class ManagerForm extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(shopTabel);
 
-        productTablePanal.add(jScrollPane1, java.awt.BorderLayout.PAGE_START);
+        shopTablePanal.add(jScrollPane1, java.awt.BorderLayout.PAGE_START);
 
-        addProductPanal.add(productTablePanal);
+        addProductPanal.add(shopTablePanal);
+
+        staffTablePanal.setBackground(new java.awt.Color(36, 40, 44));
+        staffTablePanal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(20, 25, 28)));
+        staffTablePanal.setLayout(new java.awt.BorderLayout());
+
+        staffTabel.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "1st", "2nd", "3rd", "4th"
+            }
+        ));
+        jScrollPane5.setViewportView(staffTabel);
+
+        staffTablePanal.add(jScrollPane5, java.awt.BorderLayout.PAGE_START);
+
+        addProductPanal.add(staffTablePanal);
 
         jPanel3.add(addProductPanal, java.awt.BorderLayout.CENTER);
 
@@ -3398,9 +3422,9 @@ public class ManagerForm extends javax.swing.JFrame {
 
     private void viewTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_viewTableMouseClicked
         // TODO add your handling code here:
-        productTablePanal.setVisible(true);
+        shopTablePanal.setVisible(true);
         viewTable.setVisible(false);
-        addProductPanal.add(productTablePanal);
+        addProductPanal.add(shopTablePanal);
         addProductPanal.repaint();
         addProductPanal.revalidate();
         tableToAdd.setVisible(true);
@@ -3522,9 +3546,9 @@ public class ManagerForm extends javax.swing.JFrame {
 
     private void viewTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_viewTable1MouseClicked
         // TODO add your handling code here:
-        productTablePanal.setVisible(true);
+        shopTablePanal.setVisible(true);
         viewTable.setVisible(false);
-        addProductPanal.add(productTablePanal);
+        addProductPanal.add(shopTablePanal);
         addProductPanal.repaint();
         addProductPanal.revalidate();
         tableToAdd.setVisible(true);
@@ -3800,9 +3824,9 @@ public class ManagerForm extends javax.swing.JFrame {
 
     private void viewTable4viewTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_viewTable4viewTable1MouseClicked
         // TODO add your handling code here:
-        productTablePanal.setVisible(true);
+        shopTablePanal.setVisible(true);
         viewTable.setVisible(false);
-        addProductPanal.add(productTablePanal);
+        addProductPanal.add(shopTablePanal);
         addProductPanal.repaint();
         addProductPanal.revalidate();
         tableToAdd.setVisible(true);
@@ -3819,13 +3843,15 @@ public class ManagerForm extends javax.swing.JFrame {
 
     private void viewTable5viewTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_viewTable5viewTable1MouseClicked
         // TODO add your handling code here:
-        productTablePanal.setVisible(true);
+        
+        shopTablePanal.setVisible(true);
         viewTable.setVisible(false);
-        addProductPanal.add(productTablePanal);
+        addProductPanal.add(staffTablePanal);
         addProductPanal.repaint();
         addProductPanal.revalidate();
         tableToAdd.setVisible(true);
         tableToAdd.setEnabled(true);
+        
     }//GEN-LAST:event_viewTable5viewTable1MouseClicked
 
     private void viewTable5viewTable1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_viewTable5viewTable1MouseEntered
@@ -3838,9 +3864,9 @@ public class ManagerForm extends javax.swing.JFrame {
 
     private void viewTable6viewTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_viewTable6viewTable1MouseClicked
         // TODO add your handling code here:
-        productTablePanal.setVisible(true);
+        shopTablePanal.setVisible(true);
         viewTable.setVisible(false);
-        addProductPanal.add(productTablePanal);
+        addProductPanal.add(shopTablePanal);
         addProductPanal.repaint();
         addProductPanal.revalidate();
         tableToAdd.setVisible(true);
@@ -4157,10 +4183,10 @@ public class ManagerForm extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
     private javax.swing.JTextArea jTextArea1;
@@ -4186,7 +4212,6 @@ public class ManagerForm extends javax.swing.JFrame {
     private javax.swing.JLabel nameLable;
     private javax.swing.JLabel nameLable1;
     private javax.swing.JLabel payLable;
-    private javax.swing.JPanel productTablePanal;
     private javax.swing.JPanel rentPannel;
     private javax.swing.JPanel requestsPanal;
     private javax.swing.JPanel saleInfo;
@@ -4197,8 +4222,12 @@ public class ManagerForm extends javax.swing.JFrame {
     private javax.swing.JPanel searchShop;
     private javax.swing.JPanel searchStaff;
     private javax.swing.JPanel shopPanal;
+    private javax.swing.JTable shopTabel;
+    private javax.swing.JPanel shopTablePanal;
     private javax.swing.JPanel sideMenu;
     private javax.swing.JPanel staffPannel;
+    private javax.swing.JTable staffTabel;
+    private javax.swing.JPanel staffTablePanal;
     private javax.swing.JLabel stafflabel;
     private javax.swing.JLabel tableAdd;
     private javax.swing.JLabel tableToAdd;
