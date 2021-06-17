@@ -11,10 +11,12 @@ package carrefour;
  */
 public class Shops {
     
-    private String shopNumber;
-    private char floorNumber;
     private String shopId;
+    private String floorNumber;
     private int shopRent;
+    private int tax;
+    private int arae;
+    private String shopType;
     
   
     /**
@@ -24,65 +26,71 @@ public class Shops {
     }
     /**
      * 
-     * @param shopNumber
-     * @param floorNumber
-     * @param shopRent 
+     * @param shopId
+     * @param shopType
+     * @param floor
+     * @param area
+     * @param rent
+     * @param tax 
      */
-    public Shops(String shopNumber, char floorNumber, int shopRent) {
-        this.shopNumber = shopNumber;
-        this.floorNumber = floorNumber;
-        this.shopRent = shopRent;
-        this.shopId = floorNumber +" "+ shopNumber;
+    public Shops(String shopId,String shopType,String floor,int area,int rent,int tax) {
+        this.shopId=shopId;
+        this.shopType=shopType;
+        this.arae=area;
+        this.floorNumber=floor;
+        this.shopRent=rent;
+        this.tax=tax;
+        
       
     }
-    
-    /**
-     * 
-     * @param shopRent 
-     */
-    ///////////////////Setter (According to oop thinking)
-    public void setShopRent(int shopRent) {
-        this.shopRent = shopRent;
-    }
 
-    
-    /////////////////Getters
     /**
      * 
-     * @return 
-     */
-    public char getFloorNumber() {
-        return floorNumber;
-    }
-    
-    /**
-     * 
-     * @return 
-     */
-    public String getShopNumber() {
-        return shopNumber;
-    }
-    
-    /**
-     * 
-     * @return 
-     */
-    public int getShopRent() {
-        return shopRent;
-    }
-    
-    /**
-     * 
-     * @return 
+     * @return string
      */
     public String getShopId() {
         return shopId;
     }
-    
-    
-   
-    
-    
+
+    /**
+     * 
+     * @return int
+     */
+    public String getFloorNumber() {
+        return floorNumber;
+    }
+
+    /**
+     * 
+     * @return int
+     */
+    public int getShopRent() {
+        return shopRent;
+    }
+
+    /**
+     * 
+     * @return int
+     */
+    public int getTax() {
+        return tax;
+    }
+
+    /**
+     * 
+     * @return int
+     */
+    public int getArae() {
+        return arae;
+    }
+
+    /**
+     * 
+     * @return string
+     */
+    public String getShopType() {
+        return shopType;
+    }
     
     
     
