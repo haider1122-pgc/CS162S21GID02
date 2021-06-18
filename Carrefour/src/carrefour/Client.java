@@ -16,13 +16,15 @@ public class Client extends Person {
     private String clientId;
     private String clientPassword;
     //list of shops add here
+    private String shopID;
     private int rent;
     private int gst;
     private int shopTax;
     private int amount;
-    private Shops shop;
+    floor f = floor.getInstance();
+    private Shops shop = f.getShop(shopID);
     
-
+    
     //getters
     /**
      * getter for client id
@@ -175,6 +177,7 @@ public class Client extends Person {
     
     
     //Methods
+    
     public void addProduct(Products p)
     {
         shop.products.add(p);

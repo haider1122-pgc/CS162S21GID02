@@ -18,6 +18,21 @@ public class floor {
     private List <Shops> Floor2 = new ArrayList<Shops>();
     private List <Shops> Floor3 = new ArrayList<Shops>();
     
+    /**
+     * making the floor Class Singleton
+     */
+    private floor(){}
+    static floor f = null;
+    public static floor getInstance() {
+        if (f == null) {
+            f = new floor();
+            return f;
+
+        }
+        return f;
+
+    }
+    
     //Methods
     
     public boolean addShop(Shops s)
@@ -119,6 +134,25 @@ public class floor {
             
         
         return -1;
+    }
+    public Shops getShop(String id)
+    {
+        for (int i = 0; i < Floor1.size(); i++) {
+            if (Floor1.get(i).getShopId().equals(id)) {
+                return Floor1.get(i);
+            }
+        }
+        for (int i = 0; i < Floor2.size(); i++) {
+            if (Floor2.get(i).getShopId().equals(id)) {
+                return Floor2.get(i);
+            }
+        }
+        for (int i = 0; i < Floor3.size(); i++) {
+            if (Floor3.get(i).getShopId().equals(id)) {
+                return Floor3.get(i);
+            }
+        }
+        return null;
     }
     
     

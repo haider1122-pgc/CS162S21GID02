@@ -13,7 +13,8 @@ public class Products {
     private String productName;
     private String productId;
     private int quantity;
-    private double price;
+    private double purchasingPrice;
+    private double sellingPrice;
     private String company;
     private double gst;
     
@@ -22,7 +23,7 @@ public class Products {
   * 
   * @param productName
   * @param quantity
-  * @param price
+  * @param purchasingPrice
   * @param company
   * @param shop
   * @param pNum 
@@ -30,11 +31,12 @@ public class Products {
     
     
     
-    public Products(String productName, int quantity, double price, String company, String shop , String pNum) {
+    public Products(String productName, int quantity, double purchasingPrice,double sellingPrice, String company, String shopid , String pNum) {
         this.productName = productName;
-        this.productId = ("P-" + shop + "-"+ pNum).replaceAll("\\s+", "");
+        this.productId = ("P-" + shopid + "-"+ pNum).replaceAll("\\s+", "");
         this.quantity = quantity;
-        this.price = price;
+        this.purchasingPrice = purchasingPrice;
+        this.sellingPrice = sellingPrice;
         this.company = company;
     }
     /**
@@ -67,11 +69,11 @@ public class Products {
         return quantity;
     }
 /**
- * getter for price
+ * getter for purchasingPrice
  * @return int
  */
     public double getPrice() {
-        return price;
+        return purchasingPrice;
     }
 /**
  * getter for company
@@ -101,11 +103,11 @@ public class Products {
         this.quantity = quantity;
     }
 /**
- * setter for price
- * @param price 
+ * setter for purchasingPrice
+ * @param purchasingPrice 
  */
-    public void setPrice(int price) {
-        this.price = price;
+    public void setPrice(int purchasingPrice) {
+        this.purchasingPrice = purchasingPrice;
     }
 
     

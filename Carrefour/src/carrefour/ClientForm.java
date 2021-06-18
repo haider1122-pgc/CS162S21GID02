@@ -13,6 +13,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**
@@ -152,15 +153,15 @@ public class ClientForm extends javax.swing.JFrame {
         jLabel29 = new javax.swing.JLabel();
         jPanel24 = new javax.swing.JPanel();
         jLabel33 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        productName = new javax.swing.JTextField();
         jLabel35 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
+        productCompany = new javax.swing.JTextField();
         jLabel36 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        productPrice = new javax.swing.JTextField();
         jLabel34 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        productSelling = new javax.swing.JTextField();
         jLabel37 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
+        productAmount = new javax.swing.JTextField();
         jPanel4 = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
         tableToAdd = new javax.swing.JLabel();
@@ -577,6 +578,11 @@ public class ClientForm extends javax.swing.JFrame {
         addButton.setText("Add");
         addButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         addButton.setOpaque(true);
+        addButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                addButtonMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -688,21 +694,21 @@ public class ClientForm extends javax.swing.JFrame {
         jLabel33.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 40, 44)));
         jPanel24.add(jLabel33);
 
-        jTextField5.setBackground(new java.awt.Color(44, 52, 58));
-        jTextField5.setFont(new java.awt.Font("Perpetua", 0, 16)); // NOI18N
-        jTextField5.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
-        jTextField5.setCaretColor(new java.awt.Color(204, 204, 204));
-        jTextField5.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        jTextField5.setDisabledTextColor(new java.awt.Color(204, 204, 204));
-        jTextField5.setPreferredSize(new java.awt.Dimension(40, 26));
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        productName.setBackground(new java.awt.Color(44, 52, 58));
+        productName.setFont(new java.awt.Font("Perpetua", 0, 16)); // NOI18N
+        productName.setForeground(new java.awt.Color(255, 255, 255));
+        productName.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        productName.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        productName.setCaretColor(new java.awt.Color(204, 204, 204));
+        productName.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        productName.setDisabledTextColor(new java.awt.Color(204, 204, 204));
+        productName.setPreferredSize(new java.awt.Dimension(40, 26));
+        productName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                productNameActionPerformed(evt);
             }
         });
-        jPanel24.add(jTextField5);
+        jPanel24.add(productName);
 
         jLabel35.setBackground(new java.awt.Color(36, 40, 44));
         jLabel35.setFont(new java.awt.Font("Perpetua", 0, 20)); // NOI18N
@@ -712,21 +718,21 @@ public class ClientForm extends javax.swing.JFrame {
         jLabel35.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 40, 44)));
         jPanel24.add(jLabel35);
 
-        jTextField7.setBackground(new java.awt.Color(44, 52, 58));
-        jTextField7.setFont(new java.awt.Font("Perpetua", 0, 16)); // NOI18N
-        jTextField7.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
-        jTextField7.setCaretColor(new java.awt.Color(204, 204, 204));
-        jTextField7.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        jTextField7.setDisabledTextColor(new java.awt.Color(204, 204, 204));
-        jTextField7.setPreferredSize(new java.awt.Dimension(40, 26));
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+        productCompany.setBackground(new java.awt.Color(44, 52, 58));
+        productCompany.setFont(new java.awt.Font("Perpetua", 0, 16)); // NOI18N
+        productCompany.setForeground(new java.awt.Color(255, 255, 255));
+        productCompany.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        productCompany.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        productCompany.setCaretColor(new java.awt.Color(204, 204, 204));
+        productCompany.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        productCompany.setDisabledTextColor(new java.awt.Color(204, 204, 204));
+        productCompany.setPreferredSize(new java.awt.Dimension(40, 26));
+        productCompany.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField7ActionPerformed(evt);
+                productCompanyActionPerformed(evt);
             }
         });
-        jPanel24.add(jTextField7);
+        jPanel24.add(productCompany);
 
         jLabel36.setBackground(new java.awt.Color(36, 40, 44));
         jLabel36.setFont(new java.awt.Font("Perpetua", 0, 20)); // NOI18N
@@ -736,21 +742,21 @@ public class ClientForm extends javax.swing.JFrame {
         jLabel36.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 40, 44)));
         jPanel24.add(jLabel36);
 
-        jTextField4.setBackground(new java.awt.Color(44, 52, 58));
-        jTextField4.setFont(new java.awt.Font("Perpetua", 0, 16)); // NOI18N
-        jTextField4.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
-        jTextField4.setCaretColor(new java.awt.Color(204, 204, 204));
-        jTextField4.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        jTextField4.setDisabledTextColor(new java.awt.Color(204, 204, 204));
-        jTextField4.setPreferredSize(new java.awt.Dimension(40, 26));
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        productPrice.setBackground(new java.awt.Color(44, 52, 58));
+        productPrice.setFont(new java.awt.Font("Perpetua", 0, 16)); // NOI18N
+        productPrice.setForeground(new java.awt.Color(255, 255, 255));
+        productPrice.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        productPrice.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        productPrice.setCaretColor(new java.awt.Color(204, 204, 204));
+        productPrice.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        productPrice.setDisabledTextColor(new java.awt.Color(204, 204, 204));
+        productPrice.setPreferredSize(new java.awt.Dimension(40, 26));
+        productPrice.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                productPriceActionPerformed(evt);
             }
         });
-        jPanel24.add(jTextField4);
+        jPanel24.add(productPrice);
 
         jLabel34.setBackground(new java.awt.Color(36, 40, 44));
         jLabel34.setFont(new java.awt.Font("Perpetua", 0, 20)); // NOI18N
@@ -760,21 +766,21 @@ public class ClientForm extends javax.swing.JFrame {
         jLabel34.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 40, 44)));
         jPanel24.add(jLabel34);
 
-        jTextField6.setBackground(new java.awt.Color(44, 52, 58));
-        jTextField6.setFont(new java.awt.Font("Perpetua", 0, 16)); // NOI18N
-        jTextField6.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
-        jTextField6.setCaretColor(new java.awt.Color(204, 204, 204));
-        jTextField6.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        jTextField6.setDisabledTextColor(new java.awt.Color(204, 204, 204));
-        jTextField6.setPreferredSize(new java.awt.Dimension(40, 26));
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        productSelling.setBackground(new java.awt.Color(44, 52, 58));
+        productSelling.setFont(new java.awt.Font("Perpetua", 0, 16)); // NOI18N
+        productSelling.setForeground(new java.awt.Color(255, 255, 255));
+        productSelling.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        productSelling.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        productSelling.setCaretColor(new java.awt.Color(204, 204, 204));
+        productSelling.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        productSelling.setDisabledTextColor(new java.awt.Color(204, 204, 204));
+        productSelling.setPreferredSize(new java.awt.Dimension(40, 26));
+        productSelling.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+                productSellingActionPerformed(evt);
             }
         });
-        jPanel24.add(jTextField6);
+        jPanel24.add(productSelling);
 
         jLabel37.setBackground(new java.awt.Color(36, 40, 44));
         jLabel37.setFont(new java.awt.Font("Perpetua", 0, 20)); // NOI18N
@@ -784,21 +790,21 @@ public class ClientForm extends javax.swing.JFrame {
         jLabel37.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(36, 40, 44)));
         jPanel24.add(jLabel37);
 
-        jTextField8.setBackground(new java.awt.Color(44, 52, 58));
-        jTextField8.setFont(new java.awt.Font("Perpetua", 0, 16)); // NOI18N
-        jTextField8.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField8.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
-        jTextField8.setCaretColor(new java.awt.Color(204, 204, 204));
-        jTextField8.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        jTextField8.setDisabledTextColor(new java.awt.Color(204, 204, 204));
-        jTextField8.setPreferredSize(new java.awt.Dimension(40, 26));
-        jTextField8.addActionListener(new java.awt.event.ActionListener() {
+        productAmount.setBackground(new java.awt.Color(44, 52, 58));
+        productAmount.setFont(new java.awt.Font("Perpetua", 0, 16)); // NOI18N
+        productAmount.setForeground(new java.awt.Color(255, 255, 255));
+        productAmount.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        productAmount.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        productAmount.setCaretColor(new java.awt.Color(204, 204, 204));
+        productAmount.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        productAmount.setDisabledTextColor(new java.awt.Color(204, 204, 204));
+        productAmount.setPreferredSize(new java.awt.Dimension(40, 26));
+        productAmount.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField8ActionPerformed(evt);
+                productAmountActionPerformed(evt);
             }
         });
-        jPanel24.add(jTextField8);
+        jPanel24.add(productAmount);
 
         addProduct.add(jPanel24, java.awt.BorderLayout.CENTER);
 
@@ -877,14 +883,14 @@ public class ClientForm extends javax.swing.JFrame {
         jTable2.setForeground(new java.awt.Color(36, 40, 44));
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Product ID", "Name", "Price", "Company", "Edit/Delete", "View Profile"
+                "Product ID", "Name", "Purchasing Price", "Seling Price", "Company", "Sale (Y/N)", "Edit/Delete", "View Profile"
             }
         ));
         jScrollPane2.setViewportView(jTable2);
@@ -1877,25 +1883,42 @@ public class ClientForm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField3ActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void productPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productPriceActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_productPriceActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void productNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productNameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_productNameActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void productSellingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productSellingActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }//GEN-LAST:event_productSellingActionPerformed
 
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+    private void productCompanyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productCompanyActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
+    }//GEN-LAST:event_productCompanyActionPerformed
 
-    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
+    private void productAmountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productAmountActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField8ActionPerformed
+    }//GEN-LAST:event_productAmountActionPerformed
+
+    private void addButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addButtonMouseClicked
+        // TODO add your handling code here:
+        if (productName.getText().equals("") || productCompany.equals("") || productAmount.equals("") || productPrice.equals("") ||  productSelling.equals("") ) {
+             
+            JOptionPane.showMessageDialog(null, "Please Enter Proper Data", "Invalid Attempt", 0);
+            
+
+        } else {
+            
+            Products p = new Products(productName.getText(),  Integer.parseInt(productAmount.getText()),  Double.parseDouble(productPrice.getText()),  Double.parseDouble(productSelling.getText()),  productCompany.getText(),  "1122",  "01");
+            
+           
+            
+        }
+        
+    }//GEN-LAST:event_addButtonMouseClicked
 
     /**
      * @param args the command line arguments
@@ -2039,11 +2062,6 @@ public class ClientForm extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
     private javax.swing.JLabel labout;
     private javax.swing.JLabel lgeneral;
     private javax.swing.JLabel lhome;
@@ -2057,6 +2075,11 @@ public class ClientForm extends javax.swing.JFrame {
     private javax.swing.JLabel nameLable1;
     private javax.swing.JLabel payLable;
     private javax.swing.JPanel paymentPanal;
+    private javax.swing.JTextField productAmount;
+    private javax.swing.JTextField productCompany;
+    private javax.swing.JTextField productName;
+    private javax.swing.JTextField productPrice;
+    private javax.swing.JTextField productSelling;
     private javax.swing.JPanel productTablePanal;
     private javax.swing.JLabel saleLable;
     private javax.swing.JPanel salePanal;
