@@ -1,5 +1,3 @@
-
-
 package carrefour;
 import java.util.Properties;
 import javax.mail.Message;
@@ -16,52 +14,13 @@ import javax.mail.internet.MimeMessage;
  */
 
 public class Email {
-    private String sender;
-    private String recever;
-    private String subject;
-    private String messageContent;
-    
-    //setters
-    
-    /**
-     * setter for sender email
-     * @param sender 
-     */
-    public void setSender(String sender) {
-        this.sender = sender;
-    }
-
-    /**
-     * setter for receiver email
-     * @param recever 
-     */
-    public void setRecever(String recever) {
-        this.recever = recever;
-    }
-
-    /**
-     * setter for subject of mail
-     * @param subject 
-     */
-    public void setSubject(String subject) {
-        this.subject = subject;
-    }
-
-    /**
-     * setter for message
-     * @param messageContent 
-     */
-    public void setMessage(String messageContent) {
-        this.messageContent = messageContent;
-    }
-    
     
     /**
      * function used to send email
      */
     public void sendEmail(){
         // Recipient's email ID needs to be mentioned.
-        String to = "2020civ180@gmail.com";
+        String to = "n.y.562448@gmail.com";
 
         // Sender's email ID needs to be mentioned
         String from = "haider441ali@gmail.com";
@@ -119,7 +78,3 @@ public class Email {
     }
     
 }
-        
-    
-
-

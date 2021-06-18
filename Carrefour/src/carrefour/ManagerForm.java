@@ -3693,8 +3693,8 @@ public class ManagerForm extends javax.swing.JFrame {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-        Shops s=new Shops(sid.getText(),(String)stype.getSelectedItem(),((String)sfloor.getSelectedItem()),Integer.parseInt(sarea.getText()),Integer.parseInt(srent.getText()),Integer.parseInt(stax.getText()));
-        c.getShop().add(s);
+//        Shops s=new Shops(sid.getText(),(String)stype.getSelectedItem(),((String)sfloor.getSelectedItem()),Integer.parseInt(sarea.getText()),Integer.parseInt(srent.getText()),Integer.parseInt(stax.getText()));
+//        c.getShop().add(s);
        //JOptionPane.showMessageDialog(null,c.getShop().size());
          
     }//GEN-LAST:event_jButton6ActionPerformed

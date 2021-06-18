@@ -106,15 +106,15 @@ public class Client extends Person {
                 }
             }
         }
-        if (check1 == true && check == true) {
-            this.clientId = clientId;
-            test1= true;
-
-        } else {
-
-            test1 = false;
-
-        }
+//        if (check1 == true && check == true) {
+//            this.clientId = clientId;
+//            test1= true;
+//
+//        } else {
+//
+//            test1 = false;
+//
+//        }
         
         
     }
@@ -169,11 +169,11 @@ public class Client extends Person {
      *
      * @return
      */
-    public boolean clientIdValidation() {
-
-        return test1 == true;
-
-    }
+//    public boolean clientIdValidation() {
+//
+//        return test1 == true;
+//
+//    }
     
     
     //Methods
