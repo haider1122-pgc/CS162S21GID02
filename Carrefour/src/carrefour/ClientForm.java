@@ -1957,9 +1957,9 @@ public class ClientForm extends javax.swing.JFrame {
         } else {
             
             Products p = new Products(productName.getText(),  Integer.parseInt(productAmount.getText()),  Double.parseDouble(productPrice.getText()),  Double.parseDouble(productSelling.getText()),  productCompany.getText(),  "1122",  "01");
-            System.out.println(p);
+           // System.out.println(p);
             clientShop.products.add(p);
-            System.out.println("2");
+           // System.out.println("2");
            
             
         }
@@ -1968,7 +1968,11 @@ public class ClientForm extends javax.swing.JFrame {
             Object [] obj = {product.getProductId(),product.getProductName(),product.getPurchasingPrice(),product.getSellingPrice(), product.getCompany()};
             table.addRow(obj);
         }
-                    
+        productName.setText("");
+        productCompany.setText("");
+        productAmount.setText("");
+        productPrice.setText("");
+        productSelling.setText("");
         
     }//GEN-LAST:event_addButtonMouseClicked
 
