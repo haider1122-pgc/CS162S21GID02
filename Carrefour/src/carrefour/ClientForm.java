@@ -44,6 +44,7 @@ public class ClientForm extends javax.swing.JFrame {
     /**
      * Creates new form ClienyForm
      */
+    Carrefour c= Carrefour.getInstance();
     private Client client = new Client();
     private final Shops clientShop = client.getShop();
     
@@ -1951,16 +1952,17 @@ public class ClientForm extends javax.swing.JFrame {
             
             Products p = new Products(productName.getText(),  Integer.parseInt(productAmount.getText()),  Double.parseDouble(productPrice.getText()),  Double.parseDouble(productSelling.getText()),  productCompany.getText(),  "1122",  "01");
             System.out.println(p);
-            clientShop.products.add(p);
+//              client.getShop().products.add(p);
+              c.getPro().add(p);
             System.out.println("2");
            
             
         }
-        table.setRowCount(0);
-        for (Products product : clientShop.products) {
-            Object [] obj = {product.getProductId(),product.getProductName(),product.getPurchasingPrice(),product.getSellingPrice(), product.getCompany()};
-            table.addRow(obj);
-        }
+//        table.setRowCount(0);
+//        for (Products product : clientShop.products) {
+//            Object [] obj = {product.getProductId(),product.getProductName(),product.getPurchasingPrice(),product.getSellingPrice(), product.getCompany()};
+//            table.addRow(obj);
+//        }
                     
         
     }//GEN-LAST:event_addButtonMouseClicked
