@@ -47,7 +47,8 @@ public class ClientForm extends javax.swing.JFrame {
     private Client client = new Client();
 
     private Shops clientShop ;
-
+   int proRow;
+   int  proCol;
  
 
     
@@ -935,6 +936,11 @@ public class ClientForm extends javax.swing.JFrame {
                 "Product ID", "Name", "Purchasing Price", "Seling Price", "Company", "Sale (Y/N)", "Edit/Delete", "View Profile"
             }
         ));
+        productsTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                productsTableMouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(productsTable);
 
         home.add(jScrollPane2, java.awt.BorderLayout.CENTER);
@@ -1979,6 +1985,18 @@ public class ClientForm extends javax.swing.JFrame {
     private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_addButtonActionPerformed
+
+    private void productsTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_productsTableMouseClicked
+        // TODO add your handling code here:
+        proRow = productsTable.getSelectedRow();
+        proCol = productsTable.getColumnCount();
+        productName.setText(table.getValueAt(proRow, 1).toString());
+        productPrice.setText(table.getValueAt(proRow, 2).toString());
+        productSelling.setText(table.getValueAt(proRow, 3).toString());
+        productCompany.setText(table.getValueAt(proRow, 4).toString());
+        
+        
+    }//GEN-LAST:event_productsTableMouseClicked
 
     /**
      * @param args the command line arguments
