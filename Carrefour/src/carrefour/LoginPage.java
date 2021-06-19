@@ -694,6 +694,11 @@ public class LoginPage extends javax.swing.JFrame {
         mainPanel.add(verificationPanel, java.awt.BorderLayout.CENTER);
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/clientObjective.png"))); // NOI18N
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel7MouseClicked(evt);
+            }
+        });
 
         signUplable5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1033,7 +1038,7 @@ public class LoginPage extends javax.swing.JFrame {
 
     private void SubmitButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SubmitButtonMouseClicked
         // TODO add your handling code here:
-        
+        int size;
         if (objectiveArea.getText().equals("") || aboutArea.getText().equals("") || setRent.getText().equals("")) {
             JOptionPane.showMessageDialog(null, "Please Enter Proper Data","Incomplete Input",1);
         } else {
@@ -1043,6 +1048,8 @@ public class LoginPage extends javax.swing.JFrame {
             if(login.addClientRequest(cRequest))
             {
                 JOptionPane.showMessageDialog(null, "Request Submitted Successfully","Request Submition",2);
+               
+               
             }
             else{
                 JOptionPane.showMessageDialog(null, "Unable to Send Request","Request Submition",0);
@@ -1050,6 +1057,10 @@ public class LoginPage extends javax.swing.JFrame {
             
         }
     }//GEN-LAST:event_SubmitButtonMouseClicked
+
+    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel7MouseClicked
 
     /**
      * @param args the command line arguments

@@ -33,10 +33,13 @@ public class ManagerForm extends javax.swing.JFrame {
 
     //creating object of carefour 
     Carrefour c= Carrefour.getInstance();
+    Login l=Login.getInstance();
+    int reqRow,reqCol;
      //for tabel output
     String shopHeader[] = new String[]{"Shop Id", "Shop Type", "Floor", "Area", "Rent", "Tax"};
     DefaultTableModel shop;
-   
+    String reqHeader[] = new String[]{"Product ID", "Name", "Purchasing Price", "Selling Price", "Company", "Amount", "Sale(Y/N)"};
+    DefaultTableModel req;
     /**
      * Creates new form ClienyForm
      */
@@ -45,6 +48,10 @@ public class ManagerForm extends javax.swing.JFrame {
         initComponents();
         shop = new DefaultTableModel(shopHeader, 0);
         shopTabel.setModel(shop);
+        
+        req = new DefaultTableModel(reqHeader, 0);
+        reqTable.setModel(req);
+        
         SearchPannel.removeAll();
         SearchPannel.repaint();
         SearchPannel.revalidate();
@@ -161,7 +168,7 @@ public class ManagerForm extends javax.swing.JFrame {
         staffTabel = new javax.swing.JTable();
         requestTablePanal = new javax.swing.JPanel();
         jScrollPane6 = new javax.swing.JScrollPane();
-        staffTabel1 = new javax.swing.JTable();
+        reqTable = new javax.swing.JTable();
         saleTablePanal = new javax.swing.JPanel();
         jScrollPane7 = new javax.swing.JScrollPane();
         staffTabel2 = new javax.swing.JTable();
@@ -242,18 +249,19 @@ public class ManagerForm extends javax.swing.JFrame {
         jLabel49 = new javax.swing.JLabel();
         requestsPanal = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
-        ename = new javax.swing.JTextField();
+        rname = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
-        ename1 = new javax.swing.JTextField();
-        ename2 = new javax.swing.JTextField();
-        ename3 = new javax.swing.JTextField();
+        remail = new javax.swing.JTextField();
+        rid = new javax.swing.JTextField();
+        rpass = new javax.swing.JTextField();
         jButton15 = new javax.swing.JButton();
         jLabel53 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jButton16 = new javax.swing.JButton();
         jLabel26 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
         shopPanal = new javax.swing.JPanel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel7 = new javax.swing.JPanel();
@@ -864,7 +872,7 @@ public class ManagerForm extends javax.swing.JFrame {
         requestTablePanal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(20, 25, 28)));
         requestTablePanal.setLayout(new java.awt.BorderLayout());
 
-        staffTabel1.setModel(new javax.swing.table.DefaultTableModel(
+        reqTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -875,7 +883,7 @@ public class ManagerForm extends javax.swing.JFrame {
                 "1st", "2nd", "3rd", "4th"
             }
         ));
-        jScrollPane6.setViewportView(staffTabel1);
+        jScrollPane6.setViewportView(reqTable);
 
         requestTablePanal.add(jScrollPane6, java.awt.BorderLayout.PAGE_START);
 
@@ -1458,10 +1466,10 @@ public class ManagerForm extends javax.swing.JFrame {
         jLabel13.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         jLabel13.setText("Name :");
 
-        ename.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        ename.addActionListener(new java.awt.event.ActionListener() {
+        rname.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        rname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                enameActionPerformed(evt);
+                rnameActionPerformed(evt);
             }
         });
 
@@ -1474,24 +1482,24 @@ public class ManagerForm extends javax.swing.JFrame {
         jLabel16.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         jLabel16.setText("Password :");
 
-        ename1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        ename1.addActionListener(new java.awt.event.ActionListener() {
+        remail.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        remail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ename1ActionPerformed(evt);
+                remailActionPerformed(evt);
             }
         });
 
-        ename2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        ename2.addActionListener(new java.awt.event.ActionListener() {
+        rid.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        rid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ename2ActionPerformed(evt);
+                ridActionPerformed(evt);
             }
         });
 
-        ename3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        ename3.addActionListener(new java.awt.event.ActionListener() {
+        rpass.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        rpass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ename3ActionPerformed(evt);
+                rpassActionPerformed(evt);
             }
         });
 
@@ -1517,75 +1525,81 @@ public class ManagerForm extends javax.swing.JFrame {
 
         jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/delete_25px.png"))); // NOI18N
 
+        jLabel19.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        jLabel19.setText("Password :");
+
         javax.swing.GroupLayout requestsPanalLayout = new javax.swing.GroupLayout(requestsPanal);
         requestsPanal.setLayout(requestsPanalLayout);
         requestsPanalLayout.setHorizontalGroup(
             requestsPanalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(requestsPanalLayout.createSequentialGroup()
-                .addGap(52, 52, 52)
+                .addGap(49, 49, 49)
                 .addGroup(requestsPanalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel16)
-                    .addComponent(jLabel15)
                     .addGroup(requestsPanalLayout.createSequentialGroup()
-                        .addGroup(requestsPanalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(requestsPanalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(requestsPanalLayout.createSequentialGroup()
-                                .addGap(20, 20, 20)
-                                .addComponent(jLabel53))
+                                .addComponent(jLabel13)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel53)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel17)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton15)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel26)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton16))
                             .addGroup(requestsPanalLayout.createSequentialGroup()
-                                .addGap(53, 53, 53)
+                                .addGap(102, 102, 102)
                                 .addGroup(requestsPanalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(ename1, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(ename, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(ename2, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(ename3, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, requestsPanalLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel17)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton15)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel26)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton16)
-                .addGap(3, 3, 3))
+                                    .addComponent(remail, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(rname, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(rid, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(rpass, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addContainerGap(40, Short.MAX_VALUE))
+                    .addGroup(requestsPanalLayout.createSequentialGroup()
+                        .addGroup(requestsPanalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel19)
+                            .addComponent(jLabel16)
+                            .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel15))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         requestsPanalLayout.setVerticalGroup(
             requestsPanalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(requestsPanalLayout.createSequentialGroup()
                 .addContainerGap()
+                .addGroup(requestsPanalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel13)
+                    .addComponent(rname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(requestsPanalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel14)
+                    .addComponent(remail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(requestsPanalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel15)
+                    .addComponent(rid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(requestsPanalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel16)
+                    .addComponent(rpass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel19)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(requestsPanalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(requestsPanalLayout.createSequentialGroup()
-                        .addGroup(requestsPanalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel13)
-                            .addComponent(ename, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(16, 16, 16)
-                        .addGroup(requestsPanalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel14)
-                            .addComponent(ename1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(requestsPanalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel15)
-                            .addComponent(ename2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(requestsPanalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel16)
-                            .addComponent(ename3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(requestsPanalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel17)
-                            .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, requestsPanalLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(67, 67, 67))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, requestsPanalLayout.createSequentialGroup()
                         .addGroup(requestsPanalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel26, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton16, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(16, 16, 16)
-                .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(67, 67, 67))
+                            .addComponent(jLabel17)
+                            .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel26))
+                        .addGap(89, 89, 89))
+                    .addGroup(requestsPanalLayout.createSequentialGroup()
+                        .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
         );
 
         homePanal.add(requestsPanal, java.awt.BorderLayout.CENTER);
@@ -3459,6 +3473,8 @@ public class ManagerForm extends javax.swing.JFrame {
 
     private void payLableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_payLableMouseClicked
         // TODO add your handling code here:
+        reqRow = reqTable.getSelectedRow();
+        reqCol = reqTable.getColumnCount();
         SearchPannel.removeAll();
         SearchPannel.repaint();
         SearchPannel.revalidate();
@@ -3485,6 +3501,15 @@ public class ManagerForm extends javax.swing.JFrame {
         addProductPanal.add(requestTablePanal);
         addProductPanal.repaint();
         addProductPanal.revalidate();
+      int  size= l.getClientRequestList().size();
+      
+        for (clientRequest r : l.getClientRequestList()) {
+            
+            
+        }
+          
+      
+        
     }//GEN-LAST:event_payLableMouseClicked
 
     private void homePanalMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homePanalMouseEntered
@@ -3497,21 +3522,21 @@ public class ManagerForm extends javax.swing.JFrame {
         lstaff.setText("Staff");
     }//GEN-LAST:event_stafflabelMouseEntered
 
-    private void enameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enameActionPerformed
+    private void rnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rnameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_enameActionPerformed
+    }//GEN-LAST:event_rnameActionPerformed
 
-    private void ename1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ename1ActionPerformed
+    private void remailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_remailActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ename1ActionPerformed
+    }//GEN-LAST:event_remailActionPerformed
 
-    private void ename2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ename2ActionPerformed
+    private void ridActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ridActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ename2ActionPerformed
+    }//GEN-LAST:event_ridActionPerformed
 
-    private void ename3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ename3ActionPerformed
+    private void rpassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rpassActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ename3ActionPerformed
+    }//GEN-LAST:event_rpassActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
         // TODO add your handling code here:
@@ -3913,8 +3938,6 @@ public class ManagerForm extends javax.swing.JFrame {
     private javax.swing.JPanel addProductPanal;
     private javax.swing.JPanel centerBackground;
     private javax.swing.JPanel clientPanal;
-    private javax.swing.JTextField ename;
-    private javax.swing.JTextField ename1;
     private javax.swing.JTextField ename10;
     private javax.swing.JTextField ename11;
     private javax.swing.JTextField ename12;
@@ -3923,7 +3946,6 @@ public class ManagerForm extends javax.swing.JFrame {
     private javax.swing.JTextField ename15;
     private javax.swing.JTextField ename16;
     private javax.swing.JTextField ename17;
-    private javax.swing.JTextField ename2;
     private javax.swing.JTextField ename21;
     private javax.swing.JTextField ename23;
     private javax.swing.JTextField ename24;
@@ -3932,7 +3954,6 @@ public class ManagerForm extends javax.swing.JFrame {
     private javax.swing.JTextField ename27;
     private javax.swing.JTextField ename28;
     private javax.swing.JTextField ename29;
-    private javax.swing.JTextField ename3;
     private javax.swing.JTextField ename30;
     private javax.swing.JTextField ename31;
     private javax.swing.JTextField ename32;
@@ -4040,6 +4061,7 @@ public class ManagerForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel3;
@@ -4177,9 +4199,14 @@ public class ManagerForm extends javax.swing.JFrame {
     private javax.swing.JLabel nameLable;
     private javax.swing.JLabel nameLable1;
     private javax.swing.JLabel payLable;
+    private javax.swing.JTextField remail;
     private javax.swing.JPanel rentPannel;
+    private javax.swing.JTable reqTable;
     private javax.swing.JPanel requestTablePanal;
     private javax.swing.JPanel requestsPanal;
+    private javax.swing.JTextField rid;
+    private javax.swing.JTextField rname;
+    private javax.swing.JTextField rpass;
     private javax.swing.JPanel saleInfo;
     private javax.swing.JLabel saleLable;
     private javax.swing.JPanel salePanal;
@@ -4198,7 +4225,6 @@ public class ManagerForm extends javax.swing.JFrame {
     private javax.swing.JTextField srent;
     private javax.swing.JPanel staffPannel;
     private javax.swing.JTable staffTabel;
-    private javax.swing.JTable staffTabel1;
     private javax.swing.JTable staffTabel2;
     private javax.swing.JPanel staffTablePanal;
     private javax.swing.JLabel stafflabel;

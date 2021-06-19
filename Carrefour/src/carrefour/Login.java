@@ -47,6 +47,10 @@ public class Login {
     
     //Setters
 
+    public Set<clientRequest> getClientRequestList() {
+        return clientRequestList;
+    }
+
     
     public void setLoginClient(String ID, String password) {
         Client c = new Client();
