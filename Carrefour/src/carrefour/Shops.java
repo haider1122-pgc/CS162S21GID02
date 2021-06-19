@@ -5,8 +5,11 @@
  */
 package carrefour;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
+import java.util.TreeSet;
 
 /**
  *
@@ -22,7 +25,7 @@ public class Shops {
     private double tax;
     
     
-    Set<Products> products = new HashSet<Products>();
+    List<Products> products = new ArrayList<Products>();
     
   
     /**
@@ -37,7 +40,7 @@ public class Shops {
      * @param rent 
      */
     public Shops(String shopNumber, String floorNumber, int rent) {
-        this.shopId = floorNumber + " " + shopNumber;
+        this.shopId = floorNumber + "-" + shopNumber;
         this.shopNumber = shopNumber;
         this.floorNumber = floorNumber;
         this.shopRent = rent;
@@ -103,7 +106,16 @@ public class Shops {
    
     
     //  Methods 
-    
+    public boolean addProduct(Products p)
+    {
+        
+        if(products.add(p))
+        {
+            return true;
+        }
+        return false;
+        
+    }
     
     
     

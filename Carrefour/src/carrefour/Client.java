@@ -20,9 +20,11 @@ public class Client extends Person {
     private int rent;
     private int gst;
     private int shopTax;
-    private int amount;
+    private int bankBalance;
     floor f = floor.getInstance();
     private Shops shop = f.getShop(shopID);
+    
+    // Making Class Singleton
     
     
     //getters
@@ -72,13 +74,19 @@ public class Client extends Person {
     }
 
     /**
-     * getter for amount
+     * getter for bankBalance
      *
      * @return
      */
     public int getAmount() {
-        return amount;
+        return bankBalance;
     }
+
+    public Shops getShop() {
+        return shop;
+    }
+    
+   
 
     //setters
     /**
@@ -87,25 +95,26 @@ public class Client extends Person {
      * @param clientId
      */
     public void setClientId(String clientId) {
-        boolean check1 = false, check = true;
-        int size = clientId.length();
-        if (clientId.charAt(0) == 'C') {
-            if (clientId.charAt(1) == 'L') {
-                if (clientId.charAt(2) == 'T') {
-                    if (clientId.charAt(3) == '-') {
-                        check1 = true;
-                    }
-                }
-            }
-        }
-        if (check1 == true) {
-            for (int i = 4; i <= size - 4; i++) {
-                if ((clientId.charAt(i) >= 'a' && clientId.charAt(i) <= 'z') || (clientId.charAt(i) >= 'A' && clientId.charAt(i) <= 'Z')) {
-                    check = false;
-                    break;
-                }
-            }
-        }
+        this.clientId = clientId;
+//        boolean check1 = false, check = true;
+//        int size = clientId.length();
+//        if (clientId.charAt(0) == 'C') {
+//            if (clientId.charAt(1) == 'L') {
+//                if (clientId.charAt(2) == 'T') {
+//                    if (clientId.charAt(3) == '-') {
+//                        check1 = true;
+//                    }
+//                }
+//            }
+//        }
+//        if (check1 == true) {
+//            for (int i = 4; i <= size - 4; i++) {
+//                if ((clientId.charAt(i) >= 'a' && clientId.charAt(i) <= 'z') || (clientId.charAt(i) >= 'A' && clientId.charAt(i) <= 'Z')) {
+//                    check = false;
+//                    break;
+//                }
+//            }
+//        }
 //        if (check1 == true && check == true) {
 //            this.clientId = clientId;
 //            test1= true;
@@ -155,13 +164,18 @@ public class Client extends Person {
         this.shopTax = shopTax;
     }
 
+    public void setShopID(String shopID) {
+        this.shopID = shopID;
+    }
+    
+
     /**
-     * setter for amount
+     * setter for bankBalance
      *
-     * @param amount
+     * @param bankBalance
      */
-    public void setAmount(int amount) {
-        this.amount = amount;
+    public void setAmount(int bankBalance) {
+        this.bankBalance = bankBalance;
     }
 
     /**

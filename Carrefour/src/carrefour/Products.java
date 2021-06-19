@@ -16,7 +16,7 @@ public class Products {
     private double purchasingPrice;
     private double sellingPrice;
     private String company;
-    private double gst;
+    private double gst ;
     
     
  /**
@@ -47,7 +47,7 @@ public class Products {
         return productName;
     }
     /**
-     * 
+     * getter for company
      * @return 
      */
     public String getCompany() {
@@ -72,16 +72,18 @@ public class Products {
  * getter for purchasingPrice
  * @return int
  */
-    public double getPrice() {
+    public double getPurchasingPrice() {
         return purchasingPrice;
     }
 /**
- * getter for company
- * @return string
+ * getter for selling price
+ * @return 
  */
-    public String getCompaney() {
-        return company;
+    public double getSellingPrice() {
+        return sellingPrice;
     }
+    
+
     /**
      * 
      * @return 

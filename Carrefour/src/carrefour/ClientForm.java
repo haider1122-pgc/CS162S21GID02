@@ -15,6 +15,24 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+//Table
+import com.lowagie.text.Document;
+import com.lowagie.text.DocumentException;
+import com.lowagie.text.Paragraph;
+import com.lowagie.text.pdf.PdfPTable;
+import com.lowagie.text.pdf.PdfWriter;
+import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Collection;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -26,9 +44,22 @@ public class ClientForm extends javax.swing.JFrame {
     /**
      * Creates new form ClienyForm
      */
+    private Client client = new Client();
+    private Shops clientShop = client.getShop();
+    
+    String Header[] = new String[]{"Product ID", "Name", "Purchasing Price", "Selling Price", "Company", "Sale(Y/N)", "Edit/Delete", "View Profile"};
+    DefaultTableModel table;
+    
     public ClientForm() {
         initComponents();
         // Remove All Panals from home panal
+        
+        client = Login.getInstance().getLoginClient();
+        
+        
+        table = new DefaultTableModel(Header, 0);
+        productsTable.setModel(table); 
+        
         homePanal.removeAll();
         homePanal.repaint();
         homePanal.revalidate();
@@ -170,7 +201,7 @@ public class ClientForm extends javax.swing.JFrame {
         home = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        productsTable = new javax.swing.JTable();
         mailPanal = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
         jLabel46 = new javax.swing.JLabel();
@@ -879,9 +910,9 @@ public class ClientForm extends javax.swing.JFrame {
         jLabel10.setText("List Of Products");
         home.add(jLabel10, java.awt.BorderLayout.PAGE_START);
 
-        jTable2.setBackground(new java.awt.Color(36, 40, 44));
-        jTable2.setForeground(new java.awt.Color(36, 40, 44));
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        productsTable.setBackground(new java.awt.Color(36, 40, 44));
+        productsTable.setForeground(new java.awt.Color(36, 40, 44));
+        productsTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null, null},
@@ -893,7 +924,7 @@ public class ClientForm extends javax.swing.JFrame {
                 "Product ID", "Name", "Purchasing Price", "Seling Price", "Company", "Sale (Y/N)", "Edit/Delete", "View Profile"
             }
         ));
-        jScrollPane2.setViewportView(jTable2);
+        jScrollPane2.setViewportView(productsTable);
 
         home.add(jScrollPane2, java.awt.BorderLayout.CENTER);
 
@@ -1905,6 +1936,8 @@ public class ClientForm extends javax.swing.JFrame {
 
     private void addButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addButtonMouseClicked
         // TODO add your handling code here:
+        
+        
         if (productName.getText().equals("") || productCompany.equals("") || productAmount.equals("") || productPrice.equals("") ||  productSelling.equals("") ) {
              
             JOptionPane.showMessageDialog(null, "Please Enter Proper Data", "Invalid Attempt", 0);
@@ -1913,10 +1946,18 @@ public class ClientForm extends javax.swing.JFrame {
         } else {
             
             Products p = new Products(productName.getText(),  Integer.parseInt(productAmount.getText()),  Double.parseDouble(productPrice.getText()),  Double.parseDouble(productSelling.getText()),  productCompany.getText(),  "1122",  "01");
-            
+            System.out.println("1");
+            client.getShop().products.add(p);
+            System.out.println("2");
            
             
         }
+        table.setRowCount(0);
+        for (Products product : clientShop.products) {
+            Object [] obj = {product.getProductId(),product.getProductName(),product.getPurchasingPrice(),product.getSellingPrice(), product.getCompany()};
+            table.addRow(obj);
+        }
+                    
         
     }//GEN-LAST:event_addButtonMouseClicked
 
@@ -1956,6 +1997,7 @@ public class ClientForm extends javax.swing.JFrame {
         });
     }
 
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Logo;
     private javax.swing.JLabel aboutLable;
@@ -2055,7 +2097,6 @@ public class ClientForm extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
     private javax.swing.JTable jTable4;
     private javax.swing.JTextArea jTextArea1;
@@ -2081,6 +2122,7 @@ public class ClientForm extends javax.swing.JFrame {
     private javax.swing.JTextField productPrice;
     private javax.swing.JTextField productSelling;
     private javax.swing.JPanel productTablePanal;
+    private javax.swing.JTable productsTable;
     private javax.swing.JLabel saleLable;
     private javax.swing.JPanel salePanal;
     private javax.swing.JPanel sideMenu;

@@ -137,6 +137,10 @@ public class floor {
     }
     public Shops getShop(String id)
     {
+        Shops s = new Shops("01","1",10000);
+        s.setShopName("NabeelShop");
+        
+        Floor1.add(s);
         for (int i = 0; i < Floor1.size(); i++) {
             if (Floor1.get(i).getShopId().equals(id)) {
                 return Floor1.get(i);
