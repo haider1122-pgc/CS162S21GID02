@@ -5,8 +5,10 @@
  */
 package carrefour;
 
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 
 /**
  *
@@ -15,6 +17,7 @@ import java.util.List;
 public class Login {
     
     private List<Client> clientList = new LinkedList<>();
+    private Set<clientRequest> clientRequestList = new HashSet<>();
     
 
     private Client loginClient = null; 

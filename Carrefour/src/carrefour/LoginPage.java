@@ -85,6 +85,17 @@ public class LoginPage extends javax.swing.JFrame {
         gmailLabke = new javax.swing.JLabel();
         verificationField = new javax.swing.JTextField();
         verifyGmail = new javax.swing.JLabel();
+        clientObjective = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        aboutUsLable5 = new javax.swing.JLabel();
+        signUplable5 = new javax.swing.JLabel();
+        exitLable5 = new javax.swing.JLabel();
+        setRent = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -450,6 +461,12 @@ public class LoginPage extends javax.swing.JFrame {
             }
         });
 
+        mSignUp1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                mSignUp1MouseClicked(evt);
+            }
+        });
+
         firstName1.setBackground(new java.awt.Color(201, 201, 201));
         firstName1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         firstName1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -672,6 +689,137 @@ public class LoginPage extends javax.swing.JFrame {
 
         mainPanel.add(verificationPanel, java.awt.BorderLayout.CENTER);
 
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/clientObjective.png"))); // NOI18N
+
+        signUplable5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                signUplable5MouseClicked(evt);
+            }
+        });
+
+        exitLable5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                exitLable5MouseClicked(evt);
+            }
+        });
+
+        setRent.setBackground(new java.awt.Color(201, 201, 201));
+        setRent.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        setRent.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        setRent.setBorder(null);
+
+        jScrollPane1.setBackground(new java.awt.Color(201, 201, 201));
+        jScrollPane1.setBorder(null);
+        jScrollPane1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+
+        jTextArea1.setBackground(new java.awt.Color(201, 201, 201));
+        jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        jTextArea1.setRows(5);
+        jTextArea1.setAutoscrolls(false);
+        jTextArea1.setBorder(null);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        jScrollPane2.setBackground(new java.awt.Color(201, 201, 201));
+        jScrollPane2.setBorder(null);
+        jScrollPane2.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+
+        jTextArea2.setBackground(new java.awt.Color(201, 201, 201));
+        jTextArea2.setColumns(20);
+        jTextArea2.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        jTextArea2.setRows(5);
+        jTextArea2.setAutoscrolls(false);
+        jTextArea2.setBorder(null);
+        jScrollPane2.setViewportView(jTextArea2);
+
+        jLabel1.setBackground(new java.awt.Color(201, 201, 201));
+        jLabel1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel1.setText("RS");
+
+        javax.swing.GroupLayout clientObjectiveLayout = new javax.swing.GroupLayout(clientObjective);
+        clientObjective.setLayout(clientObjectiveLayout);
+        clientObjectiveLayout.setHorizontalGroup(
+            clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clientObjectiveLayout.createSequentialGroup()
+                    .addContainerGap(711, Short.MAX_VALUE)
+                    .addComponent(setRent, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(225, Short.MAX_VALUE)))
+            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clientObjectiveLayout.createSequentialGroup()
+                    .addContainerGap(763, Short.MAX_VALUE)
+                    .addComponent(aboutUsLable5, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(213, Short.MAX_VALUE)))
+            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clientObjectiveLayout.createSequentialGroup()
+                    .addContainerGap(876, Short.MAX_VALUE)
+                    .addComponent(signUplable5, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(116, 116, 116)))
+            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clientObjectiveLayout.createSequentialGroup()
+                    .addContainerGap(972, Short.MAX_VALUE)
+                    .addComponent(exitLable5, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(60, 60, 60)))
+            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clientObjectiveLayout.createSequentialGroup()
+                    .addContainerGap(444, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 517, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(119, Short.MAX_VALUE)))
+            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clientObjectiveLayout.createSequentialGroup()
+                    .addContainerGap(510, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 435, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(135, 135, 135)))
+            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clientObjectiveLayout.createSequentialGroup()
+                    .addContainerGap(855, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(197, Short.MAX_VALUE)))
+        );
+        clientObjectiveLayout.setVerticalGroup(
+            clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clientObjectiveLayout.createSequentialGroup()
+                    .addContainerGap(607, Short.MAX_VALUE)
+                    .addComponent(setRent, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(136, Short.MAX_VALUE)))
+            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clientObjectiveLayout.createSequentialGroup()
+                    .addContainerGap(70, Short.MAX_VALUE)
+                    .addComponent(aboutUsLable5, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(674, Short.MAX_VALUE)))
+            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(clientObjectiveLayout.createSequentialGroup()
+                    .addGap(71, 71, 71)
+                    .addComponent(signUplable5, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(673, Short.MAX_VALUE)))
+            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(clientObjectiveLayout.createSequentialGroup()
+                    .addGap(42, 42, 42)
+                    .addComponent(exitLable5, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(704, Short.MAX_VALUE)))
+            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clientObjectiveLayout.createSequentialGroup()
+                    .addContainerGap(348, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(368, Short.MAX_VALUE)))
+            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(clientObjectiveLayout.createSequentialGroup()
+                    .addGap(453, 453, 453)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(210, Short.MAX_VALUE)))
+            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clientObjectiveLayout.createSequentialGroup()
+                    .addContainerGap(609, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(135, Short.MAX_VALUE)))
+        );
+
+        mainPanel.add(clientObjective, java.awt.BorderLayout.CENTER);
+
         getContentPane().add(mainPanel, java.awt.BorderLayout.PAGE_START);
 
         pack();
@@ -809,14 +957,53 @@ public class LoginPage extends javax.swing.JFrame {
 //            System.out.println(gmailLabke.getText());
 //            JOptionPane.showMessageDialog(null, "Invalid Attempt", "Error Sending", 0);
 //        }
-Email e = new Email();
-e.sendEmail();
+//            Email e = new Email();
+//            e.sendEmail();
         
     }//GEN-LAST:event_mSignUpMouseClicked
 
     private void loginPasswordKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_loginPasswordKeyTyped
         // TODO add your handling code here:
+        
+        
+        
+        
     }//GEN-LAST:event_loginPasswordKeyTyped
+
+    private void mSignUp1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mSignUp1MouseClicked
+        // TODO add your handling code here:
+        if () {
+            
+        } else {
+        }
+        
+        
+        mainPanel.removeAll();
+        mainPanel.repaint();
+        mainPanel.revalidate();
+        
+        mainPanel.add(clientObjective);
+        mainPanel.repaint();
+        mainPanel.revalidate();
+        
+    }//GEN-LAST:event_mSignUp1MouseClicked
+
+    private void signUplable5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signUplable5MouseClicked
+        // TODO add your handling code here:
+        mainPanel.removeAll();
+        mainPanel.repaint();
+        mainPanel.revalidate();
+        
+        mainPanel.add(loginPanal);
+        mainPanel.repaint();
+        mainPanel.revalidate();
+    }//GEN-LAST:event_signUplable5MouseClicked
+
+    private void exitLable5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitLable5MouseClicked
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "System has been closed", "EXIT", 1);
+        System.exit(0);
+    }//GEN-LAST:event_exitLable5MouseClicked
 
     /**
      * @param args the command line arguments
@@ -877,20 +1064,29 @@ e.sendEmail();
     private javax.swing.JLabel aboutUsLable2;
     private javax.swing.JLabel aboutUsLable3;
     private javax.swing.JLabel aboutUsLable4;
+    private javax.swing.JLabel aboutUsLable5;
+    private javax.swing.JPanel clientObjective;
     private javax.swing.JPanel clientPanel;
     private javax.swing.JLabel exitLable;
     private javax.swing.JLabel exitLable1;
     private javax.swing.JLabel exitLable2;
     private javax.swing.JLabel exitLable3;
     private javax.swing.JLabel exitLable4;
+    private javax.swing.JLabel exitLable5;
     private javax.swing.JTextField firstName;
     private javax.swing.JTextField firstName1;
     private javax.swing.JLabel gmailLabke;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextField lastName;
     private javax.swing.JTextField lastName1;
     private javax.swing.JTextField loginId;
@@ -904,11 +1100,13 @@ e.sendEmail();
     private javax.swing.JLabel selectClient;
     private javax.swing.JLabel selectManager;
     private javax.swing.JPanel selectOptionPanel;
+    private javax.swing.JTextField setRent;
     private javax.swing.JLabel signUplable;
     private javax.swing.JLabel signUplable1;
     private javax.swing.JLabel signUplable2;
     private javax.swing.JLabel signUplable3;
     private javax.swing.JLabel signUplable4;
+    private javax.swing.JLabel signUplable5;
     private javax.swing.JTextField verificationField;
     private javax.swing.JPanel verificationPanel;
     private javax.swing.JLabel verifyGmail;

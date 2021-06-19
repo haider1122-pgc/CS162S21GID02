@@ -10,61 +10,22 @@ package carrefour;
  * @author Haider
  */
 public class clientRequest  extends Request{
-    private String shopId;
-    private String clientType;
-    private String shopType;
+    private double rent;
+    private String aboutShop;
+
     
-    //getters
-
     /**
-     * getter for shopId
-     * @return string
+     * 
+     * @param rent 
      */
-    public String getShopId() {
-        return shopId;
+    public void setRent(double rent) {
+        this.rent = rent;
     }
-
-    /**
-     * getter for clientType
-     * @return string
-     */
-    public String getClientType() {
-        return clientType;
+/**
+ * 
+ * @param aboutShop 
+ */
+    public void setAboutShop(String aboutShop) {
+        this.aboutShop = aboutShop;
     }
-
-    /**
-     * getter for shop type
-     * @return string
-     */
-    public String getShopType() {
-        return shopType;
-    }
-    
-    //setters
-
-    /**
-     * setter for shop id
-     * @param shopId 
-     */
-    public void setShopId(String shopId) {
-        this.shopId = shopId;
-    }
-
-    /**
-     * setter for client type
-     * @param clientType 
-     */
-    public void setClientType(String clientType) {
-        this.clientType = clientType;
-    }
-
-    /**
-     * setter for shop type
-     * @param shopType 
-     */
-    public void setShopType(String shopType) {
-        this.shopType = shopType;
-    }
-    
-    
 }

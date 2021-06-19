@@ -45,7 +45,6 @@ public class ClientForm extends javax.swing.JFrame {
      * Creates new form ClienyForm
      */
     private Client client = new Client();
-
     private Shops clientShop ;
 
  
@@ -58,9 +57,7 @@ public class ClientForm extends javax.swing.JFrame {
         initComponents();
         // Remove All Panals from home panal
         
-        client = Login.getInstance().getLoginClient();
-        
-        
+        client = Login.getInstance().getLoginClient();      
         client.setShop();
         clientShop = client.getShop();
         
