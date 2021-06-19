@@ -48,7 +48,7 @@ public class Login {
     //Setters
 
     
-    void setLoginClient(String ID, String password) {
+    public void setLoginClient(String ID, String password) {
         Client c = new Client();
         c.setName("Nabeel");
         c.setAddress("Address");
@@ -66,6 +66,15 @@ public class Login {
             }
         }
         
+    }
+    
+    public boolean addClientRequest(clientRequest c)
+    {
+        if(clientRequestList.add(c))
+        {
+            return true ;
+        }
+        return false;
     }
     
     

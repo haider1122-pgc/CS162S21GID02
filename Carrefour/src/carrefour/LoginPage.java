@@ -17,6 +17,9 @@ public class LoginPage extends javax.swing.JFrame {
     /**
      * Creates new form LoginPage
      */
+    clientRequest cRequest = new clientRequest();
+    Login login = Login.getInstance();
+    
     public LoginPage() {
         initComponents();
         
@@ -92,10 +95,11 @@ public class LoginPage extends javax.swing.JFrame {
         exitLable5 = new javax.swing.JLabel();
         setRent = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        objectiveArea = new javax.swing.JTextArea();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
+        aboutArea = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
+        SubmitButton = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -712,30 +716,36 @@ public class LoginPage extends javax.swing.JFrame {
         jScrollPane1.setBorder(null);
         jScrollPane1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
 
-        jTextArea1.setBackground(new java.awt.Color(201, 201, 201));
-        jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        jTextArea1.setRows(5);
-        jTextArea1.setAutoscrolls(false);
-        jTextArea1.setBorder(null);
-        jScrollPane1.setViewportView(jTextArea1);
+        objectiveArea.setBackground(new java.awt.Color(201, 201, 201));
+        objectiveArea.setColumns(20);
+        objectiveArea.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        objectiveArea.setRows(5);
+        objectiveArea.setAutoscrolls(false);
+        objectiveArea.setBorder(null);
+        jScrollPane1.setViewportView(objectiveArea);
 
         jScrollPane2.setBackground(new java.awt.Color(201, 201, 201));
         jScrollPane2.setBorder(null);
         jScrollPane2.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
 
-        jTextArea2.setBackground(new java.awt.Color(201, 201, 201));
-        jTextArea2.setColumns(20);
-        jTextArea2.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        jTextArea2.setRows(5);
-        jTextArea2.setAutoscrolls(false);
-        jTextArea2.setBorder(null);
-        jScrollPane2.setViewportView(jTextArea2);
+        aboutArea.setBackground(new java.awt.Color(201, 201, 201));
+        aboutArea.setColumns(20);
+        aboutArea.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        aboutArea.setRows(5);
+        aboutArea.setAutoscrolls(false);
+        aboutArea.setBorder(null);
+        jScrollPane2.setViewportView(aboutArea);
 
-        jLabel1.setBackground(new java.awt.Color(201, 201, 201));
+        jLabel1.setBackground(new java.awt.Color(1, 1, 1));
         jLabel1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel1.setText("RS");
+
+        SubmitButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                SubmitButtonMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout clientObjectiveLayout = new javax.swing.GroupLayout(clientObjective);
         clientObjective.setLayout(clientObjectiveLayout);
@@ -774,9 +784,14 @@ public class LoginPage extends javax.swing.JFrame {
                     .addGap(135, 135, 135)))
             .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clientObjectiveLayout.createSequentialGroup()
-                    .addContainerGap(855, Short.MAX_VALUE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(197, Short.MAX_VALUE)))
+                    .addContainerGap(857, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(201, Short.MAX_VALUE)))
+            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clientObjectiveLayout.createSequentialGroup()
+                    .addContainerGap(844, Short.MAX_VALUE)
+                    .addComponent(SubmitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(106, 106, 106)))
         );
         clientObjectiveLayout.setVerticalGroup(
             clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -816,6 +831,11 @@ public class LoginPage extends javax.swing.JFrame {
                     .addContainerGap(609, Short.MAX_VALUE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(135, Short.MAX_VALUE)))
+            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(clientObjectiveLayout.createSequentialGroup()
+                    .addGap(667, 667, 667)
+                    .addComponent(SubmitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(83, Short.MAX_VALUE)))
         );
 
         mainPanel.add(clientObjective, java.awt.BorderLayout.CENTER);
@@ -834,10 +854,10 @@ public class LoginPage extends javax.swing.JFrame {
 
     private void loginLableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginLableMouseClicked
        
-        Login l = Login.getInstance();
-        l.setLoginClient(loginId.getText(), loginPassword.getText());
-        l.getLoginClient().getName();
-        if(l.getLoginClient() != null )
+        
+        login.setLoginClient(loginId.getText(), loginPassword.getText());
+        login.getLoginClient().getName();
+        if(login.getLoginClient() != null )
         {
             ClientForm c = new ClientForm();
             c.setVisible(true);
@@ -972,19 +992,25 @@ public class LoginPage extends javax.swing.JFrame {
 
     private void mSignUp1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mSignUp1MouseClicked
         // TODO add your handling code here:
-//        if () {
-//            
-//        } else {
-//        }
+        if (firstName1.getText().equals("") || lastName1.getText().equals("") || GmailText1.getText().equals("") || Username1.getText().equals("") || Password1.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Please Enter Proper Data","Incomplete Input",1);
+        } else {
+            cRequest.setName(firstName1.getText()+" "+lastName1.getText());
+            cRequest.setEmail(GmailText1.getText());
+            cRequest.setUsername(Username1.getText());
+            cRequest.setPassword(Password1.getText());
+            
+            mainPanel.removeAll();
+            mainPanel.repaint();
+            mainPanel.revalidate();
+        
+            mainPanel.add(clientObjective);
+            mainPanel.repaint();
+            mainPanel.revalidate();
+        }
         
         
-        mainPanel.removeAll();
-        mainPanel.repaint();
-        mainPanel.revalidate();
         
-        mainPanel.add(clientObjective);
-        mainPanel.repaint();
-        mainPanel.revalidate();
         
     }//GEN-LAST:event_mSignUp1MouseClicked
 
@@ -1004,6 +1030,26 @@ public class LoginPage extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, "System has been closed", "EXIT", 1);
         System.exit(0);
     }//GEN-LAST:event_exitLable5MouseClicked
+
+    private void SubmitButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SubmitButtonMouseClicked
+        // TODO add your handling code here:
+        
+        if (objectiveArea.getText().equals("") || aboutArea.getText().equals("") || setRent.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Please Enter Proper Data","Incomplete Input",1);
+        } else {
+            cRequest.setProspactive(objectiveArea.getText());
+            cRequest.setAboutShop(aboutArea.getText());
+            cRequest.setRent(Double.parseDouble(setRent.getText()));
+            if(login.addClientRequest(cRequest))
+            {
+                JOptionPane.showMessageDialog(null, "Request Submitted Successfully","Request Submition",2);
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "Unable to Send Request","Request Submition",0);
+            }
+            
+        }
+    }//GEN-LAST:event_SubmitButtonMouseClicked
 
     /**
      * @param args the command line arguments
@@ -1057,8 +1103,10 @@ public class LoginPage extends javax.swing.JFrame {
     private javax.swing.JTextField GmailText1;
     private javax.swing.JTextField Password;
     private javax.swing.JTextField Password1;
+    private javax.swing.JLabel SubmitButton;
     private javax.swing.JTextField Username;
     private javax.swing.JTextField Username1;
+    private javax.swing.JTextArea aboutArea;
     private javax.swing.JLabel aboutUsLable;
     private javax.swing.JLabel aboutUsLable1;
     private javax.swing.JLabel aboutUsLable2;
@@ -1085,8 +1133,6 @@ public class LoginPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextField lastName;
     private javax.swing.JTextField lastName1;
     private javax.swing.JTextField loginId;
@@ -1097,6 +1143,7 @@ public class LoginPage extends javax.swing.JFrame {
     private javax.swing.JLabel mSignUp1;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JPanel managerPanel;
+    private javax.swing.JTextArea objectiveArea;
     private javax.swing.JLabel selectClient;
     private javax.swing.JLabel selectManager;
     private javax.swing.JPanel selectOptionPanel;
