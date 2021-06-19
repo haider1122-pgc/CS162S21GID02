@@ -180,6 +180,8 @@ public class ClientForm extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         tableAdd = new javax.swing.JLabel();
         addButton = new javax.swing.JButton();
+        addButton1 = new javax.swing.JButton();
+        addButton2 = new javax.swing.JButton();
         addProductPanal = new javax.swing.JPanel();
         productTablePanal = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -503,7 +505,7 @@ public class ClientForm extends javax.swing.JFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(nameLable, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(nameLable1, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 36, Short.MAX_VALUE))
+                .addGap(0, 48, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -524,7 +526,7 @@ public class ClientForm extends javax.swing.JFrame {
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 298, Short.MAX_VALUE)
+            .addGap(0, 310, Short.MAX_VALUE)
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -560,7 +562,7 @@ public class ClientForm extends javax.swing.JFrame {
         jPanel10Layout.setHorizontalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
-                .addGap(0, 103, Short.MAX_VALUE)
+                .addGap(0, 115, Short.MAX_VALUE)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel32, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)))
@@ -613,6 +615,7 @@ public class ClientForm extends javax.swing.JFrame {
         addButton.setBackground(new java.awt.Color(44, 52, 58));
         addButton.setText("Add");
         addButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        addButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         addButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 addButtonMouseClicked(evt);
@@ -621,6 +624,36 @@ public class ClientForm extends javax.swing.JFrame {
         addButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addButtonActionPerformed(evt);
+            }
+        });
+
+        addButton1.setBackground(new java.awt.Color(44, 52, 58));
+        addButton1.setText("Edit");
+        addButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        addButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        addButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                addButton1MouseClicked(evt);
+            }
+        });
+        addButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addButton1ActionPerformed(evt);
+            }
+        });
+
+        addButton2.setBackground(new java.awt.Color(44, 52, 58));
+        addButton2.setText("Delete");
+        addButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        addButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        addButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                addButton2MouseClicked(evt);
+            }
+        });
+        addButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addButton2ActionPerformed(evt);
             }
         });
 
@@ -639,13 +672,18 @@ public class ClientForm extends javax.swing.JFrame {
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel7)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addComponent(jLabel7)
+                        .addGap(126, 126, 126)
+                        .addComponent(tableAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel6))
-                .addGap(126, 126, 126)
-                .addComponent(tableAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 126, Short.MAX_VALUE)
-                .addComponent(addButton, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15))
+                .addGap(56, 56, 56)
+                .addComponent(addButton, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(addButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(addButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -663,7 +701,10 @@ public class ClientForm extends javax.swing.JFrame {
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(addButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(addButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(addButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(addButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel6Layout.createSequentialGroup()
                                 .addComponent(jLabel6)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -933,6 +974,7 @@ public class ClientForm extends javax.swing.JFrame {
                 "Product ID", "Name", "Purchasing Price", "Seling Price", "Company", "Sale (Y/N)", "Edit/Delete", "View Profile"
             }
         ));
+        productsTable.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         productsTable.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 productsTableMouseClicked(evt);
@@ -1968,7 +2010,7 @@ public class ClientForm extends javax.swing.JFrame {
         }
         table.setRowCount(0);
         for (Products product : clientShop.products) {
-            Object [] obj = {product.getProductId(),product.getProductName(),product.getPurchasingPrice(),product.getSellingPrice(), product.getCompany()};
+            Object [] obj = {product.getProductId(),product.getProductName(),product.getPurchasingPrice(),product.getSellingPrice(), product.getCompany(),product.getQuantity()};
             table.addRow(obj);
         }
         productName.setText("");
@@ -1991,9 +2033,67 @@ public class ClientForm extends javax.swing.JFrame {
         productPrice.setText(table.getValueAt(proRow, 2).toString());
         productSelling.setText(table.getValueAt(proRow, 3).toString());
         productCompany.setText(table.getValueAt(proRow, 4).toString());
+        productAmount.setText(table.getValueAt(proRow, 5).toString());
+        
         
         
     }//GEN-LAST:event_productsTableMouseClicked
+
+    private void addButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addButton1MouseClicked
+        // TODO add your handling code here:
+        if (productName.getText().equals("") || productCompany.getText().equals("") || productAmount.getText().equals("") || productPrice.getText().equals("") ||  productSelling.getText().equals("") ) {
+             
+            JOptionPane.showMessageDialog(null, "Please Enter Proper Data", "Invalid Attempt", 0);
+            
+
+        } else {
+            
+            Products p = new Products(productName.getText(),  Integer.parseInt(productAmount.getText()),  Double.parseDouble(productPrice.getText()),  Double.parseDouble(productSelling.getText()),  productCompany.getText(),  "1122",  "01");
+          
+            //clientShop.products.add(p);
+            clientShop.products.set(proRow, p);
+          
+           
+            
+        }
+        table.setRowCount(0);
+        for (Products product : clientShop.products) {
+            Object [] obj = {product.getProductId(),product.getProductName(),product.getPurchasingPrice(),product.getSellingPrice(), product.getCompany(),product.getQuantity()};
+            table.addRow(obj);
+        }
+        productName.setText("");
+        productCompany.setText("");
+        productAmount.setText("");
+        productPrice.setText("");
+        productSelling.setText("");
+    }//GEN-LAST:event_addButton1MouseClicked
+
+    private void addButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addButton1ActionPerformed
+
+    private void addButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addButton2MouseClicked
+        // TODO add your handling code here:
+        clientShop.products.remove(proRow);
+          
+           
+            
+        
+        table.setRowCount(0);
+        for (Products product : clientShop.products) {
+            Object [] obj = {product.getProductId(),product.getProductName(),product.getPurchasingPrice(),product.getSellingPrice(), product.getCompany(),product.getQuantity()};
+            table.addRow(obj);
+        }
+        productName.setText("");
+        productCompany.setText("");
+        productAmount.setText("");
+        productPrice.setText("");
+        productSelling.setText("");
+    }//GEN-LAST:event_addButton2MouseClicked
+
+    private void addButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2032,6 +2132,8 @@ public class ClientForm extends javax.swing.JFrame {
     private javax.swing.JLabel aboutLable;
     private javax.swing.JPanel aboutPanal;
     private javax.swing.JButton addButton;
+    private javax.swing.JButton addButton1;
+    private javax.swing.JButton addButton2;
     private javax.swing.JPanel addProduct;
     private javax.swing.JPanel addProductPanal;
     private javax.swing.JPanel centerBackground;
