@@ -45,7 +45,7 @@ public class ClientForm extends javax.swing.JFrame {
      * Creates new form ClienyForm
      */
     private Client client = new Client();
-    private Shops clientShop = client.getShop();
+    private final Shops clientShop = client.getShop();
     
     String Header[] = new String[]{"Product ID", "Name", "Purchasing Price", "Selling Price", "Company", "Sale(Y/N)", "Edit/Delete", "View Profile"};
     DefaultTableModel table;
@@ -608,10 +608,14 @@ public class ClientForm extends javax.swing.JFrame {
         addButton.setBackground(new java.awt.Color(44, 52, 58));
         addButton.setText("Add");
         addButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        addButton.setOpaque(true);
         addButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 addButtonMouseClicked(evt);
+            }
+        });
+        addButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addButtonActionPerformed(evt);
             }
         });
 
@@ -661,7 +665,7 @@ public class ClientForm extends javax.swing.JFrame {
                                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(tableAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel7))))
-                        .addGap(0, 8, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -1938,7 +1942,7 @@ public class ClientForm extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         
-        if (productName.getText().equals("") || productCompany.equals("") || productAmount.equals("") || productPrice.equals("") ||  productSelling.equals("") ) {
+        if (productName.getText().equals("") || productCompany.getText().equals("") || productAmount.getText().equals("") || productPrice.getText().equals("") ||  productSelling.getText().equals("") ) {
              
             JOptionPane.showMessageDialog(null, "Please Enter Proper Data", "Invalid Attempt", 0);
             
@@ -1946,8 +1950,8 @@ public class ClientForm extends javax.swing.JFrame {
         } else {
             
             Products p = new Products(productName.getText(),  Integer.parseInt(productAmount.getText()),  Double.parseDouble(productPrice.getText()),  Double.parseDouble(productSelling.getText()),  productCompany.getText(),  "1122",  "01");
-            System.out.println("1");
-            client.getShop().products.add(p);
+            System.out.println(p);
+            clientShop.products.add(p);
             System.out.println("2");
            
             
@@ -1960,6 +1964,10 @@ public class ClientForm extends javax.swing.JFrame {
                     
         
     }//GEN-LAST:event_addButtonMouseClicked
+
+    private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1977,23 +1985,18 @@ public class ClientForm extends javax.swing.JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ClientForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ClientForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ClientForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(ClientForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
+        
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new ClientForm().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new ClientForm().setVisible(true);
         });
     }
 
