@@ -972,10 +972,10 @@ public class LoginPage extends javax.swing.JFrame {
 
     private void mSignUp1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mSignUp1MouseClicked
         // TODO add your handling code here:
-        if () {
-            
-        } else {
-        }
+//        if () {
+//            
+//        } else {
+//        }
         
         
         mainPanel.removeAll();

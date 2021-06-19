@@ -51,7 +51,7 @@ public class ClientForm extends javax.swing.JFrame {
  
 
     
-    String Header[] = new String[]{"Product ID", "Name", "Purchasing Price", "Selling Price", "Company", "Sale(Y/N)", "Edit/Delete", "View Profile"};
+    String Header[] = new String[]{"Product ID", "Name", "Purchasing Price", "Selling Price", "Company", "Amount", "Sale(Y/N)"};
     DefaultTableModel table;
     
     public ClientForm() {
