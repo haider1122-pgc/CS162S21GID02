@@ -24,7 +24,7 @@ public class Login {
     private Set<managerRequest> managerRequestsSet = new HashSet<>();
     
 
-    private Client loginClient = null; 
+    private Object loginPerson = null; 
     
     private Login(){}
     static Login l = null;
@@ -45,8 +45,8 @@ public class Login {
         return clientList;
     }
 
-    public Client getLoginClient() {
-        return loginClient;
+    public Object getLoginPerson() {
+        return loginPerson;
     }
     
     //Setters
@@ -56,7 +56,7 @@ public class Login {
     }
 
     
-    public void setLoginClient(String ID, String password) {
+    public void setLoginPerson(String ID, String password) {
         Client c = new Client();
         c.setName("Nabeel");
         c.setAddress("Address");
@@ -66,16 +66,29 @@ public class Login {
         c.setClientPassword("n1");
         c.setShopID("1-01");
         clientList.add(c);
+        clientRequest cr = new clientRequest();
+        cr.setName("Haider");
+        cr.setEmail("haider137");
+        cr.setUsername("h1");
+        cr.setPassword("h1");
+        clientRequestSet.add(cr);
+        
         for (Client client : clientList) {
             
             if ((client.getEmail().equals(ID) || client.getClientId().equalsIgnoreCase(ID)) && client.getClientPassword().equals(password)) {
-                loginClient = client;
+                loginPerson = client;
                 
+                
+            }
+        }
+        for (clientRequest request : clientRequestSet) {
+            if ((request.getEmail().equals(ID) || request.getUsername().equals(ID)) && request.getPassword().equals(password)) {
+                loginPerson = request;
             }
         }
         
     }
-    
+     
     public boolean addClientRequest(clientRequest c)
     {
         if(clientRequestSet.add(c))

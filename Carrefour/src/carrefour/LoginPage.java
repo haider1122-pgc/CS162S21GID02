@@ -89,18 +89,6 @@ public class LoginPage extends javax.swing.JFrame {
         gmailLabke = new javax.swing.JLabel();
         verificationField = new javax.swing.JTextField();
         verifyGmail = new javax.swing.JLabel();
-        clientObjective = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
-        aboutUsLable5 = new javax.swing.JLabel();
-        signUplable5 = new javax.swing.JLabel();
-        exitLable5 = new javax.swing.JLabel();
-        setRent = new javax.swing.JTextField();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        objectiveArea = new javax.swing.JTextArea();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        aboutArea = new javax.swing.JTextArea();
-        jLabel1 = new javax.swing.JLabel();
-        SubmitButton = new javax.swing.JLabel();
         managerObjective = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         aboutUsLable6 = new javax.swing.JLabel();
@@ -114,6 +102,30 @@ public class LoginPage extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         SubmitButton1 = new javax.swing.JLabel();
         mCompany = new javax.swing.JTextField();
+        clientObjective = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
+        aboutUsLable7 = new javax.swing.JLabel();
+        signUplable7 = new javax.swing.JLabel();
+        exitLable7 = new javax.swing.JLabel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        objectiveArea2 = new javax.swing.JTextArea();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        aboutArea2 = new javax.swing.JTextArea();
+        SubmitButton2 = new javax.swing.JLabel();
+        pendingRequest = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+        aboutUsLable8 = new javax.swing.JLabel();
+        signUplable8 = new javax.swing.JLabel();
+        exitLable8 = new javax.swing.JLabel();
+        availableShops = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        aboutUsLable5 = new javax.swing.JLabel();
+        signUplable5 = new javax.swing.JLabel();
+        exitLable5 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jLabel1 = new javax.swing.JLabel();
+        submitAvailable = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -634,6 +646,12 @@ public class LoginPage extends javax.swing.JFrame {
         verificationField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         verificationField.setBorder(null);
 
+        verifyGmail.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                verifyGmailMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout verificationPanelLayout = new javax.swing.GroupLayout(verificationPanel);
         verificationPanel.setLayout(verificationPanelLayout);
         verificationPanelLayout.setHorizontalGroup(
@@ -706,158 +724,6 @@ public class LoginPage extends javax.swing.JFrame {
         );
 
         mainPanel.add(verificationPanel, java.awt.BorderLayout.CENTER);
-
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/clientObjective.png"))); // NOI18N
-        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel7MouseClicked(evt);
-            }
-        });
-
-        signUplable5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                signUplable5MouseClicked(evt);
-            }
-        });
-
-        exitLable5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                exitLable5MouseClicked(evt);
-            }
-        });
-
-        setRent.setBackground(new java.awt.Color(201, 201, 201));
-        setRent.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        setRent.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        setRent.setBorder(null);
-
-        jScrollPane1.setBackground(new java.awt.Color(201, 201, 201));
-        jScrollPane1.setBorder(null);
-        jScrollPane1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-
-        objectiveArea.setBackground(new java.awt.Color(201, 201, 201));
-        objectiveArea.setColumns(20);
-        objectiveArea.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        objectiveArea.setRows(5);
-        objectiveArea.setAutoscrolls(false);
-        objectiveArea.setBorder(null);
-        jScrollPane1.setViewportView(objectiveArea);
-
-        jScrollPane2.setBackground(new java.awt.Color(201, 201, 201));
-        jScrollPane2.setBorder(null);
-        jScrollPane2.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-
-        aboutArea.setBackground(new java.awt.Color(201, 201, 201));
-        aboutArea.setColumns(20);
-        aboutArea.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        aboutArea.setRows(5);
-        aboutArea.setAutoscrolls(false);
-        aboutArea.setBorder(null);
-        jScrollPane2.setViewportView(aboutArea);
-
-        jLabel1.setBackground(new java.awt.Color(1, 1, 1));
-        jLabel1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel1.setText("RS");
-
-        SubmitButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                SubmitButtonMouseClicked(evt);
-            }
-        });
-
-        javax.swing.GroupLayout clientObjectiveLayout = new javax.swing.GroupLayout(clientObjective);
-        clientObjective.setLayout(clientObjectiveLayout);
-        clientObjectiveLayout.setHorizontalGroup(
-            clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clientObjectiveLayout.createSequentialGroup()
-                    .addContainerGap(711, Short.MAX_VALUE)
-                    .addComponent(setRent, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(225, Short.MAX_VALUE)))
-            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clientObjectiveLayout.createSequentialGroup()
-                    .addContainerGap(763, Short.MAX_VALUE)
-                    .addComponent(aboutUsLable5, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(213, Short.MAX_VALUE)))
-            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clientObjectiveLayout.createSequentialGroup()
-                    .addContainerGap(876, Short.MAX_VALUE)
-                    .addComponent(signUplable5, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(116, 116, 116)))
-            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clientObjectiveLayout.createSequentialGroup()
-                    .addContainerGap(972, Short.MAX_VALUE)
-                    .addComponent(exitLable5, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(60, 60, 60)))
-            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clientObjectiveLayout.createSequentialGroup()
-                    .addContainerGap(444, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 517, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(119, Short.MAX_VALUE)))
-            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clientObjectiveLayout.createSequentialGroup()
-                    .addContainerGap(510, Short.MAX_VALUE)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 435, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(135, 135, 135)))
-            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clientObjectiveLayout.createSequentialGroup()
-                    .addContainerGap(857, Short.MAX_VALUE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(201, Short.MAX_VALUE)))
-            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clientObjectiveLayout.createSequentialGroup()
-                    .addContainerGap(844, Short.MAX_VALUE)
-                    .addComponent(SubmitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(106, 106, 106)))
-        );
-        clientObjectiveLayout.setVerticalGroup(
-            clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clientObjectiveLayout.createSequentialGroup()
-                    .addContainerGap(607, Short.MAX_VALUE)
-                    .addComponent(setRent, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(136, Short.MAX_VALUE)))
-            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clientObjectiveLayout.createSequentialGroup()
-                    .addContainerGap(70, Short.MAX_VALUE)
-                    .addComponent(aboutUsLable5, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(674, Short.MAX_VALUE)))
-            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(clientObjectiveLayout.createSequentialGroup()
-                    .addGap(71, 71, 71)
-                    .addComponent(signUplable5, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(673, Short.MAX_VALUE)))
-            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(clientObjectiveLayout.createSequentialGroup()
-                    .addGap(42, 42, 42)
-                    .addComponent(exitLable5, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(704, Short.MAX_VALUE)))
-            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clientObjectiveLayout.createSequentialGroup()
-                    .addContainerGap(348, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(368, Short.MAX_VALUE)))
-            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(clientObjectiveLayout.createSequentialGroup()
-                    .addGap(453, 453, 453)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(210, Short.MAX_VALUE)))
-            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clientObjectiveLayout.createSequentialGroup()
-                    .addContainerGap(609, Short.MAX_VALUE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(135, Short.MAX_VALUE)))
-            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(clientObjectiveLayout.createSequentialGroup()
-                    .addGap(667, 667, 667)
-                    .addComponent(SubmitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(83, Short.MAX_VALUE)))
-        );
-
-        mainPanel.add(clientObjective, java.awt.BorderLayout.CENTER);
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/managerObjPSD.png"))); // NOI18N
 
@@ -1021,6 +887,295 @@ public class LoginPage extends javax.swing.JFrame {
 
         mainPanel.add(managerObjective, java.awt.BorderLayout.CENTER);
 
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/clientObjective.png"))); // NOI18N
+
+        signUplable7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                signUplable7MouseClicked(evt);
+            }
+        });
+
+        exitLable7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                exitLable7MouseClicked(evt);
+            }
+        });
+
+        jScrollPane5.setBackground(new java.awt.Color(201, 201, 201));
+        jScrollPane5.setBorder(null);
+        jScrollPane5.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+
+        objectiveArea2.setBackground(new java.awt.Color(201, 201, 201));
+        objectiveArea2.setColumns(20);
+        objectiveArea2.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        objectiveArea2.setRows(5);
+        objectiveArea2.setAutoscrolls(false);
+        objectiveArea2.setBorder(null);
+        jScrollPane5.setViewportView(objectiveArea2);
+
+        jScrollPane6.setBackground(new java.awt.Color(201, 201, 201));
+        jScrollPane6.setBorder(null);
+        jScrollPane6.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+
+        aboutArea2.setBackground(new java.awt.Color(201, 201, 201));
+        aboutArea2.setColumns(20);
+        aboutArea2.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        aboutArea2.setRows(5);
+        aboutArea2.setAutoscrolls(false);
+        aboutArea2.setBorder(null);
+        jScrollPane6.setViewportView(aboutArea2);
+
+        SubmitButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                SubmitButton2MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout clientObjectiveLayout = new javax.swing.GroupLayout(clientObjective);
+        clientObjective.setLayout(clientObjectiveLayout);
+        clientObjectiveLayout.setHorizontalGroup(
+            clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clientObjectiveLayout.createSequentialGroup()
+                    .addContainerGap(763, Short.MAX_VALUE)
+                    .addComponent(aboutUsLable7, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(213, Short.MAX_VALUE)))
+            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clientObjectiveLayout.createSequentialGroup()
+                    .addContainerGap(876, Short.MAX_VALUE)
+                    .addComponent(signUplable7, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(116, 116, 116)))
+            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clientObjectiveLayout.createSequentialGroup()
+                    .addContainerGap(972, Short.MAX_VALUE)
+                    .addComponent(exitLable7, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(60, 60, 60)))
+            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clientObjectiveLayout.createSequentialGroup()
+                    .addContainerGap(444, Short.MAX_VALUE)
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 517, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(119, Short.MAX_VALUE)))
+            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clientObjectiveLayout.createSequentialGroup()
+                    .addContainerGap(525, Short.MAX_VALUE)
+                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 419, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(136, 136, 136)))
+            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clientObjectiveLayout.createSequentialGroup()
+                    .addContainerGap(844, Short.MAX_VALUE)
+                    .addComponent(SubmitButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(106, 106, 106)))
+        );
+        clientObjectiveLayout.setVerticalGroup(
+            clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clientObjectiveLayout.createSequentialGroup()
+                    .addContainerGap(70, Short.MAX_VALUE)
+                    .addComponent(aboutUsLable7, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(674, Short.MAX_VALUE)))
+            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(clientObjectiveLayout.createSequentialGroup()
+                    .addGap(71, 71, 71)
+                    .addComponent(signUplable7, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(673, Short.MAX_VALUE)))
+            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(clientObjectiveLayout.createSequentialGroup()
+                    .addGap(42, 42, 42)
+                    .addComponent(exitLable7, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(704, Short.MAX_VALUE)))
+            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clientObjectiveLayout.createSequentialGroup()
+                    .addContainerGap(349, Short.MAX_VALUE)
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(371, Short.MAX_VALUE)))
+            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(clientObjectiveLayout.createSequentialGroup()
+                    .addGap(455, 455, 455)
+                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(210, Short.MAX_VALUE)))
+            .addGroup(clientObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(clientObjectiveLayout.createSequentialGroup()
+                    .addGap(667, 667, 667)
+                    .addComponent(SubmitButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(83, Short.MAX_VALUE)))
+        );
+
+        mainPanel.add(clientObjective, java.awt.BorderLayout.CENTER);
+
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/pendingRequest.png"))); // NOI18N
+
+        signUplable8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                signUplable8MouseClicked(evt);
+            }
+        });
+
+        exitLable8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                exitLable8MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pendingRequestLayout = new javax.swing.GroupLayout(pendingRequest);
+        pendingRequest.setLayout(pendingRequestLayout);
+        pendingRequestLayout.setHorizontalGroup(
+            pendingRequestLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(pendingRequestLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pendingRequestLayout.createSequentialGroup()
+                    .addContainerGap(763, Short.MAX_VALUE)
+                    .addComponent(aboutUsLable8, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(213, Short.MAX_VALUE)))
+            .addGroup(pendingRequestLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pendingRequestLayout.createSequentialGroup()
+                    .addContainerGap(876, Short.MAX_VALUE)
+                    .addComponent(signUplable8, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(116, 116, 116)))
+            .addGroup(pendingRequestLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pendingRequestLayout.createSequentialGroup()
+                    .addContainerGap(972, Short.MAX_VALUE)
+                    .addComponent(exitLable8, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(60, 60, 60)))
+        );
+        pendingRequestLayout.setVerticalGroup(
+            pendingRequestLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(pendingRequestLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pendingRequestLayout.createSequentialGroup()
+                    .addContainerGap(70, Short.MAX_VALUE)
+                    .addComponent(aboutUsLable8, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(674, Short.MAX_VALUE)))
+            .addGroup(pendingRequestLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pendingRequestLayout.createSequentialGroup()
+                    .addGap(71, 71, 71)
+                    .addComponent(signUplable8, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(673, Short.MAX_VALUE)))
+            .addGroup(pendingRequestLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pendingRequestLayout.createSequentialGroup()
+                    .addGap(42, 42, 42)
+                    .addComponent(exitLable8, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(704, Short.MAX_VALUE)))
+        );
+
+        mainPanel.add(pendingRequest, java.awt.BorderLayout.CENTER);
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/availAbleShops.png"))); // NOI18N
+
+        signUplable5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                signUplable5MouseClicked(evt);
+            }
+        });
+
+        exitLable5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                exitLable5MouseClicked(evt);
+            }
+        });
+
+        jScrollPane1.setBackground(new java.awt.Color(201, 201, 201));
+        jScrollPane1.setForeground(new java.awt.Color(1, 1, 1));
+        jScrollPane1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        jLabel1.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(1, 1, 1));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("jLabel1");
+
+        submitAvailable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                submitAvailableMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout availableShopsLayout = new javax.swing.GroupLayout(availableShops);
+        availableShops.setLayout(availableShopsLayout);
+        availableShopsLayout.setHorizontalGroup(
+            availableShopsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(availableShopsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, availableShopsLayout.createSequentialGroup()
+                    .addContainerGap(763, Short.MAX_VALUE)
+                    .addComponent(aboutUsLable5, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(213, Short.MAX_VALUE)))
+            .addGroup(availableShopsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, availableShopsLayout.createSequentialGroup()
+                    .addContainerGap(876, Short.MAX_VALUE)
+                    .addComponent(signUplable5, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(116, 116, 116)))
+            .addGroup(availableShopsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, availableShopsLayout.createSequentialGroup()
+                    .addContainerGap(972, Short.MAX_VALUE)
+                    .addComponent(exitLable5, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(60, 60, 60)))
+            .addGroup(availableShopsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, availableShopsLayout.createSequentialGroup()
+                    .addContainerGap(482, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 478, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(120, Short.MAX_VALUE)))
+            .addGroup(availableShopsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, availableShopsLayout.createSequentialGroup()
+                    .addContainerGap(727, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(128, Short.MAX_VALUE)))
+            .addGroup(availableShopsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, availableShopsLayout.createSequentialGroup()
+                    .addContainerGap(841, Short.MAX_VALUE)
+                    .addComponent(submitAvailable, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(114, 114, 114)))
+        );
+        availableShopsLayout.setVerticalGroup(
+            availableShopsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(availableShopsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, availableShopsLayout.createSequentialGroup()
+                    .addContainerGap(70, Short.MAX_VALUE)
+                    .addComponent(aboutUsLable5, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(674, Short.MAX_VALUE)))
+            .addGroup(availableShopsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(availableShopsLayout.createSequentialGroup()
+                    .addGap(71, 71, 71)
+                    .addComponent(signUplable5, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(673, Short.MAX_VALUE)))
+            .addGroup(availableShopsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(availableShopsLayout.createSequentialGroup()
+                    .addGap(42, 42, 42)
+                    .addComponent(exitLable5, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(704, Short.MAX_VALUE)))
+            .addGroup(availableShopsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, availableShopsLayout.createSequentialGroup()
+                    .addContainerGap(321, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(285, Short.MAX_VALUE)))
+            .addGroup(availableShopsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, availableShopsLayout.createSequentialGroup()
+                    .addContainerGap(551, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(199, Short.MAX_VALUE)))
+            .addGroup(availableShopsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(availableShopsLayout.createSequentialGroup()
+                    .addGap(633, 633, 633)
+                    .addComponent(submitAvailable, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(100, Short.MAX_VALUE)))
+        );
+
+        mainPanel.add(availableShops, java.awt.BorderLayout.CENTER);
+
         getContentPane().add(mainPanel, java.awt.BorderLayout.PAGE_START);
 
         pack();
@@ -1036,12 +1191,26 @@ public class LoginPage extends javax.swing.JFrame {
     private void loginLableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginLableMouseClicked
        
         
-        login.setLoginClient(loginId.getText(), loginPassword.getText());
-        login.getLoginClient().getName();
-        if(login.getLoginClient() != null )
+        login.setLoginPerson(loginId.getText(), loginPassword.getText());
+        
+        if(login.getLoginPerson() != null )
         {
-            ClientForm c = new ClientForm();
-            c.setVisible(true);
+            if (login.getLoginPerson().getClass().equals(Client.class)) {
+                ClientForm c = new ClientForm();
+                c.setVisible(true);
+            }
+            else if (login.getLoginPerson().getClass().equals(clientRequest.class)) {
+                mainPanel.removeAll();
+                mainPanel.repaint();
+                mainPanel.revalidate();
+        
+                mainPanel.add(pendingRequest);
+                mainPanel.repaint();
+                mainPanel.revalidate();
+            } else {
+                System.out.println("else");
+            }
+            
         }
         else{
             JOptionPane.showMessageDialog(null, "Invalid Attemt","Login",0);
@@ -1202,9 +1371,11 @@ public class LoginPage extends javax.swing.JFrame {
             mainPanel.repaint();
             mainPanel.revalidate();
         
-            mainPanel.add(clientObjective);
+            mainPanel.add(verificationPanel);
             mainPanel.repaint();
             mainPanel.revalidate();
+            
+           
         }
         
         
@@ -1212,8 +1383,10 @@ public class LoginPage extends javax.swing.JFrame {
         
     }//GEN-LAST:event_mSignUp1MouseClicked
 
-    private void signUplable5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signUplable5MouseClicked
+
+    private void signUplable6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signUplable6MouseClicked
         // TODO add your handling code here:
+
         mainPanel.removeAll();
         mainPanel.repaint();
         mainPanel.revalidate();
@@ -1221,43 +1394,12 @@ public class LoginPage extends javax.swing.JFrame {
         mainPanel.add(loginPanal);
         mainPanel.repaint();
         mainPanel.revalidate();
-    }//GEN-LAST:event_signUplable5MouseClicked
-
-    private void exitLable5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitLable5MouseClicked
-        // TODO add your handling code here:
-        JOptionPane.showMessageDialog(null, "System has been closed", "EXIT", 1);
-        System.exit(0);
-    }//GEN-LAST:event_exitLable5MouseClicked
-
-    private void SubmitButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SubmitButtonMouseClicked
-        // TODO add your handling code here:
-        int size;
-        if (objectiveArea.getText().equals("") || aboutArea.getText().equals("") || setRent.getText().equals("")) {
-            JOptionPane.showMessageDialog(null, "Please Enter Proper Data","Incomplete Input",1);
-        } else {
-            cRequest.setProspactive(objectiveArea.getText());
-            cRequest.setAboutShop(aboutArea.getText());
-            cRequest.setRent(Double.parseDouble(setRent.getText()));
-            if(login.addClientRequest(cRequest))
-            {
-                JOptionPane.showMessageDialog(null, "Request Submitted Successfully","Request Submition",2);
-               
-               
-            }
-            else{
-                JOptionPane.showMessageDialog(null, "Unable to Send Request","Request Submition",0);
-            }
-            
-        }
-    }//GEN-LAST:event_SubmitButtonMouseClicked
-
-
-    private void signUplable6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signUplable6MouseClicked
-        // TODO add your handling code here:
     }//GEN-LAST:event_signUplable6MouseClicked
 
     private void exitLable6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitLable6MouseClicked
         // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "System has been closed", "EXIT", 1);
+        System.exit(0);
     }//GEN-LAST:event_exitLable6MouseClicked
 
     private void SubmitButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SubmitButton1MouseClicked
@@ -1274,6 +1416,10 @@ public class LoginPage extends javax.swing.JFrame {
             if(login.addManagerRequest(mRequest))
             {
                 JOptionPane.showMessageDialog(null, "Request Submitted Successfully","Request Submition",2);
+                objectiveArea1.setText("");
+                aboutArea1.setText("");
+                mExperience.setText("");
+                mCompany.setText("");
             }
             else{
                 JOptionPane.showMessageDialog(null, "Unable to Send Request","Request Submition",0);
@@ -1282,9 +1428,101 @@ public class LoginPage extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_SubmitButton1MouseClicked
 
-    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
+    private void signUplable7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signUplable7MouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel7MouseClicked
+        
+        mainPanel.removeAll();
+        mainPanel.repaint();
+        mainPanel.revalidate();
+        
+        mainPanel.add(loginPanal);
+        mainPanel.repaint();
+        mainPanel.revalidate();
+        
+    }//GEN-LAST:event_signUplable7MouseClicked
+
+    private void exitLable7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitLable7MouseClicked
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "System has been closed", "EXIT", 1);
+        System.exit(0);
+        
+    }//GEN-LAST:event_exitLable7MouseClicked
+
+    private void SubmitButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SubmitButton2MouseClicked
+        // TODO add your handling code here:
+        if (objectiveArea2.getText().equals("") || aboutArea2.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Please Enter Proper Data","Incomplete Input",1);
+        }
+        else{
+            cRequest.setAboutShop(aboutArea2.getText());
+            cRequest.setProspactive(objectiveArea2.getText());
+            if (login.addClientRequest(cRequest)) {
+                JOptionPane.showMessageDialog(null, "Request Submitted Successfully","Request Submition",2);
+               objectiveArea2.setText("");
+               aboutArea2.setText("");
+            } else {
+                JOptionPane.showMessageDialog(null, "Unable to Send Request","Request Submition",0);
+            }
+        }
+    }//GEN-LAST:event_SubmitButton2MouseClicked
+
+    private void signUplable8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signUplable8MouseClicked
+        // TODO add your handling code here:
+        mainPanel.removeAll();
+        mainPanel.repaint();
+        mainPanel.revalidate();
+        
+        mainPanel.add(loginPanal);
+        mainPanel.repaint();
+        mainPanel.revalidate();
+        
+    }//GEN-LAST:event_signUplable8MouseClicked
+
+    private void exitLable8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitLable8MouseClicked
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "System has been closed", "EXIT", 1);
+        System.exit(0);
+    }//GEN-LAST:event_exitLable8MouseClicked
+
+    private void signUplable5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signUplable5MouseClicked
+        // TODO add your handling code here:
+        mainPanel.removeAll();
+        mainPanel.repaint();
+        mainPanel.revalidate();
+        
+        mainPanel.add(loginPanal);
+        mainPanel.repaint();
+        mainPanel.revalidate();
+        
+    }//GEN-LAST:event_signUplable5MouseClicked
+
+    private void exitLable5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitLable5MouseClicked
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "System has been closed", "EXIT", 1);
+        System.exit(0);
+    }//GEN-LAST:event_exitLable5MouseClicked
+
+    private void submitAvailableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_submitAvailableMouseClicked
+        // TODO add your handling code here:
+        mainPanel.removeAll();
+        mainPanel.repaint();
+        mainPanel.revalidate();
+        
+        mainPanel.add(clientObjective);
+        mainPanel.repaint();
+        mainPanel.revalidate();
+    }//GEN-LAST:event_submitAvailableMouseClicked
+
+    private void verifyGmailMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_verifyGmailMouseClicked
+        // TODO add your handling code here:
+        mainPanel.removeAll();
+        mainPanel.repaint();
+        mainPanel.revalidate();
+        
+        mainPanel.add(availableShops);
+        mainPanel.repaint();
+        mainPanel.revalidate();
+    }//GEN-LAST:event_verifyGmailMouseClicked
 
 
     /**
@@ -1339,12 +1577,12 @@ public class LoginPage extends javax.swing.JFrame {
     private javax.swing.JTextField GmailText1;
     private javax.swing.JTextField Password;
     private javax.swing.JTextField Password1;
-    private javax.swing.JLabel SubmitButton;
     private javax.swing.JLabel SubmitButton1;
+    private javax.swing.JLabel SubmitButton2;
     private javax.swing.JTextField Username;
     private javax.swing.JTextField Username1;
-    private javax.swing.JTextArea aboutArea;
     private javax.swing.JTextArea aboutArea1;
+    private javax.swing.JTextArea aboutArea2;
     private javax.swing.JLabel aboutUsLable;
     private javax.swing.JLabel aboutUsLable1;
     private javax.swing.JLabel aboutUsLable2;
@@ -1352,6 +1590,9 @@ public class LoginPage extends javax.swing.JFrame {
     private javax.swing.JLabel aboutUsLable4;
     private javax.swing.JLabel aboutUsLable5;
     private javax.swing.JLabel aboutUsLable6;
+    private javax.swing.JLabel aboutUsLable7;
+    private javax.swing.JLabel aboutUsLable8;
+    private javax.swing.JPanel availableShops;
     private javax.swing.JPanel clientObjective;
     private javax.swing.JPanel clientPanel;
     private javax.swing.JLabel exitLable;
@@ -1361,10 +1602,14 @@ public class LoginPage extends javax.swing.JFrame {
     private javax.swing.JLabel exitLable4;
     private javax.swing.JLabel exitLable5;
     private javax.swing.JLabel exitLable6;
+    private javax.swing.JLabel exitLable7;
+    private javax.swing.JLabel exitLable8;
     private javax.swing.JTextField firstName;
     private javax.swing.JTextField firstName1;
     private javax.swing.JLabel gmailLabke;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -1374,9 +1619,11 @@ public class LoginPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JTable jTable1;
     private javax.swing.JTextField lastName;
     private javax.swing.JTextField lastName1;
     private javax.swing.JTextField loginId;
@@ -1390,12 +1637,12 @@ public class LoginPage extends javax.swing.JFrame {
     private javax.swing.JPanel mainPanel;
     private javax.swing.JPanel managerObjective;
     private javax.swing.JPanel managerPanel;
-    private javax.swing.JTextArea objectiveArea;
     private javax.swing.JTextArea objectiveArea1;
+    private javax.swing.JTextArea objectiveArea2;
+    private javax.swing.JPanel pendingRequest;
     private javax.swing.JLabel selectClient;
     private javax.swing.JLabel selectManager;
     private javax.swing.JPanel selectOptionPanel;
-    private javax.swing.JTextField setRent;
     private javax.swing.JLabel signUplable;
     private javax.swing.JLabel signUplable1;
     private javax.swing.JLabel signUplable2;
@@ -1403,6 +1650,9 @@ public class LoginPage extends javax.swing.JFrame {
     private javax.swing.JLabel signUplable4;
     private javax.swing.JLabel signUplable5;
     private javax.swing.JLabel signUplable6;
+    private javax.swing.JLabel signUplable7;
+    private javax.swing.JLabel signUplable8;
+    private javax.swing.JLabel submitAvailable;
     private javax.swing.JTextField verificationField;
     private javax.swing.JPanel verificationPanel;
     private javax.swing.JLabel verifyGmail;

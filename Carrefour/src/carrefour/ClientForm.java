@@ -58,7 +58,7 @@ public class ClientForm extends javax.swing.JFrame {
         initComponents();
         // Remove All Panals from home panal
         
-        client = Login.getInstance().getLoginClient();      
+        client = (Client) Login.getInstance().getLoginPerson();      
         client.setShop();
         clientShop = client.getShop();
         
