@@ -103,8 +103,7 @@ public class Carrefour {
     public static void main(String[] args) {
 //        clientRequestForm c = new clientRequestForm();
  //       c.setVisible(true);
-//       Email e =new Email();
-//       e.sendEmail();
+       
         // TODO code application logic here
 //        ManagerForm m = new ManagerForm();
 //        m.setVisible(true);
@@ -118,10 +117,10 @@ public class Carrefour {
 //
 //        ClientForm cf = new ClientForm();
 //        cf.setVisible(true);
-        LoginPage l = new LoginPage();
-        l.setVisible(true);
-//        ManagerForm w = new ManagerForm();
-//        w.setVisible(true);
+//        LoginPage l = new LoginPage();
+//        l.setVisible(true);
+        ManagerForm w = new ManagerForm();
+        w.setVisible(true);
 
     }
     

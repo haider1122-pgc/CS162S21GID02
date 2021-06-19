@@ -13,10 +13,11 @@ import java.util.List;
  * @author Haider
  */
 public class floor {
-     
+    private List <Shops> groundFloor = new ArrayList<Shops>();
     private List <Shops> Floor1 = new ArrayList<Shops>();
     private List <Shops> Floor2 = new ArrayList<Shops>();
     private List <Shops> Floor3 = new ArrayList<Shops>();
+    
     
     /**
      * making the floor Class Singleton
@@ -52,6 +53,11 @@ public class floor {
             Floor3.add(s);
             return true;
         }
+        else if(s.getFloorNumber().equals( "0"))
+        {
+            groundFloor.add(s);
+            return true;
+        }
             
         return false;
     
@@ -76,6 +82,11 @@ public class floor {
             Floor3.remove(getIndex(s));
             return true;
         }
+        else if(s.getFloorNumber().equals( "0"))
+        {
+            groundFloor.remove(getIndex(s));
+            return true;
+        }
             
         return false;
         
@@ -97,6 +108,11 @@ public class floor {
         else if(s.getFloorNumber().equals( "3"))
         {
             Floor3.set(getIndex(s), s);
+            return true;
+        }
+        else if(s.getFloorNumber().equals( "0"))
+        {
+            groundFloor.set(getIndex(s), s);
             return true;
         }
             
@@ -131,16 +147,31 @@ public class floor {
                 }
             }
         }
+        else if(s.getFloorNumber().equals("0"))
+        {
+            for (int i = 0; i < groundFloor.size(); i++) {
+                if (s.getShopId().equals(groundFloor.get(i).getShopId())) {
+                    return i;
+                }
+            }
+        }
             
         
         return -1;
     }
     public Shops getShop(String id)
     {
-        Shops s = new Shops("01","1",10000);
+        Shops s = new Shops("01","1","25ft sq.","Luxury",10000,2);
         s.setShopName("NabeelShop");
         
         Floor1.add(s);
+        
+        for (int i = 0; i < groundFloor.size(); i++) {
+
+            if (groundFloor.get(i).getShopId().equals(id)) {
+                return groundFloor.get(i);
+            }
+        }
         for (int i = 0; i < Floor1.size(); i++) {
 
             if (Floor1.get(i).getShopId().equals(id)) {

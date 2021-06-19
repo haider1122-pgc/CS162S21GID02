@@ -52,7 +52,7 @@ public class Login {
     //Setters
 
     public Set<clientRequest> getClientRequestList() {
-        return clientRequestList;
+        return clientRequestSet;
     }
 
     

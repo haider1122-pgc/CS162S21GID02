@@ -2017,7 +2017,9 @@ public class ClientForm extends javax.swing.JFrame {
         productCompany.setText("");
         productAmount.setText("");
         productPrice.setText("");
+        
         productSelling.setText("");
+        
         
     }//GEN-LAST:event_addButtonMouseClicked
 
@@ -2074,7 +2076,23 @@ public class ClientForm extends javax.swing.JFrame {
 
     private void addButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addButton2MouseClicked
         // TODO add your handling code here:
-        clientShop.products.remove(proRow);
+        
+        if (productName.getText().equals("") || productCompany.getText().equals("") || productAmount.getText().equals("") || productPrice.getText().equals("") ||  productSelling.getText().equals("") ) {
+             
+            JOptionPane.showMessageDialog(null, "Please Enter Proper Data", "Invalid Attempt", 0);
+            
+
+        } else {
+            
+            Products p = new Products(productName.getText(),  Integer.parseInt(productAmount.getText()),  Double.parseDouble(productPrice.getText()),  Double.parseDouble(productSelling.getText()),  productCompany.getText(),  "1122",  "01");
+          
+            //clientShop.products.add(p);
+//          clientShop.products.set(proRow, p);
+            clientShop.products.remove(proRow);
+          
+           
+            
+        }
           
            
             

@@ -13,6 +13,9 @@ public class Manager extends Management {
 
     private String managerId;
     private String managerPassword;
+    
+    floor f = floor.getInstance();
+    
     boolean test1;
 
     //getters
@@ -92,5 +95,35 @@ public class Manager extends Management {
 
         return test1 == true;
 
+    }
+    
+    
+    //Methods
+    public boolean addShop(Shops s)
+    {
+        if(f.addShop(s))
+        {
+            return true;
+            
+        }
+        return false;
+    }
+    public boolean deleteShop(Shops s)
+    {
+        if(f.deleteShop(s))
+        {
+            return true;
+            
+        }
+        return false;
+    }
+    public boolean updateShop(Shops s)
+    {
+        if(f.updateShop(s))
+        {
+            return true;
+            
+        }
+        return false;
     }
 }
