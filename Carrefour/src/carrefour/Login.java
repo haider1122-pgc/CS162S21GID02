@@ -9,6 +9,7 @@ import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
+import java.util.TreeSet;
 
 /**
  *
@@ -17,7 +18,10 @@ import java.util.Set;
 public class Login {
     
     private List<Client> clientList = new LinkedList<>();
-    private Set<clientRequest> clientRequestList = new HashSet<>();
+    
+    
+    private Set<clientRequest> clientRequestSet = new HashSet<>();
+    private Set<managerRequest> managerRequestsSet = new HashSet<>();
     
 
     private Client loginClient = null; 
@@ -70,12 +74,19 @@ public class Login {
     
     public boolean addClientRequest(clientRequest c)
     {
-        if(clientRequestList.add(c))
+        if(clientRequestSet.add(c))
         {
             return true ;
         }
         return false;
     }
-    
+    public boolean addManagerRequest(managerRequest m)
+    {
+       
+        if (managerRequestsSet.add(m)) {
+            return true;
+        }
+        return false;
+    }
     
 }

@@ -10,7 +10,8 @@ package carrefour;
  * @author Haider
  */
 public class managerRequest extends Request {
-    private String education;
+    
+    private String aboutYourself;
     private String experience;
     private String previousWorkPlace;
     
@@ -18,14 +19,7 @@ public class managerRequest extends Request {
     
     //getter
 
-    /**
-     * getter for education
-     * @return string
-     */
-    public String getEducation() {
-        return education;
-    }
-
+    
     /**
      * getter for experience
      * @return string
@@ -45,14 +39,6 @@ public class managerRequest extends Request {
     //setters
 
     /**
-     * setter for education
-     * @param education 
-     */
-    public void setEducation(String education) {
-        this.education = education;
-    }
-
-    /**
      * setter for experiences
      * @param experience 
      */
@@ -66,6 +52,20 @@ public class managerRequest extends Request {
      */
     public void setPreviousWorkPlace(String previousWorkPlace) {
         this.previousWorkPlace = previousWorkPlace;
+    }
+
+    /**
+     * @return the aboutYourself
+     */
+    public String getAboutYourself() {
+        return aboutYourself;
+    }
+
+    /**
+     * @param aboutYourself the aboutYourself to set
+     */
+    public void setAboutYourself(String aboutYourself) {
+        this.aboutYourself = aboutYourself;
     }
     
     

@@ -18,6 +18,7 @@ public class LoginPage extends javax.swing.JFrame {
      * Creates new form LoginPage
      */
     clientRequest cRequest = new clientRequest();
+    managerRequest mRequest = new managerRequest();
     Login login = Login.getInstance();
     
     public LoginPage() {
@@ -100,6 +101,19 @@ public class LoginPage extends javax.swing.JFrame {
         aboutArea = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
         SubmitButton = new javax.swing.JLabel();
+        managerObjective = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
+        aboutUsLable6 = new javax.swing.JLabel();
+        signUplable6 = new javax.swing.JLabel();
+        exitLable6 = new javax.swing.JLabel();
+        mExperience = new javax.swing.JTextField();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        objectiveArea1 = new javax.swing.JTextArea();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        aboutArea1 = new javax.swing.JTextArea();
+        jLabel9 = new javax.swing.JLabel();
+        SubmitButton1 = new javax.swing.JLabel();
+        mCompany = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -840,6 +854,168 @@ public class LoginPage extends javax.swing.JFrame {
 
         mainPanel.add(clientObjective, java.awt.BorderLayout.CENTER);
 
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/managerObjPSD.png"))); // NOI18N
+
+        signUplable6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                signUplable6MouseClicked(evt);
+            }
+        });
+
+        exitLable6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                exitLable6MouseClicked(evt);
+            }
+        });
+
+        mExperience.setBackground(new java.awt.Color(201, 201, 201));
+        mExperience.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        mExperience.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        mExperience.setBorder(null);
+
+        jScrollPane3.setBackground(new java.awt.Color(201, 201, 201));
+        jScrollPane3.setBorder(null);
+        jScrollPane3.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+
+        objectiveArea1.setBackground(new java.awt.Color(201, 201, 201));
+        objectiveArea1.setColumns(20);
+        objectiveArea1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        objectiveArea1.setRows(5);
+        objectiveArea1.setAutoscrolls(false);
+        objectiveArea1.setBorder(null);
+        jScrollPane3.setViewportView(objectiveArea1);
+
+        jScrollPane4.setBackground(new java.awt.Color(201, 201, 201));
+        jScrollPane4.setBorder(null);
+        jScrollPane4.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+
+        aboutArea1.setBackground(new java.awt.Color(201, 201, 201));
+        aboutArea1.setColumns(20);
+        aboutArea1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        aboutArea1.setRows(5);
+        aboutArea1.setAutoscrolls(false);
+        aboutArea1.setBorder(null);
+        jScrollPane4.setViewportView(aboutArea1);
+
+        jLabel9.setBackground(new java.awt.Color(1, 1, 1));
+        jLabel9.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel9.setText("RS");
+
+        SubmitButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                SubmitButton1MouseClicked(evt);
+            }
+        });
+
+        mCompany.setBackground(new java.awt.Color(201, 201, 201));
+        mCompany.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        mCompany.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        mCompany.setBorder(null);
+
+        javax.swing.GroupLayout managerObjectiveLayout = new javax.swing.GroupLayout(managerObjective);
+        managerObjective.setLayout(managerObjectiveLayout);
+        managerObjectiveLayout.setHorizontalGroup(
+            managerObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(managerObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, managerObjectiveLayout.createSequentialGroup()
+                    .addContainerGap(711, Short.MAX_VALUE)
+                    .addComponent(mExperience, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(132, Short.MAX_VALUE)))
+            .addGroup(managerObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, managerObjectiveLayout.createSequentialGroup()
+                    .addContainerGap(763, Short.MAX_VALUE)
+                    .addComponent(aboutUsLable6, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(213, Short.MAX_VALUE)))
+            .addGroup(managerObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, managerObjectiveLayout.createSequentialGroup()
+                    .addContainerGap(876, Short.MAX_VALUE)
+                    .addComponent(signUplable6, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(116, 116, 116)))
+            .addGroup(managerObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, managerObjectiveLayout.createSequentialGroup()
+                    .addContainerGap(972, Short.MAX_VALUE)
+                    .addComponent(exitLable6, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(60, 60, 60)))
+            .addGroup(managerObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, managerObjectiveLayout.createSequentialGroup()
+                    .addContainerGap(444, Short.MAX_VALUE)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 517, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(119, Short.MAX_VALUE)))
+            .addGroup(managerObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, managerObjectiveLayout.createSequentialGroup()
+                    .addContainerGap(484, Short.MAX_VALUE)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 461, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(135, 135, 135)))
+            .addGroup(managerObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, managerObjectiveLayout.createSequentialGroup()
+                    .addContainerGap(857, Short.MAX_VALUE)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(201, Short.MAX_VALUE)))
+            .addGroup(managerObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, managerObjectiveLayout.createSequentialGroup()
+                    .addContainerGap(844, Short.MAX_VALUE)
+                    .addComponent(SubmitButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(106, 106, 106)))
+            .addGroup(managerObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, managerObjectiveLayout.createSequentialGroup()
+                    .addContainerGap(694, Short.MAX_VALUE)
+                    .addComponent(mCompany, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(130, 130, 130)))
+        );
+        managerObjectiveLayout.setVerticalGroup(
+            managerObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(managerObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, managerObjectiveLayout.createSequentialGroup()
+                    .addContainerGap(607, Short.MAX_VALUE)
+                    .addComponent(mExperience, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(136, Short.MAX_VALUE)))
+            .addGroup(managerObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, managerObjectiveLayout.createSequentialGroup()
+                    .addContainerGap(70, Short.MAX_VALUE)
+                    .addComponent(aboutUsLable6, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(674, Short.MAX_VALUE)))
+            .addGroup(managerObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(managerObjectiveLayout.createSequentialGroup()
+                    .addGap(71, 71, 71)
+                    .addComponent(signUplable6, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(673, Short.MAX_VALUE)))
+            .addGroup(managerObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(managerObjectiveLayout.createSequentialGroup()
+                    .addGap(42, 42, 42)
+                    .addComponent(exitLable6, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(704, Short.MAX_VALUE)))
+            .addGroup(managerObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, managerObjectiveLayout.createSequentialGroup()
+                    .addContainerGap(307, Short.MAX_VALUE)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(411, Short.MAX_VALUE)))
+            .addGroup(managerObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(managerObjectiveLayout.createSequentialGroup()
+                    .addGap(409, 409, 409)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(260, Short.MAX_VALUE)))
+            .addGroup(managerObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, managerObjectiveLayout.createSequentialGroup()
+                    .addContainerGap(609, Short.MAX_VALUE)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(135, Short.MAX_VALUE)))
+            .addGroup(managerObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(managerObjectiveLayout.createSequentialGroup()
+                    .addGap(667, 667, 667)
+                    .addComponent(SubmitButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(83, Short.MAX_VALUE)))
+            .addGroup(managerObjectiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, managerObjectiveLayout.createSequentialGroup()
+                    .addContainerGap(552, Short.MAX_VALUE)
+                    .addComponent(mCompany, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(198, 198, 198)))
+        );
+
+        mainPanel.add(managerObjective, java.awt.BorderLayout.CENTER);
+
         getContentPane().add(mainPanel, java.awt.BorderLayout.PAGE_START);
 
         pack();
@@ -979,6 +1155,23 @@ public class LoginPage extends javax.swing.JFrame {
 //        }
 //            Email e = new Email();
 //            e.sendEmail();
+
+        if (firstName.getText().equals("") || lastName.getText().equals("") || GmailText.getText().equals("") || Username.getText().equals("") || Password.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Please Enter Proper Data","Incomplete Input",1);
+        } else {
+            cRequest.setName(firstName.getText()+" "+lastName.getText());
+            cRequest.setEmail(GmailText.getText());
+            cRequest.setUsername(Username.getText());
+            cRequest.setPassword(Password.getText());
+            
+            mainPanel.removeAll();
+            mainPanel.repaint();
+            mainPanel.revalidate();
+        
+            mainPanel.add(managerObjective);
+            mainPanel.repaint();
+            mainPanel.revalidate();
+        }
         
     }//GEN-LAST:event_mSignUpMouseClicked
 
@@ -1051,6 +1244,36 @@ public class LoginPage extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_SubmitButtonMouseClicked
 
+    private void signUplable6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signUplable6MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_signUplable6MouseClicked
+
+    private void exitLable6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitLable6MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_exitLable6MouseClicked
+
+    private void SubmitButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SubmitButton1MouseClicked
+        // TODO add your handling code here:
+        
+        if (objectiveArea1.getText().equals("") || aboutArea1.getText().equals("") || mExperience.getText().equals("") || mCompany.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Please Enter Proper Data","Incomplete Input",1);
+        } else {
+            mRequest.setProspactive(objectiveArea1.getText());
+            mRequest.setAboutYourself(aboutArea1.getText());
+            mRequest.setExperience(mExperience.getText());
+            mRequest.setPreviousWorkPlace(mCompany.getText());
+            
+            if(login.addManagerRequest(mRequest))
+            {
+                JOptionPane.showMessageDialog(null, "Request Submitted Successfully","Request Submition",2);
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "Unable to Send Request","Request Submition",0);
+            }
+            
+        }
+    }//GEN-LAST:event_SubmitButton1MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -1104,15 +1327,18 @@ public class LoginPage extends javax.swing.JFrame {
     private javax.swing.JTextField Password;
     private javax.swing.JTextField Password1;
     private javax.swing.JLabel SubmitButton;
+    private javax.swing.JLabel SubmitButton1;
     private javax.swing.JTextField Username;
     private javax.swing.JTextField Username1;
     private javax.swing.JTextArea aboutArea;
+    private javax.swing.JTextArea aboutArea1;
     private javax.swing.JLabel aboutUsLable;
     private javax.swing.JLabel aboutUsLable1;
     private javax.swing.JLabel aboutUsLable2;
     private javax.swing.JLabel aboutUsLable3;
     private javax.swing.JLabel aboutUsLable4;
     private javax.swing.JLabel aboutUsLable5;
+    private javax.swing.JLabel aboutUsLable6;
     private javax.swing.JPanel clientObjective;
     private javax.swing.JPanel clientPanel;
     private javax.swing.JLabel exitLable;
@@ -1121,6 +1347,7 @@ public class LoginPage extends javax.swing.JFrame {
     private javax.swing.JLabel exitLable3;
     private javax.swing.JLabel exitLable4;
     private javax.swing.JLabel exitLable5;
+    private javax.swing.JLabel exitLable6;
     private javax.swing.JTextField firstName;
     private javax.swing.JTextField firstName1;
     private javax.swing.JLabel gmailLabke;
@@ -1131,19 +1358,27 @@ public class LoginPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTextField lastName;
     private javax.swing.JTextField lastName1;
     private javax.swing.JTextField loginId;
     private javax.swing.JLabel loginLable;
     private javax.swing.JPanel loginPanal;
     private javax.swing.JPasswordField loginPassword;
+    private javax.swing.JTextField mCompany;
+    private javax.swing.JTextField mExperience;
     private javax.swing.JLabel mSignUp;
     private javax.swing.JLabel mSignUp1;
     private javax.swing.JPanel mainPanel;
+    private javax.swing.JPanel managerObjective;
     private javax.swing.JPanel managerPanel;
     private javax.swing.JTextArea objectiveArea;
+    private javax.swing.JTextArea objectiveArea1;
     private javax.swing.JLabel selectClient;
     private javax.swing.JLabel selectManager;
     private javax.swing.JPanel selectOptionPanel;
@@ -1154,6 +1389,7 @@ public class LoginPage extends javax.swing.JFrame {
     private javax.swing.JLabel signUplable3;
     private javax.swing.JLabel signUplable4;
     private javax.swing.JLabel signUplable5;
+    private javax.swing.JLabel signUplable6;
     private javax.swing.JTextField verificationField;
     private javax.swing.JPanel verificationPanel;
     private javax.swing.JLabel verifyGmail;
