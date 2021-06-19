@@ -142,6 +142,7 @@ public class floor {
         
         Floor1.add(s);
         for (int i = 0; i < Floor1.size(); i++) {
+
             if (Floor1.get(i).getShopId().equals(id)) {
                 return Floor1.get(i);
             }
@@ -156,6 +157,7 @@ public class floor {
                 return Floor3.get(i);
             }
         }
+
         return null;
     }
     

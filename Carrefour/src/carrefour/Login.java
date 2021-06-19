@@ -53,7 +53,7 @@ public class Login {
         c.setGender('M');
         c.setClientId("N1");
         c.setClientPassword("n1");
-        c.setShopID("01-1");
+        c.setShopID("1-01");
         clientList.add(c);
         for (Client client : clientList) {
             

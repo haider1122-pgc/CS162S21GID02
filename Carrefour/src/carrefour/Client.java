@@ -22,9 +22,13 @@ public class Client extends Person {
     private int shopTax;
     private int bankBalance;
     floor f = floor.getInstance();
-    private Shops shop = f.getShop(shopID);
+    private Shops shop ;
+
+    public Client() {
+        
+    }
     
-    // Making Class Singleton
+    
     
     
     //getters
@@ -84,6 +88,10 @@ public class Client extends Person {
 
     public Shops getShop() {
         return shop;
+    }
+
+    public String getShopID() {
+        return shopID;
     }
     
    
@@ -178,22 +186,19 @@ public class Client extends Person {
         this.bankBalance = bankBalance;
     }
 
-    /**
-     * function to check whether the client id is valid or not
-     *
-     * @return
-     */
 //    public boolean clientIdValidation() {
 //
 //        return test1 == true;
 //
 //    }
     
-    
-    //Methods
-    
-    public void addProduct(Products p)
+    public void setShop()
     {
+        shop = f.getShop(shopID);
+    }
+
+    //Methods
+    public void addProduct(Products p) {
         shop.products.add(p);
         JOptionPane.showMessageDialog(null, "Product Added Successfully", "Adding Product", 2);
     }

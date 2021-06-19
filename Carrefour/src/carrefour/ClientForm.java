@@ -45,7 +45,7 @@ public class ClientForm extends javax.swing.JFrame {
      * Creates new form ClienyForm
      */
     private Client client = new Client();
-    private Shops clientShop = client.getShop();
+    private Shops clientShop ;
     
     String Header[] = new String[]{"Product ID", "Name", "Purchasing Price", "Selling Price", "Company", "Sale(Y/N)", "Edit/Delete", "View Profile"};
     DefaultTableModel table;
@@ -56,6 +56,9 @@ public class ClientForm extends javax.swing.JFrame {
         
         client = Login.getInstance().getLoginClient();
         
+        
+        client.setShop();
+        clientShop = client.getShop();
         
         table = new DefaultTableModel(Header, 0);
         productsTable.setModel(table); 
@@ -911,7 +914,7 @@ public class ClientForm extends javax.swing.JFrame {
         home.add(jLabel10, java.awt.BorderLayout.PAGE_START);
 
         productsTable.setBackground(new java.awt.Color(36, 40, 44));
-        productsTable.setForeground(new java.awt.Color(36, 40, 44));
+        productsTable.setForeground(new java.awt.Color(255, 255, 255));
         productsTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null},
