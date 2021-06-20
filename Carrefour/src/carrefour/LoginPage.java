@@ -10,6 +10,7 @@ import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -17,16 +18,24 @@ import javax.swing.JOptionPane;
  */
 public class LoginPage extends javax.swing.JFrame {
 
-    /**
-     * Creates new form LoginPage
-     */
     clientRequest cRequest = new clientRequest();
     managerRequest mRequest = new managerRequest();
     Login login = Login.getInstance();
     
+    String shopHeader[] = new String[]{"Shop Id", "Shop Type", "Floor", "Area", "Rent", "Tax"};
+    DefaultTableModel shop;
+    int shoRow,shoCol;
+    Manager manager = new Manager();
+    floor f=floor.getInstance();
+    /**
+     * Creates new form LoginPage
+     */
+    
+    
     public LoginPage() {
         initComponents();
-        
+        shop = new DefaultTableModel(shopHeader, 0);
+        shopTable.setModel(shop);
         mainPanel.removeAll();
         mainPanel.repaint();
         mainPanel.revalidate();
@@ -126,7 +135,7 @@ public class LoginPage extends javax.swing.JFrame {
         signUplable5 = new javax.swing.JLabel();
         exitLable5 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        shopTable = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         submitAvailable = new javax.swing.JLabel();
 
@@ -1085,7 +1094,7 @@ public class LoginPage extends javax.swing.JFrame {
         jScrollPane1.setForeground(new java.awt.Color(1, 1, 1));
         jScrollPane1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        shopTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -1096,7 +1105,7 @@ public class LoginPage extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(shopTable);
 
         jLabel1.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(1, 1, 1));
@@ -1536,6 +1545,13 @@ public class LoginPage extends javax.swing.JFrame {
         mainPanel.repaint();
         mainPanel.revalidate();
         
+        shop.setRowCount(0);
+        for (Shops s :f.availAbleShops() ) {
+            Object [] obj = {s.getShopId(),s.getShopType(),s.getFloorNumber(),s.getArea(), s.getShopRent(),s.getShopRent()};
+            shop.addRow(obj);
+        }
+       
+        
         mainPanel.add(availableShops);
         mainPanel.repaint();
         mainPanel.revalidate();
@@ -1649,7 +1665,6 @@ public class LoginPage extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTextField lastName;
     private javax.swing.JTextField lastName1;
     private javax.swing.JTextField loginId;
@@ -1669,6 +1684,7 @@ public class LoginPage extends javax.swing.JFrame {
     private javax.swing.JLabel selectClient;
     private javax.swing.JLabel selectManager;
     private javax.swing.JPanel selectOptionPanel;
+    private javax.swing.JTable shopTable;
     private javax.swing.JLabel signUplable;
     private javax.swing.JLabel signUplable1;
     private javax.swing.JLabel signUplable2;
