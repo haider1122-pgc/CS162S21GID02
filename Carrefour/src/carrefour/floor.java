@@ -33,6 +33,22 @@ public class floor {
         return f;
 
     }
+
+    public List<Shops> getGroundFloor() {
+        return groundFloor;
+    }
+
+    public List<Shops> getFloor1() {
+        return Floor1;
+    }
+
+    public List<Shops> getFloor2() {
+        return Floor2;
+    }
+
+    public List<Shops> getFloor3() {
+        return Floor3;
+    }
     
     //Methods
     
