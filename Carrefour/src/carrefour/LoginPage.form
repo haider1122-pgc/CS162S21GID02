@@ -851,8 +851,8 @@
                   <Group type="103" rootIndex="6" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace pref="589" max="32767" attributes="0"/>
-                          <Component id="verifyGmail" min="-2" pref="145" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="346" max="-2" attributes="0"/>
+                          <Component id="verifyGmail" min="-2" pref="136" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="355" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -912,9 +912,6 @@
                   <Image iconType="3" name="/Images/verificationIMG.png"/>
                 </Property>
               </Properties>
-              <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel6MouseClicked"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="aboutUsLable4">
             </Component>
@@ -1666,7 +1663,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTable" name="shopTable">
+                <Component class="javax.swing.JTable" name="jTable1">
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="4" rowCount="4">
