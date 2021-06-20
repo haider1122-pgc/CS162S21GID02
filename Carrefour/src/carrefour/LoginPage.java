@@ -5,7 +5,10 @@
  */
 package carrefour;
 
+import java.io.IOException;
 import java.util.Random;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -1457,9 +1460,20 @@ public class LoginPage extends javax.swing.JFrame {
             cRequest.setAboutShop(aboutArea2.getText());
             cRequest.setProspactive(objectiveArea2.getText());
             if (login.addClientRequest(cRequest)) {
-                JOptionPane.showMessageDialog(null, "Request Submitted Successfully","Request Submition",2);
-               objectiveArea2.setText("");
-               aboutArea2.setText("");
+                try {
+                    if (login.saveClientRequest()) {
+                        JOptionPane.showMessageDialog(null, "Request Submitted Successfully","Request Submition",2);
+                        objectiveArea2.setText("");
+                        aboutArea2.setText("");
+                    }
+                    else{
+                        JOptionPane.showMessageDialog(null, "Unable to save data","Saving Data...",0);
+                    }
+                } catch (IOException ex) {
+                    JOptionPane.showMessageDialog(null, "Unable to save data","Saving Data...",0);
+
+                }
+                
             } else {
                 JOptionPane.showMessageDialog(null, "Unable to Send Request","Request Submition",0);
             }

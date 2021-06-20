@@ -192,6 +192,41 @@ public class floor {
         return null;
     }
     
+    public List<Shops> availAbleShops()
+    {
+        List<Shops> available = new ArrayList<>();
+        for (Shops shops : groundFloor) {
+            if (shops.isAvailableStatus()) {
+                available.add(shops);
+                
+            }
+            
+        }
+        for (Shops shops : Floor1) {
+            if (shops.isAvailableStatus()) {
+                available.add(shops);
+                
+            }
+            
+        }
+        for (Shops shops : Floor2) {
+            if (shops.isAvailableStatus()) {
+                available.add(shops);
+                
+            }
+            
+        }
+        for (Shops shops : Floor3) {
+            if (shops.isAvailableStatus()) {
+                available.add(shops);
+                
+            }
+            
+        }
+        
+        return available;
+    }
+    
     
      
 }
