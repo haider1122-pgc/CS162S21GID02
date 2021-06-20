@@ -3529,7 +3529,7 @@ public class ManagerForm extends javax.swing.JFrame {
         shop.setRowCount(0);
         shop.setRowCount(0);
         for (Shops s :f.availAbleShops() ) {
-            Object [] obj = {s.getShopId(),s.getShopType(),s.getFloorNumber(),s.getArea(), s.getShopRent(),s.getShopRent()};
+            Object [] obj = {s.getShopId(),s.getShopType(),s.getFloorNumber(),s.getArea(), s.getShopRent(),s.getTax()};
             shop.addRow(obj);
         }
         sNumber.setText("");
