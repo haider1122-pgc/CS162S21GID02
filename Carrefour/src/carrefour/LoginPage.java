@@ -23,7 +23,7 @@ public class LoginPage extends javax.swing.JFrame {
     clientRequest cRequest = new clientRequest();
     managerRequest mRequest = new managerRequest();
     Login login = Login.getInstance();
-    
+    String random = null;
     public LoginPage() {
         initComponents();
         
@@ -89,9 +89,9 @@ public class LoginPage extends javax.swing.JFrame {
         aboutUsLable4 = new javax.swing.JLabel();
         signUplable4 = new javax.swing.JLabel();
         exitLable4 = new javax.swing.JLabel();
-        gmailLabke = new javax.swing.JLabel();
         verificationField = new javax.swing.JTextField();
         verifyGmail = new javax.swing.JLabel();
+        gmailField = new javax.swing.JTextField();
         managerObjective = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         aboutUsLable6 = new javax.swing.JLabel();
@@ -129,7 +129,7 @@ public class LoginPage extends javax.swing.JFrame {
         jTable1 = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         submitAvailable = new javax.swing.JLabel();
-        clickHere = new javax.swing.JLabel();
+        selectedShop = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -646,18 +646,29 @@ public class LoginPage extends javax.swing.JFrame {
             }
         });
 
-        gmailLabke.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-
         verificationField.setBackground(new java.awt.Color(201, 201, 201));
         verificationField.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         verificationField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         verificationField.setBorder(null);
+        verificationField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                verificationFieldActionPerformed(evt);
+            }
+        });
 
         verifyGmail.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 verifyGmailMouseClicked(evt);
             }
         });
+
+        gmailField.setBackground(new java.awt.Color(201, 201, 201));
+        gmailField.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        gmailField.setForeground(new java.awt.Color(1, 1, 1));
+        gmailField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        gmailField.setText("haghsas");
+        gmailField.setBorder(null);
+        gmailField.setDisabledTextColor(new java.awt.Color(1, 1, 1));
 
         javax.swing.GroupLayout verificationPanelLayout = new javax.swing.GroupLayout(verificationPanel);
         verificationPanel.setLayout(verificationPanelLayout);
@@ -686,14 +697,14 @@ public class LoginPage extends javax.swing.JFrame {
                     .addGap(60, 60, 60)))
             .addGroup(verificationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, verificationPanelLayout.createSequentialGroup()
-                    .addContainerGap(505, Short.MAX_VALUE)
-                    .addComponent(gmailLabke, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(232, 232, 232)))
-            .addGroup(verificationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, verificationPanelLayout.createSequentialGroup()
                     .addContainerGap(589, Short.MAX_VALUE)
                     .addComponent(verifyGmail, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(355, 355, 355)))
+            .addGroup(verificationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, verificationPanelLayout.createSequentialGroup()
+                    .addContainerGap(517, Short.MAX_VALUE)
+                    .addComponent(gmailField, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(255, 255, 255)))
         );
         verificationPanelLayout.setVerticalGroup(
             verificationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -720,14 +731,14 @@ public class LoginPage extends javax.swing.JFrame {
                     .addContainerGap(704, Short.MAX_VALUE)))
             .addGroup(verificationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(verificationPanelLayout.createSequentialGroup()
-                    .addGap(369, 369, 369)
-                    .addComponent(gmailLabke, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(386, Short.MAX_VALUE)))
-            .addGroup(verificationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(verificationPanelLayout.createSequentialGroup()
                     .addGap(520, 520, 520)
                     .addComponent(verifyGmail, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(228, Short.MAX_VALUE)))
+            .addGroup(verificationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, verificationPanelLayout.createSequentialGroup()
+                    .addContainerGap(370, Short.MAX_VALUE)
+                    .addComponent(gmailField, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(385, 385, 385)))
         );
 
         mainPanel.add(verificationPanel, java.awt.BorderLayout.CENTER);
@@ -1086,6 +1097,9 @@ public class LoginPage extends javax.swing.JFrame {
         jScrollPane1.setForeground(new java.awt.Color(1, 1, 1));
         jScrollPane1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
 
+        jTable1.setAutoCreateRowSorter(true);
+        jTable1.setBackground(new java.awt.Color(201, 201, 201));
+        jTable1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -1114,10 +1128,13 @@ public class LoginPage extends javax.swing.JFrame {
             }
         });
 
-        clickHere.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
-        clickHere.setForeground(new java.awt.Color(1, 1, 1));
-        clickHere.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        clickHere.setText("jLabel1");
+        selectedShop.setBackground(new java.awt.Color(201, 201, 201));
+        selectedShop.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        selectedShop.setForeground(new java.awt.Color(1, 1, 1));
+        selectedShop.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        selectedShop.setText("haghsas");
+        selectedShop.setBorder(null);
+        selectedShop.setDisabledTextColor(new java.awt.Color(1, 1, 1));
 
         javax.swing.GroupLayout availableShopsLayout = new javax.swing.GroupLayout(availableShops);
         availableShops.setLayout(availableShopsLayout);
@@ -1155,10 +1172,10 @@ public class LoginPage extends javax.swing.JFrame {
                     .addComponent(submitAvailable, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(114, 114, 114)))
             .addGroup(availableShopsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, availableShopsLayout.createSequentialGroup()
-                    .addContainerGap(492, Short.MAX_VALUE)
-                    .addComponent(clickHere, javax.swing.GroupLayout.PREFERRED_SIZE, 454, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(134, 134, 134)))
+                .addGroup(availableShopsLayout.createSequentialGroup()
+                    .addGap(729, 729, 729)
+                    .addComponent(selectedShop, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(118, Short.MAX_VALUE)))
         );
         availableShopsLayout.setVerticalGroup(
             availableShopsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1194,10 +1211,10 @@ public class LoginPage extends javax.swing.JFrame {
                     .addComponent(submitAvailable, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(100, Short.MAX_VALUE)))
             .addGroup(availableShopsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, availableShopsLayout.createSequentialGroup()
-                    .addContainerGap(319, Short.MAX_VALUE)
-                    .addComponent(clickHere, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(422, 422, 422)))
+                .addGroup(availableShopsLayout.createSequentialGroup()
+                    .addGap(551, 551, 551)
+                    .addComponent(selectedShop, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(194, Short.MAX_VALUE)))
         );
 
         mainPanel.add(availableShops, java.awt.BorderLayout.CENTER);
@@ -1388,18 +1405,34 @@ public class LoginPage extends javax.swing.JFrame {
         if (firstName1.getText().equals("") || lastName1.getText().equals("") || GmailText1.getText().equals("") || Username1.getText().equals("") || Password1.getText().equals("")) {
             JOptionPane.showMessageDialog(null, "Please Enter Proper Data","Incomplete Input",1);
         } else {
-            cRequest.setName(firstName1.getText()+" "+lastName1.getText());
-            cRequest.setEmail(GmailText1.getText());
-            cRequest.setUsername(Username1.getText());
-            cRequest.setPassword(Password1.getText());
+            random = rendomCode();
+            String message = "Hey "+firstName1.getText()+"...!\n\nYour email verification code is:\n"
+                    + "G-" +random+"\nEnter this code to verify your account\nThanks for choosing Carrefour!";
             
-            mainPanel.removeAll();
-            mainPanel.repaint();
-            mainPanel.revalidate();
-        
-            mainPanel.add(verificationPanel);
-            mainPanel.repaint();
-            mainPanel.revalidate();
+            Email e = new Email( "carrefour.uet@gmail.com", "carrefour123@", GmailText1.getText() , "Carrefour - The Multinational Corporation\nVerify Your Email", message);
+            JOptionPane.showMessageDialog(null, "Please wait for a while and press OK to continue...", "Email Sending", 1);
+            if(e.sendEmail())
+            {
+                cRequest.setName(firstName1.getText()+" "+lastName1.getText());
+                cRequest.setEmail(GmailText1.getText());
+                cRequest.setUsername(Username1.getText());
+                cRequest.setPassword(Password1.getText());
+            
+                mainPanel.removeAll();
+                mainPanel.repaint();
+                mainPanel.revalidate();
+                gmailField.setText(hideGmail(GmailText1.getText()));
+                gmailField.setEnabled(false);
+                
+                mainPanel.add(verificationPanel);
+                mainPanel.repaint();
+                mainPanel.revalidate();
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "Email not sending...","Email Sending error",1);
+
+            }
+            
             
            
         }
@@ -1488,6 +1521,7 @@ public class LoginPage extends javax.swing.JFrame {
                         JOptionPane.showMessageDialog(null, "Request Submitted Successfully","Request Submition",2);
                         objectiveArea2.setText("");
                         aboutArea2.setText("");
+                        cRequest = new clientRequest();
                     }
                     else{
                         JOptionPane.showMessageDialog(null, "Unable to save data","Saving Data...",0);
@@ -1571,6 +1605,10 @@ public class LoginPage extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_mSignUp1MouseEntered
 
+    private void verificationFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verificationFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_verificationFieldActionPerformed
+
 
     /**
      * @param args the command line arguments
@@ -1618,6 +1656,24 @@ public class LoginPage extends javax.swing.JFrame {
         return String.format("%06d", number);
        
     }
+    public String hideGmail(String Gmail)
+    {
+        String hide = "";
+//        hide = Character.toString(Gmail.charAt(0));
+        for (int i = 0; i < 4; i++) {
+          
+            hide = hide +Character.toString(Gmail.charAt(i));
+        }
+        for (int i = 4; i < Gmail.length()-4; i++) {
+           
+            hide = hide +"*";
+        }
+        for (int i = Gmail.length()-4; i < Gmail.length(); i++) {
+           
+            hide = hide + Character.toString(Gmail.charAt(i));
+        }
+        return hide;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField GmailText;
@@ -1640,7 +1696,6 @@ public class LoginPage extends javax.swing.JFrame {
     private javax.swing.JLabel aboutUsLable7;
     private javax.swing.JLabel aboutUsLable8;
     private javax.swing.JPanel availableShops;
-    private javax.swing.JLabel clickHere;
     private javax.swing.JPanel clientObjective;
     private javax.swing.JPanel clientPanel;
     private javax.swing.JLabel exitLable;
@@ -1654,7 +1709,7 @@ public class LoginPage extends javax.swing.JFrame {
     private javax.swing.JLabel exitLable8;
     private javax.swing.JTextField firstName;
     private javax.swing.JTextField firstName1;
-    private javax.swing.JLabel gmailLabke;
+    private javax.swing.JTextField gmailField;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1691,6 +1746,7 @@ public class LoginPage extends javax.swing.JFrame {
     private javax.swing.JLabel selectClient;
     private javax.swing.JLabel selectManager;
     private javax.swing.JPanel selectOptionPanel;
+    private javax.swing.JTextField selectedShop;
     private javax.swing.JLabel signUplable;
     private javax.swing.JLabel signUplable1;
     private javax.swing.JLabel signUplable2;
