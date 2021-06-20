@@ -3484,6 +3484,7 @@ public class ManagerForm extends javax.swing.JFrame {
         
         stax.setText(shop.getValueAt(shoRow, 5).toString());
         
+        
     }//GEN-LAST:event_shopTabelMouseClicked
 
     private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
@@ -3529,7 +3530,7 @@ public class ManagerForm extends javax.swing.JFrame {
         shop.setRowCount(0);
         shop.setRowCount(0);
         for (Shops s :f.availAbleShops() ) {
-            Object [] obj = {s.getShopId(),s.getShopType(),s.getFloorNumber(),s.getArea(), s.getShopRent(),s.getShopRent()};
+            Object [] obj = {s.getShopId(),s.getShopType(),s.getFloorNumber(),s.getArea(), s.getShopRent(),s.getTax()};
             shop.addRow(obj);
         }
         sNumber.setText("");
