@@ -9,6 +9,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 import java.util.HashSet;
@@ -30,8 +31,8 @@ public class Login {
     
     private Set<clientRequest> clientRequestSet = new HashSet<>();
     private Set<managerRequest> managerRequestsSet = new HashSet<>();
-    private Set<workers> workers = new HashSet<>();
-    private Queue<Cashier> cashiers = new LinkedList<Cashier>();
+    private List<workers> workers = new ArrayList<>();
+    private List<Cashier> cashiers = new LinkedList<Cashier>();
     
     
 
@@ -60,7 +61,7 @@ public class Login {
         return loginPerson;
     }
 
-    public Queue<Cashier> getCashiers() {
+    public List<Cashier> getCashiers() {
         return cashiers;
     }
 
@@ -68,7 +69,7 @@ public class Login {
         return clientRequestSet;
     }
 
-    public Set<workers> getWorkers() {
+    public List<workers> getWorkers() {
         return workers;
     }
     
@@ -81,11 +82,11 @@ public class Login {
         return clientRequestSet;
     }
 
-    public void setCashiers(Queue<Cashier> cashiers) {
+    public void setCashiers (List<Cashier> cashiers) {
         this.cashiers = cashiers;
     }
 
-    public void setWorkers(Set<workers> workers) {
+    public void setWorkers(List<workers> workers) {
         this.workers = workers;
     }
     
@@ -183,5 +184,70 @@ public class Login {
         save.close();
         
     }
+    
+    // Staff Methods
+    
+    public boolean addWorkers(workers w)
+    {
+        if(workers.add(w))
+        {
+            return true;
+        }
+        return false;
+    }
+    public boolean editWorkets(workers w)
+    {
+        int index = 0;
+        for (workers worker : workers) {
+            if(worker.getStaffId().equals(w.getStaffId()))
+            {
+                workers.set(index, w);
+                return true;
+            }
+            index++;
+        }
+        return false;
+        
+    }
+    public boolean deleteWorker(workers w)
+    {
+        if (workers.remove(w)) {
+            return true;
+        }
+        return false;
+    }
+    
+    
+    public boolean addCashier(Cashier w)
+    {
+        if(cashiers.add(w))
+        {
+            return true;
+        }
+        return false;
+    }
+    public boolean editCashier(Cashier w)
+    {
+        int index = 0;
+        for (Cashier worker : cashiers) {
+            if(worker.getStaffId().equals(w.getStaffId()) && worker.getLogin().equals(w.getLogin()))
+            {
+                cashiers.set(index, w);
+                return true;
+            }
+            index++;
+        }
+        return false;
+        
+    }
+    public boolean deletCashier(Cashier w)
+    {
+        if (cashiers.remove(w)) {
+            return true;
+        }
+        return false;
+    }
+    
+    
     
 }

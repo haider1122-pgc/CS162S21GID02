@@ -5,6 +5,7 @@
  */
 package carrefour;
 
+import java.util.List;
 import java.util.Queue;
 import java.util.Set;
 
@@ -19,8 +20,7 @@ public class Manager extends Management {
     
     floor f = floor.getInstance();
     Login login = Login.getInstance();
-    Set workers = login.getWorkers();
-    Queue Cashiers = login.getCashiers();
+   
     
     boolean test1;
 
@@ -137,22 +137,60 @@ public class Manager extends Management {
     //Staff Methods
     
     
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings({"unchecked", "unchecked"})
     public boolean addWorkers(workers w)
     {
-        
-        if (workers.add(w)) {
+        if (login.addWorkers(w)) {
             return true;
         }
         return false;
+    }
+    public boolean editWorkers(workers w)
+    {
+        if(login.editWorkets(w))
+        {
+            return true;
+        }
+        return false;
+        
+    }
+    public boolean deleteWorkers(workers w)
+    {
+        if(login.deleteWorker(w))
+        {
+            return true;
+        }
+        return false;
+        
     }
     
-    @SuppressWarnings("unchecked")
-    public boolean addCashier(Cashier c)
+    
+    
+    public boolean addCashier(Cashier w)
     {
-        if (Cashiers.add(c)) {
+        if (login.addCashier(w)) {
             return true;
         }
         return false;
     }
+    public boolean editCashier(Cashier w)
+    {
+        if(login.editCashier(w))
+        {
+            return true;
+        }
+        return false;
+        
+    }
+    public boolean deleteCashier(Cashier w)
+    {
+        if(login.deletCashier(w))
+        {
+            return true;
+        }
+        return false;
+        
+    }
+    
+    
 }
