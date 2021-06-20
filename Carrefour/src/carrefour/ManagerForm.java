@@ -3897,17 +3897,19 @@ public class ManagerForm extends javax.swing.JFrame {
             Shops s = new Shops(sNumber.getText(), sfloor.getSelectedItem().toString(), sarea.getText(), stype.getSelectedItem().toString(), Double.parseDouble(srent.getText()), Double.parseDouble(stax.getText()));
             if(manager.addShop(s))
             {
-                JOptionPane.showMessageDialog(null, "Shop Added Successfully ", "Adding shop", 3);
+                //JOptionPane.showMessageDialog(null, "Shop Added Successfully ", "Adding shop", 3);
             }
             else{
                 JOptionPane.showMessageDialog(null, "Invalid Attempt", "Invalid Shop", 0);
             }
         }
         shop.setRowCount(0);
-//        for (Shops s : ) {
-//            Object [] obj = {s.getShopId(),s.getShopType(),s.getFloorNumber(),s.getArea(), s.getShopRent(),s.getShopRent()};
-//            shop.addRow(obj);
-//        }
+
+        for (Shops s :f.availAbleShops() ) {
+            Object [] obj = {s.getShopId(),s.getShopType(),s.getFloorNumber(),s.getArea(), s.getShopRent(),s.getShopRent()};
+            shop.addRow(obj);
+        }
+
         sNumber.setText("");
         srent.setText("");
         sarea.setText("");

@@ -120,7 +120,7 @@ public class Carrefour {
         LoginPage l = new LoginPage();
         l.setVisible(true);
 //        ManagerForm w = new ManagerForm();
-//        w.setVisible(true);
+//       w.setVisible(true);
 
     }
     
