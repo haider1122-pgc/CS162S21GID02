@@ -7,6 +7,9 @@ package carrefour;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
@@ -93,8 +96,10 @@ public class Login {
      
     public boolean addClientRequest(clientRequest c)
     {
+        System.out.println("1");
         if(clientRequestSet.add(c))
         {
+            System.out.println("1");
             return true ;
         }
         return false;
@@ -118,8 +123,15 @@ public class Login {
             save.write(request.getEmail()+ "," );
             save.write(request.getUsername()+ "," );
             save.write(request.getPassword()+ "," );
-            save.write(request.getShopID()+ "," );
-            save.write(request.getJoiningDate().toString()+ "\n" );
+            save.write(/*request.getShopID()*/"ID"+ "," );
+            System.out.println("3");
+            
+            request.setJoiningDate(new Date());
+            DateFormat dateFormat = new SimpleDateFormat("dd-MMMM-yyyy");
+            String date = dateFormat.format(request.getJoiningDate());
+            
+            save.write(date+ "\n" );
+            System.out.println("3");
             saveParagraph("D:\\2nd Semester\\OOP\\OOP Final Project\\CS162S21GID02\\Carrefour\\Database\\Requests\\ClientRequest\\about", request.getUsername()+".txt", request.getAboutShop());
             saveParagraph("D:\\2nd Semester\\OOP\\OOP Final Project\\CS162S21GID02\\Carrefour\\Database\\Requests\\ClientRequest\\objective", request.getUsername()+".txt", request.getProspactive());
             flag = true;
