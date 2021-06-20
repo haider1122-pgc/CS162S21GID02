@@ -5,6 +5,9 @@
  */
 package carrefour;
 
+import java.util.Queue;
+import java.util.Set;
+
 /**
  *
  * @author Haider
@@ -15,6 +18,9 @@ public class Manager extends Management {
     private String managerPassword;
     
     floor f = floor.getInstance();
+    Login login = Login.getInstance();
+    Set workers = login.getWorkers();
+    Queue Cashiers = login.getCashiers();
     
     boolean test1;
 
@@ -123,6 +129,29 @@ public class Manager extends Management {
         {
             return true;
             
+        }
+        return false;
+    }
+    
+    
+    //Staff Methods
+    
+    
+    @SuppressWarnings("unchecked")
+    public boolean addWorkers(workers w)
+    {
+        
+        if (workers.add(w)) {
+            return true;
+        }
+        return false;
+    }
+    
+    @SuppressWarnings("unchecked")
+    public boolean addCashier(Cashier c)
+    {
+        if (Cashiers.add(c)) {
+            return true;
         }
         return false;
     }
