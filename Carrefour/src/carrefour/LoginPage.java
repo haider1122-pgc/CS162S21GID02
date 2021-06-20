@@ -1554,10 +1554,7 @@ public class LoginPage extends javax.swing.JFrame {
         // TODO add your handling code here:
         mainPanel.removeAll();
         mainPanel.repaint();
-        mainPanel.revalidate();   
-        availableShops.add(clickHere);
-        availableShops.repaint();
-        availableShops.revalidate();
+        mainPanel.revalidate(); 
         
         mainPanel.add(availableShops);
         mainPanel.repaint();

@@ -81,27 +81,32 @@ public class floor {
 
     public boolean deleteShop(Shops s)
     {
-        if(s.getFloorNumber().equals( "1"))
+        int index = getIndex(s);
+        if(index != -1)
         {
-            Floor1.remove(getIndex(s));
+            if(s.getFloorNumber().equals( "1"))
+            {
+            Floor1.remove(index);
             return true;
 
-        }
-        else if(s.getFloorNumber().equals( "2"))
-        {
-            Floor2.remove(getIndex(s));
+            }
+            else if(s.getFloorNumber().equals( "2"))
+            {
+            Floor2.remove(index);
             return true;
            
-        }
-        else if(s.getFloorNumber().equals( "3"))
-        {
-            Floor3.remove(getIndex(s));
+            }
+            else if(s.getFloorNumber().equals( "3"))
+            {
+            Floor3.remove(index);
             return true;
-        }
-        else if(s.getFloorNumber().equals( "0"))
-        {
-            groundFloor.remove(getIndex(s));
+            }
+            else if(s.getFloorNumber().equals( "0"))
+            {
+            groundFloor.remove(index);
             return true;
+            }
+        
         }
             
         return false;
@@ -109,29 +114,33 @@ public class floor {
     }
     public boolean updateShop(Shops s)
     {
+        int index = getIndex(s);
+        
+        if (index != -1)
+        {
         if(s.getFloorNumber().equals("1"))
         {
-            Floor1.set(getIndex(s), s);
+            Floor1.set(index, s);
             return true;
 
         }
         else if(s.getFloorNumber().equals( "2"))
         {
-            Floor2.set(getIndex(s), s);
+            Floor2.set(index, s);
             return true;
            
         }
         else if(s.getFloorNumber().equals( "3"))
         {
-            Floor3.set(getIndex(s), s);
+            Floor3.set(index, s);
             return true;
         }
         else if(s.getFloorNumber().equals( "0"))
         {
-            groundFloor.set(getIndex(s), s);
+            groundFloor.set(index, s);
             return true;
         }
-            
+        }
         return false;
     }
     
