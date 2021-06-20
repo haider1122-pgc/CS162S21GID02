@@ -3904,7 +3904,8 @@ public class ManagerForm extends javax.swing.JFrame {
             }
         }
         shop.setRowCount(0);
-        for (Shops s : ) {
+        shop.setRowCount(0);
+        for (Shops s :f.availAbleShops() ) {
             Object [] obj = {s.getShopId(),s.getShopType(),s.getFloorNumber(),s.getArea(), s.getShopRent(),s.getShopRent()};
             shop.addRow(obj);
         }
@@ -3912,6 +3913,7 @@ public class ManagerForm extends javax.swing.JFrame {
         srent.setText("");
         sarea.setText("");
         stax.setText("");
+        
         
         
         
