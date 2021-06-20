@@ -503,6 +503,9 @@ public class LoginPage extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 mSignUp1MouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                mSignUp1MouseEntered(evt);
+            }
         });
 
         firstName1.setBackground(new java.awt.Color(201, 201, 201));
@@ -1552,6 +1555,10 @@ public class LoginPage extends javax.swing.JFrame {
         // TODO add your handling code here:
         
     }//GEN-LAST:event_jLabel6MouseClicked
+
+    private void mSignUp1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mSignUp1MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mSignUp1MouseEntered
 
 
     /**
