@@ -119,8 +119,8 @@ public class Carrefour {
 //        cf.setVisible(true);
         LoginPage l = new LoginPage();
         l.setVisible(true);
-        ManagerForm w = new ManagerForm();
-        w.setVisible(true);
+//        ManagerForm w = new ManagerForm();
+//        w.setVisible(true);
 
     }
     
