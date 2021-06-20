@@ -10,7 +10,7 @@ package carrefour;
  * @author Haider
  */
 public class clientRequest  extends Request{
-    private double ShopID;
+    private String ShopID;
     private String aboutShop;
 
     
@@ -26,14 +26,14 @@ public class clientRequest  extends Request{
     /**
      * @return the ShopID
      */
-    public double getShopID() {
+    public String getShopID() {
         return ShopID;
     }
 
     /**
      * @param ShopID the ShopID to set
      */
-    public void setShopID(double ShopID) {
+    public void setShopID(String ShopID) {
         this.ShopID = ShopID;
     }
 
