@@ -134,9 +134,9 @@ public class LoginPage extends javax.swing.JFrame {
         exitLable5 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         shopTabel = new javax.swing.JTable();
-        sNumber = new javax.swing.JLabel();
         submitAvailable = new javax.swing.JLabel();
         selectedShop = new javax.swing.JTextField();
+        doubleclick = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -685,8 +685,8 @@ public class LoginPage extends javax.swing.JFrame {
             .addGroup(verificationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, verificationPanelLayout.createSequentialGroup()
                     .addContainerGap(535, Short.MAX_VALUE)
-                    .addComponent(verificationField, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(240, Short.MAX_VALUE)))
+                    .addComponent(verificationField, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(272, Short.MAX_VALUE)))
             .addGroup(verificationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, verificationPanelLayout.createSequentialGroup()
                     .addContainerGap(763, Short.MAX_VALUE)
@@ -1129,11 +1129,6 @@ public class LoginPage extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(shopTabel);
 
-        sNumber.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
-        sNumber.setForeground(new java.awt.Color(1, 1, 1));
-        sNumber.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        sNumber.setText("jLabel1");
-
         submitAvailable.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 submitAvailableMouseClicked(evt);
@@ -1144,9 +1139,26 @@ public class LoginPage extends javax.swing.JFrame {
         selectedShop.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         selectedShop.setForeground(new java.awt.Color(1, 1, 1));
         selectedShop.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        selectedShop.setText("haghsas");
         selectedShop.setBorder(null);
         selectedShop.setDisabledTextColor(new java.awt.Color(1, 1, 1));
+
+        doubleclick.setBackground(new java.awt.Color(201, 201, 201));
+        doubleclick.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        doubleclick.setForeground(new java.awt.Color(1, 1, 1));
+        doubleclick.setText("Double Dlick here to View Shops");
+        doubleclick.setBorder(null);
+        doubleclick.setFocusPainted(false);
+        doubleclick.setOpaque(true);
+        doubleclick.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                doubleclickMouseClicked(evt);
+            }
+        });
+        doubleclick.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                doubleclickActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout availableShopsLayout = new javax.swing.GroupLayout(availableShops);
         availableShops.setLayout(availableShopsLayout);
@@ -1175,11 +1187,6 @@ public class LoginPage extends javax.swing.JFrame {
                     .addContainerGap(120, Short.MAX_VALUE)))
             .addGroup(availableShopsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, availableShopsLayout.createSequentialGroup()
-                    .addContainerGap(727, Short.MAX_VALUE)
-                    .addComponent(sNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(128, Short.MAX_VALUE)))
-            .addGroup(availableShopsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, availableShopsLayout.createSequentialGroup()
                     .addContainerGap(841, Short.MAX_VALUE)
                     .addComponent(submitAvailable, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(114, 114, 114)))
@@ -1188,6 +1195,11 @@ public class LoginPage extends javax.swing.JFrame {
                     .addGap(729, 729, 729)
                     .addComponent(selectedShop, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(118, Short.MAX_VALUE)))
+            .addGroup(availableShopsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, availableShopsLayout.createSequentialGroup()
+                    .addContainerGap(482, Short.MAX_VALUE)
+                    .addComponent(doubleclick, javax.swing.GroupLayout.PREFERRED_SIZE, 477, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(121, Short.MAX_VALUE)))
         );
         availableShopsLayout.setVerticalGroup(
             availableShopsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1213,11 +1225,6 @@ public class LoginPage extends javax.swing.JFrame {
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(285, Short.MAX_VALUE)))
             .addGroup(availableShopsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, availableShopsLayout.createSequentialGroup()
-                    .addContainerGap(551, Short.MAX_VALUE)
-                    .addComponent(sNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(199, Short.MAX_VALUE)))
-            .addGroup(availableShopsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(availableShopsLayout.createSequentialGroup()
                     .addGap(633, 633, 633)
                     .addComponent(submitAvailable, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1227,6 +1234,11 @@ public class LoginPage extends javax.swing.JFrame {
                     .addGap(551, 551, 551)
                     .addComponent(selectedShop, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(194, Short.MAX_VALUE)))
+            .addGroup(availableShopsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, availableShopsLayout.createSequentialGroup()
+                    .addContainerGap(318, Short.MAX_VALUE)
+                    .addComponent(doubleclick, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(423, Short.MAX_VALUE)))
         );
 
         mainPanel.add(availableShops, java.awt.BorderLayout.CENTER);
@@ -1607,6 +1619,13 @@ public class LoginPage extends javax.swing.JFrame {
         mainPanel.repaint();
         mainPanel.revalidate(); 
         
+        availableShops.add(doubleclick);
+        availableShops.remove(jScrollPane1);
+        availableShops.repaint();
+        availableShops.revalidate();
+        shopTabel.setEnabled(false);
+        jScrollPane1.setEnabled(false);
+        
         mainPanel.add(availableShops);
         mainPanel.repaint();
         mainPanel.revalidate();
@@ -1631,8 +1650,22 @@ public class LoginPage extends javax.swing.JFrame {
         // TODO add your handling code here:
         shoRow = shopTabel.getSelectedRow();
         shoCol = shopTabel.getColumnCount();
-        sNumber.setText(shop.getValueAt(shoRow, 0).toString());  
+        selectedShop.setText(shop.getValueAt(shoRow, 0).toString());
+        selectedShop.setEnabled(false);
     }//GEN-LAST:event_shopTabelMouseClicked
+
+    private void doubleclickActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_doubleclickActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_doubleclickActionPerformed
+
+    private void doubleclickMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_doubleclickMouseClicked
+        // TODO add your handling code here:
+        availableShops.remove(doubleclick);
+        availableShops.add(jScrollPane1);
+        availableShops.repaint();
+        availableShops.revalidate();
+        
+    }//GEN-LAST:event_doubleclickMouseClicked
 
 
     /**
@@ -1723,6 +1756,7 @@ public class LoginPage extends javax.swing.JFrame {
     private javax.swing.JPanel availableShops;
     private javax.swing.JPanel clientObjective;
     private javax.swing.JPanel clientPanel;
+    private javax.swing.JButton doubleclick;
     private javax.swing.JLabel exitLable;
     private javax.swing.JLabel exitLable1;
     private javax.swing.JLabel exitLable2;
@@ -1766,7 +1800,6 @@ public class LoginPage extends javax.swing.JFrame {
     private javax.swing.JTextArea objectiveArea1;
     private javax.swing.JTextArea objectiveArea2;
     private javax.swing.JPanel pendingRequest;
-    private javax.swing.JLabel sNumber;
     private javax.swing.JLabel selectClient;
     private javax.swing.JLabel selectManager;
     private javax.swing.JPanel selectOptionPanel;
