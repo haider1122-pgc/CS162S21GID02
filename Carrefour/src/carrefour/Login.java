@@ -9,10 +9,13 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Collection;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -27,6 +30,9 @@ public class Login {
     
     private Set<clientRequest> clientRequestSet = new HashSet<>();
     private Set<managerRequest> managerRequestsSet = new HashSet<>();
+    private Set<workers> workers = new HashSet<>();
+    private Queue<Cashier> cashiers = new LinkedList<Cashier>();
+    
     
 
     private Object loginPerson = null; 
@@ -53,12 +59,36 @@ public class Login {
     public Object getLoginPerson() {
         return loginPerson;
     }
+
+    public Queue<Cashier> getCashiers() {
+        return cashiers;
+    }
+
+    public Set<clientRequest> getClientRequestSet() {
+        return clientRequestSet;
+    }
+
+    public Set<workers> getWorkers() {
+        return workers;
+    }
+    
+    
+    
     
     //Setters
-
+    
     public Set<clientRequest> getClientRequestList() {
         return clientRequestSet;
     }
+
+    public void setCashiers(Queue<Cashier> cashiers) {
+        this.cashiers = cashiers;
+    }
+
+    public void setWorkers(Set<workers> workers) {
+        this.workers = workers;
+    }
+    
 
     
     public void setLoginPerson(String ID, String password) {
@@ -112,6 +142,7 @@ public class Login {
         }
         return false;
     }
+    
     
     
     public boolean saveClientRequest() throws IOException
