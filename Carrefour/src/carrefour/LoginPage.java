@@ -1623,8 +1623,8 @@ public class LoginPage extends javax.swing.JFrame {
         availableShops.remove(jScrollPane1);
         availableShops.repaint();
         availableShops.revalidate();
-        shopTabel.setEnabled(false);
-        jScrollPane1.setEnabled(false);
+        selectedShop.setEnabled(false);
+        
         
         mainPanel.add(availableShops);
         mainPanel.repaint();
