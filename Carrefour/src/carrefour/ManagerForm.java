@@ -52,6 +52,9 @@ public class ManagerForm extends javax.swing.JFrame {
     /**
      * Creates new form ClienyForm
      */
+    
+    
+    
     public ManagerForm() {
         
         initComponents();
@@ -77,6 +80,12 @@ public class ManagerForm extends javax.swing.JFrame {
             jLabel.setForeground(new Color(241,62,51));
             jLabel.setHorizontalAlignment((int) CENTER_ALIGNMENT);
            
+        }
+        
+        //changing mid panal color
+        JPanel []midPanalArray = {homePanal,mailPanal,requestsPanal,shopPanal,clientPanal,salePanal,staffPannel,rentPannel,jPanel13,jPanel14,jPanel16,jPanel7,jPanel24,jPanel25,jPanel26,jPanel23,jPanel22,jPanel23};
+        for (JPanel jPanel : midPanalArray) {
+            jPanel.setBackground(new Color(248,248,255));
         }
       
        
@@ -701,7 +710,7 @@ public class ManagerForm extends javax.swing.JFrame {
         jPanel10Layout.setHorizontalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
-                .addContainerGap(210, Short.MAX_VALUE)
+                .addContainerGap(231, Short.MAX_VALUE)
                 .addComponent(jLabel10)
                 .addContainerGap())
         );
@@ -768,7 +777,7 @@ public class ManagerForm extends javax.swing.JFrame {
                     .addComponent(jLabel7))
                 .addGap(126, 126, 126)
                 .addComponent(tableAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(151, Short.MAX_VALUE))
+                .addContainerGap(191, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1321,7 +1330,7 @@ public class ManagerForm extends javax.swing.JFrame {
                 .addComponent(jLabel148)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel149)
-                .addContainerGap(235, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         SearchPannel.add(saleInfo, java.awt.BorderLayout.CENTER);
@@ -1719,7 +1728,7 @@ public class ManagerForm extends javax.swing.JFrame {
                         .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(sarea, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(sfloor, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addGap(0, 38, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(jPanel16Layout.createSequentialGroup()
                 .addGap(214, 214, 214)
                 .addComponent(jLabel150)
@@ -2123,7 +2132,7 @@ public class ManagerForm extends javax.swing.JFrame {
                         .addComponent(ename17, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
-                .addContainerGap(109, Short.MAX_VALUE)
+                .addContainerGap(103, Short.MAX_VALUE)
                 .addComponent(jLabel74)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton5)
@@ -2152,7 +2161,7 @@ public class ManagerForm extends javax.swing.JFrame {
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel74))
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("delete", jPanel14);
@@ -2306,7 +2315,7 @@ public class ManagerForm extends javax.swing.JFrame {
         staffPannel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         staffPannel.setPreferredSize(new java.awt.Dimension(500, 365));
 
-        jTabbedPane3.setBackground(new java.awt.Color(0, 204, 204));
+        jTabbedPane3.setBackground(new java.awt.Color(26, 40, 44));
 
         jPanel21.setBackground(new java.awt.Color(0, 204, 204));
 
@@ -2856,7 +2865,7 @@ public class ManagerForm extends javax.swing.JFrame {
         rentPannel.setLayout(rentPannelLayout);
         rentPannelLayout.setHorizontalGroup(
             rentPannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 611, Short.MAX_VALUE)
+            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 661, Short.MAX_VALUE)
         );
         rentPannelLayout.setVerticalGroup(
             rentPannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
