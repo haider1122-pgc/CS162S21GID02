@@ -5,16 +5,6 @@
  */
 package carrefour;
 
-import java.io.BufferedWriter;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.JFileChooser;
-import javax.swing.JOptionPane;
-import javax.swing.table.DefaultTableModel;
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.FlowLayout;
@@ -23,7 +13,26 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+//Table
+import com.lowagie.text.Document;
+import com.lowagie.text.DocumentException;
+import com.lowagie.text.Paragraph;
+import com.lowagie.text.pdf.PdfPTable;
+import com.lowagie.text.pdf.PdfWriter;
+import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Collection;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -36,8 +45,9 @@ public class ManagerForm extends javax.swing.JFrame {
      //for tabel output
     String shopHeader[] = new String[]{"Shop Id", "Shop Type", "Floor", "Area", "Rent", "Tax"};
     DefaultTableModel shop;
-   
+    int shoRow,shoCol;
     Manager manager = new Manager();
+    floor f=floor.getInstance();
     /**
      * Creates new form ClienyForm
      */
@@ -3893,6 +3903,17 @@ public class ManagerForm extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Invalid Attempt", "Invalid Shop", 0);
             }
         }
+        shop.setRowCount(0);
+        for (Shops s : ) {
+            Object [] obj = {s.getShopId(),s.getShopType(),s.getFloorNumber(),s.getArea(), s.getShopRent(),s.getShopRent()};
+            shop.addRow(obj);
+        }
+        sNumber.setText("");
+        srent.setText("");
+        sarea.setText("");
+        stax.setText("");
+        
+        
         
     }//GEN-LAST:event_jButton6MouseClicked
 
