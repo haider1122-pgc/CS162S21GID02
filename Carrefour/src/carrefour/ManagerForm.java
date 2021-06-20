@@ -3484,6 +3484,7 @@ public class ManagerForm extends javax.swing.JFrame {
         
         stax.setText(shop.getValueAt(shoRow, 5).toString());
         
+        
     }//GEN-LAST:event_shopTabelMouseClicked
 
     private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
