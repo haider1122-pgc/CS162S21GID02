@@ -3904,10 +3904,10 @@ public class ManagerForm extends javax.swing.JFrame {
             }
         }
         shop.setRowCount(0);
-        for (Shops s : ) {
-            Object [] obj = {s.getShopId(),s.getShopType(),s.getFloorNumber(),s.getArea(), s.getShopRent(),s.getShopRent()};
-            shop.addRow(obj);
-        }
+//        for (Shops s : ) {
+//            Object [] obj = {s.getShopId(),s.getShopType(),s.getFloorNumber(),s.getArea(), s.getShopRent(),s.getShopRent()};
+//            shop.addRow(obj);
+//        }
         sNumber.setText("");
         srent.setText("");
         sarea.setText("");
