@@ -10,22 +10,37 @@ package carrefour;
  * @author Haider
  */
 public class clientRequest  extends Request{
-    private double rent;
+    private double ShopID;
     private String aboutShop;
 
     
-    /**
-     * 
-     * @param rent 
-     */
-    public void setRent(double rent) {
-        this.rent = rent;
-    }
+   
 /**
  * 
  * @param aboutShop 
  */
     public void setAboutShop(String aboutShop) {
         this.aboutShop = aboutShop;
+    }
+
+    /**
+     * @return the ShopID
+     */
+    public double getShopID() {
+        return ShopID;
+    }
+
+    /**
+     * @param ShopID the ShopID to set
+     */
+    public void setShopID(double ShopID) {
+        this.ShopID = ShopID;
+    }
+
+    /**
+     * @return the aboutShop
+     */
+    public String getAboutShop() {
+        return aboutShop;
     }
 }

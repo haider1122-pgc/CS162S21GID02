@@ -5,6 +5,8 @@
  */
 package carrefour;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
@@ -104,6 +106,39 @@ public class Login {
             return true;
         }
         return false;
+    }
+    
+    
+    public boolean saveClientRequest() throws IOException
+    {
+        boolean flag = false;
+        FileWriter save = new FileWriter("D:\\2nd Semester\\OOP\\OOP Final Project\\CS162S21GID02\\Carrefour\\Database\\Requests\\ClientRequest\\request.txt");
+        for (clientRequest request : clientRequestSet) {
+            save.write(request.getName()+ "," );
+            save.write(request.getEmail()+ "," );
+            save.write(request.getUsername()+ "," );
+            save.write(request.getPassword()+ "," );
+            save.write(request.getShopID()+ "," );
+            save.write(request.getJoiningDate().toString()+ "\n" );
+            saveParagraph("D:\\2nd Semester\\OOP\\OOP Final Project\\CS162S21GID02\\Carrefour\\Database\\Requests\\ClientRequest\\about", request.getUsername()+".txt", request.getAboutShop());
+            saveParagraph("D:\\2nd Semester\\OOP\\OOP Final Project\\CS162S21GID02\\Carrefour\\Database\\Requests\\ClientRequest\\objective", request.getUsername()+".txt", request.getProspactive());
+            flag = true;
+        }
+        save.flush();
+        save.close();
+        
+        
+        return flag;
+    }
+    
+    public void saveParagraph(String path, String fileName ,String paragraph) throws IOException
+    {
+        path = path + "\\" + fileName;
+        FileWriter save = new FileWriter(path);
+        save.write(paragraph);
+        save.flush();
+        save.close();
+        
     }
     
 }
