@@ -10,6 +10,7 @@ import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -20,12 +21,18 @@ public class LoginPage extends javax.swing.JFrame {
     /**
      * Creates new form LoginPage
      */
+    floor f= floor.getInstance();
     clientRequest cRequest = new clientRequest();
     managerRequest mRequest = new managerRequest();
     Login login = Login.getInstance();
     String random = null;
+    String shopHeader[] = new String[]{"Shop Id", "Shop Type", "Floor", "Area", "Rent", "Tax"};
+    DefaultTableModel shop;
+    
     public LoginPage() {
         initComponents();
+        shop = new DefaultTableModel(shopHeader, 0);
+        shopTabel.setModel(shop);
         
         mainPanel.removeAll();
         mainPanel.repaint();
@@ -126,8 +133,8 @@ public class LoginPage extends javax.swing.JFrame {
         signUplable5 = new javax.swing.JLabel();
         exitLable5 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jLabel1 = new javax.swing.JLabel();
+        shopTabel = new javax.swing.JTable();
+        sNumber = new javax.swing.JLabel();
         submitAvailable = new javax.swing.JLabel();
         selectedShop = new javax.swing.JTextField();
 
@@ -1097,10 +1104,10 @@ public class LoginPage extends javax.swing.JFrame {
         jScrollPane1.setForeground(new java.awt.Color(1, 1, 1));
         jScrollPane1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
 
-        jTable1.setAutoCreateRowSorter(true);
-        jTable1.setBackground(new java.awt.Color(201, 201, 201));
-        jTable1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        shopTabel.setAutoCreateRowSorter(true);
+        shopTabel.setBackground(new java.awt.Color(201, 201, 201));
+        shopTabel.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        shopTabel.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -1115,12 +1122,17 @@ public class LoginPage extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        shopTabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                shopTabelMouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(shopTabel);
 
-        jLabel1.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(1, 1, 1));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("jLabel1");
+        sNumber.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
+        sNumber.setForeground(new java.awt.Color(1, 1, 1));
+        sNumber.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        sNumber.setText("jLabel1");
 
         submitAvailable.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1164,7 +1176,7 @@ public class LoginPage extends javax.swing.JFrame {
             .addGroup(availableShopsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, availableShopsLayout.createSequentialGroup()
                     .addContainerGap(727, Short.MAX_VALUE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(sNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(128, Short.MAX_VALUE)))
             .addGroup(availableShopsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, availableShopsLayout.createSequentialGroup()
@@ -1203,7 +1215,7 @@ public class LoginPage extends javax.swing.JFrame {
             .addGroup(availableShopsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, availableShopsLayout.createSequentialGroup()
                     .addContainerGap(551, Short.MAX_VALUE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(sNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(199, Short.MAX_VALUE)))
             .addGroup(availableShopsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(availableShopsLayout.createSequentialGroup()
@@ -1586,6 +1598,11 @@ public class LoginPage extends javax.swing.JFrame {
 
     private void verifyGmailMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_verifyGmailMouseClicked
         // TODO add your handling code here:
+        shop.setRowCount(0);
+        for (Shops s :f.availAbleShops() ) {
+            Object [] obj = {s.getShopId(),s.getShopType(),s.getFloorNumber(),s.getArea(), s.getShopRent(),s.getShopRent()};
+            shop.addRow(obj);
+        }
         mainPanel.removeAll();
         mainPanel.repaint();
         mainPanel.revalidate(); 
@@ -1608,6 +1625,14 @@ public class LoginPage extends javax.swing.JFrame {
     private void verificationFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verificationFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_verificationFieldActionPerformed
+
+    int shoRow,shoCol;
+    private void shopTabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_shopTabelMouseClicked
+        // TODO add your handling code here:
+        shoRow = shopTabel.getSelectedRow();
+        shoCol = shopTabel.getColumnCount();
+        sNumber.setText(shop.getValueAt(shoRow, 0).toString());  
+    }//GEN-LAST:event_shopTabelMouseClicked
 
 
     /**
@@ -1710,7 +1735,6 @@ public class LoginPage extends javax.swing.JFrame {
     private javax.swing.JTextField firstName;
     private javax.swing.JTextField firstName1;
     private javax.swing.JTextField gmailField;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
@@ -1726,7 +1750,6 @@ public class LoginPage extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTextField lastName;
     private javax.swing.JTextField lastName1;
     private javax.swing.JTextField loginId;
@@ -1743,10 +1766,12 @@ public class LoginPage extends javax.swing.JFrame {
     private javax.swing.JTextArea objectiveArea1;
     private javax.swing.JTextArea objectiveArea2;
     private javax.swing.JPanel pendingRequest;
+    private javax.swing.JLabel sNumber;
     private javax.swing.JLabel selectClient;
     private javax.swing.JLabel selectManager;
     private javax.swing.JPanel selectOptionPanel;
     private javax.swing.JTextField selectedShop;
+    private javax.swing.JTable shopTabel;
     private javax.swing.JLabel signUplable;
     private javax.swing.JLabel signUplable1;
     private javax.swing.JLabel signUplable2;
