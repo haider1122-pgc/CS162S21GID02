@@ -727,6 +727,7 @@
             <Component class="javax.swing.JLabel" name="mSignUp1">
               <Events>
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="mSignUp1MouseClicked"/>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="mSignUp1MouseEntered"/>
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="firstName1">
