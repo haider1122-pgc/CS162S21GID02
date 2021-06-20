@@ -10,6 +10,7 @@ import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -23,9 +24,13 @@ public class LoginPage extends javax.swing.JFrame {
     clientRequest cRequest = new clientRequest();
     managerRequest mRequest = new managerRequest();
     Login login = Login.getInstance();
-    
+    String shopHeader[] = new String[]{"Shop Id", "Shop Type", "Floor", "Area", "Rent", "Tax"};
+    DefaultTableModel shop;
+    floor f=floor.getInstance();
     public LoginPage() {
         initComponents();
+        shop = new DefaultTableModel(shopHeader, 0);
+        shopTable.setModel(shop);
         
         mainPanel.removeAll();
         mainPanel.repaint();
@@ -126,7 +131,7 @@ public class LoginPage extends javax.swing.JFrame {
         signUplable5 = new javax.swing.JLabel();
         exitLable5 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        shopTable = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         submitAvailable = new javax.swing.JLabel();
 
@@ -629,6 +634,11 @@ public class LoginPage extends javax.swing.JFrame {
         mainPanel.add(clientPanel, java.awt.BorderLayout.CENTER);
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/verificationIMG.png"))); // NOI18N
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel6MouseClicked(evt);
+            }
+        });
 
         signUplable4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -688,8 +698,8 @@ public class LoginPage extends javax.swing.JFrame {
             .addGroup(verificationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, verificationPanelLayout.createSequentialGroup()
                     .addContainerGap(589, Short.MAX_VALUE)
-                    .addComponent(verifyGmail, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(355, 355, 355)))
+                    .addComponent(verifyGmail, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(346, 346, 346)))
         );
         verificationPanelLayout.setVerticalGroup(
             verificationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1082,7 +1092,7 @@ public class LoginPage extends javax.swing.JFrame {
         jScrollPane1.setForeground(new java.awt.Color(1, 1, 1));
         jScrollPane1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        shopTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -1093,7 +1103,7 @@ public class LoginPage extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(shopTable);
 
         jLabel1.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(1, 1, 1));
@@ -1538,6 +1548,11 @@ public class LoginPage extends javax.swing.JFrame {
         mainPanel.revalidate();
     }//GEN-LAST:event_verifyGmailMouseClicked
 
+    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jLabel6MouseClicked
+
 
     /**
      * @param args the command line arguments
@@ -1637,7 +1652,6 @@ public class LoginPage extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTextField lastName;
     private javax.swing.JTextField lastName1;
     private javax.swing.JTextField loginId;
@@ -1657,6 +1671,7 @@ public class LoginPage extends javax.swing.JFrame {
     private javax.swing.JLabel selectClient;
     private javax.swing.JLabel selectManager;
     private javax.swing.JPanel selectOptionPanel;
+    private javax.swing.JTable shopTable;
     private javax.swing.JLabel signUplable;
     private javax.swing.JLabel signUplable1;
     private javax.swing.JLabel signUplable2;
