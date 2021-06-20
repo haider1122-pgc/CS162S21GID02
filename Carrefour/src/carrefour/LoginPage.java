@@ -1121,7 +1121,15 @@ public class LoginPage extends javax.swing.JFrame {
             new String [] {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         shopTabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 shopTabelMouseClicked(evt);
@@ -1148,7 +1156,6 @@ public class LoginPage extends javax.swing.JFrame {
         doubleclick.setText("Double Dlick here to View Shops");
         doubleclick.setBorder(null);
         doubleclick.setFocusPainted(false);
-        doubleclick.setOpaque(true);
         doubleclick.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 doubleclickMouseClicked(evt);
@@ -1413,6 +1420,11 @@ public class LoginPage extends javax.swing.JFrame {
             mainPanel.repaint();
             mainPanel.revalidate();
         }
+        firstName.setText("");
+        lastName.setText("");
+        GmailText.setText("");
+        Username.setText("");
+        Password.setText("");
         
     }//GEN-LAST:event_mSignUpMouseClicked
 
