@@ -1,0 +1,4 @@
+null,0-1,50 sqft.,Luxury,0,1,25000.0,10.0,true,false
+null,0-2,50 sqft.,Luxury,0,2,25000.0,25000.0,true,false
+null,0-3,50 sqft.,Luxury,0,3,25000.0,25000.0,true,false
+null,0-4,50 sqft.,Luxury,0,4,25000.0,25000.0,true,false

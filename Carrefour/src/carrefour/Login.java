@@ -149,7 +149,7 @@ public class Login {
     public boolean saveClientRequest() throws IOException
     {
         boolean flag = false;
-        FileWriter save = new FileWriter("D:\\2nd Semester\\OOP\\OOP Final Project\\CS162S21GID02\\Carrefour\\Database\\Requests\\ClientRequest\\request.txt");
+        FileWriter save = new FileWriter("Database\\Requests\\ClientRequest\\request.txt");
         for (clientRequest request : clientRequestSet) {
             save.write(request.getName()+ "," );
             save.write(request.getEmail()+ "," );
@@ -164,8 +164,8 @@ public class Login {
             
             save.write(date+ "\n" );
             System.out.println("3");
-            saveParagraph("D:\\2nd Semester\\OOP\\OOP Final Project\\CS162S21GID02\\Carrefour\\Database\\Requests\\ClientRequest\\about", request.getUsername()+".txt", request.getAboutShop());
-            saveParagraph("D:\\2nd Semester\\OOP\\OOP Final Project\\CS162S21GID02\\Carrefour\\Database\\Requests\\ClientRequest\\objective", request.getUsername()+".txt", request.getProspactive());
+            saveParagraph("Database\\Requests\\ClientRequest\\about", request.getUsername()+".txt", request.getAboutShop());
+            saveParagraph("Database\\Requests\\ClientRequest\\objective", request.getUsername()+".txt", request.getProspactive());
             flag = true;
         }
         save.flush();

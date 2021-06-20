@@ -5,6 +5,8 @@
  */
 package carrefour;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -250,6 +252,34 @@ public class floor {
         }
         
         return available;
+    }
+    
+    
+    public boolean saveShops() throws IOException
+    {
+        boolean flag = false;
+        FileWriter save = new FileWriter("Database\\AvailableShops\\AvailableShops.txt");
+        for (Shops shops : groundFloor) {
+            if (shops.isAvailableStatus()) {
+                
+                save.write(shops.getShopName() + ",");
+                save.write(shops.getShopId() + ",");
+                save.write(shops.getArea() + ",");
+                save.write(shops.getShopType() + ",");
+                save.write(shops.getFloorNumber() + ",");
+                save.write(shops.getShopNumber() + ",");
+                save.write(shops.getShopRent() + ",");
+                save.write(shops.getTax() + ",");
+                save.write(shops.isAvailableStatus() + ",");
+                save.write(shops.isUsingStatus() + "\n");
+                flag = true;
+                
+            }
+        }
+        save.flush();
+        save.close();
+        
+        return flag;
     }
     
     

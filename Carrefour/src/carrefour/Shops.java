@@ -176,6 +176,20 @@ public class Shops {
     public void setAvailableStatus(boolean availableStatus) {
         this.availableStatus = availableStatus;
     }
+
+    /**
+     * @return the usingStatus
+     */
+    public boolean isUsingStatus() {
+        return usingStatus;
+    }
+
+    /**
+     * @param usingStatus the usingStatus to set
+     */
+    public void setUsingStatus(boolean usingStatus) {
+        this.usingStatus = usingStatus;
+    }
     
     
     
