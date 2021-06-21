@@ -855,6 +855,9 @@
                                   <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                                 </Property>
                               </Properties>
+                              <Events>
+                                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="staffTabelMouseClicked"/>
+                              </Events>
                             </Component>
                           </SubComponents>
                         </Container>
@@ -2241,7 +2244,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                      <Component id="jPanel16" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jPanel16" min="-2" pref="436" max="-2" attributes="0"/>
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
@@ -2272,7 +2275,7 @@
                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                               <Group type="102" alignment="1" attributes="0">
                                                   <Component id="jLabel75" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace pref="19" max="32767" attributes="0"/>
+                                                  <EmptySpace pref="37" max="32767" attributes="0"/>
                                                   <Component id="sNumber" min="-2" pref="129" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" alignment="1" attributes="0">
@@ -2282,14 +2285,16 @@
                                                   </Group>
                                                   <EmptySpace pref="30" max="32767" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Group type="102" attributes="0">
-                                                          <Component id="jLabel85" min="-2" max="-2" attributes="0"/>
-                                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                          <Component id="jButton6" min="-2" pref="65" max="-2" attributes="0"/>
-                                                      </Group>
                                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                                           <Component id="stax" pref="129" max="32767" attributes="0"/>
                                                           <Component id="stype" max="32767" attributes="0"/>
+                                                      </Group>
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <Component id="jLabel85" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace max="-2" attributes="0"/>
+                                                          <Component id="jButton6" min="-2" pref="65" max="-2" attributes="0"/>
+                                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                          <Component id="jLabel150" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                               </Group>
@@ -2315,11 +2320,9 @@
                                           </Group>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="214" max="-2" attributes="0"/>
-                                          <Component id="jLabel150" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jButton18" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="jButton18" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Component id="jLabel151" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jButton19" min="-2" max="-2" attributes="0"/>
@@ -3565,12 +3568,13 @@
                                                                   <Component id="jLabel104" min="-2" max="-2" attributes="0"/>
                                                                   <EmptySpace max="32767" attributes="0"/>
                                                                   <Component id="m" min="-2" max="-2" attributes="0"/>
-                                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                                  <EmptySpace max="-2" attributes="0"/>
                                                                   <Component id="fe" min="-2" max="-2" attributes="0"/>
+                                                                  <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
                                                               </Group>
                                                               <Group type="102" attributes="0">
                                                                   <Component id="jLabel105" min="-2" max="-2" attributes="0"/>
-                                                                  <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                                                                  <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                                                                   <Component id="stCat" max="32767" attributes="0"/>
                                                               </Group>
                                                           </Group>
@@ -3617,13 +3621,7 @@
                                           </Group>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="0" attributes="0">
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Group type="103" groupAlignment="3" attributes="0">
-                                                      <Component id="jLabel104" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="fe" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="m" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <EmptySpace pref="40" max="32767" attributes="0"/>
+                                                  <EmptySpace type="separate" pref="81" max="32767" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                                       <Component id="jLabel106" max="32767" attributes="0"/>
                                                       <Component id="jButton2" max="32767" attributes="0"/>
@@ -3639,6 +3637,9 @@
                                                   <Group type="103" groupAlignment="3" attributes="0">
                                                       <Component id="jLabel99" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       <Component id="stSalary" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabel104" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="m" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="fe" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">

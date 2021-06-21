@@ -43,12 +43,16 @@ public class ManagerForm extends javax.swing.JFrame {
 
     //creating object of carefour 
     Carrefour c= Carrefour.getInstance();
+    Login l=Login.getInstance();
      //for tabel output
     String shopHeader[] = new String[]{"Shop Id", "Shop Type", "Floor", "Area", "Rent", "Tax"};
     DefaultTableModel shop;
-    int shoRow,shoCol;
+    String staffHeader[] = new String[]{"Name", "Staff Id", "Categoury", "salary", "email", "password","gender","Phone","CNIC"};
+    DefaultTableModel staff;
+    int shoRow,shoCol,stfRow,stfCol;
     Manager manager = new Manager();
     floor f=floor.getInstance();
+    
     /**
      * Creates new form ClienyForm
      */
@@ -60,6 +64,9 @@ public class ManagerForm extends javax.swing.JFrame {
         initComponents();
         shop = new DefaultTableModel(shopHeader, 0);
         shopTabel.setModel(shop);
+        staff = new DefaultTableModel(staffHeader, 0);
+        staffTabel.setModel(staff);
+        
         SearchPannel.removeAll();
         SearchPannel.repaint();
         SearchPannel.revalidate();
@@ -828,6 +835,11 @@ public class ManagerForm extends javax.swing.JFrame {
                 "1st", "2nd", "3rd", "4th"
             }
         ));
+        staffTabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                staffTabelMouseClicked(evt);
+            }
+        });
         jScrollPane5.setViewportView(staffTabel);
 
         staffTablePanal.add(jScrollPane5, java.awt.BorderLayout.PAGE_START);
@@ -1677,7 +1689,7 @@ public class ManagerForm extends javax.swing.JFrame {
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel16Layout.createSequentialGroup()
                         .addComponent(jLabel75)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
                         .addComponent(sNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel16Layout.createSequentialGroup()
                         .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1685,13 +1697,15 @@ public class ManagerForm extends javax.swing.JFrame {
                             .addComponent(jLabel77))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                         .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel16Layout.createSequentialGroup()
-                                .addComponent(jLabel85)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(stax, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE)
-                                .addComponent(stype, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                                .addComponent(stype, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(jPanel16Layout.createSequentialGroup()
+                                .addComponent(jLabel85)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel150)))))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel16Layout.createSequentialGroup()
@@ -1707,11 +1721,9 @@ public class ManagerForm extends javax.swing.JFrame {
                             .addComponent(sarea, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(sfloor, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
             .addGroup(jPanel16Layout.createSequentialGroup()
-                .addGap(214, 214, 214)
-                .addComponent(jLabel150)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton18)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel151)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton19)
@@ -1755,7 +1767,7 @@ public class ManagerForm extends javax.swing.JFrame {
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, 436, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
@@ -2487,11 +2499,12 @@ public class ManagerForm extends javax.swing.JFrame {
                                         .addComponent(jLabel104)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(m)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(fe))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(fe)
+                                        .addGap(2, 2, 2))
                                     .addGroup(jPanel24Layout.createSequentialGroup()
                                         .addComponent(jLabel105)
-                                        .addGap(6, 6, 6)
+                                        .addGap(13, 13, 13)
                                         .addComponent(stCat, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                         .addContainerGap())
                     .addGroup(jPanel24Layout.createSequentialGroup()
@@ -2526,12 +2539,7 @@ public class ManagerForm extends javax.swing.JFrame {
                     .addComponent(stCat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel24Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel104)
-                            .addComponent(fe)
-                            .addComponent(m))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                        .addGap(18, 81, Short.MAX_VALUE)
                         .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel106, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -2544,7 +2552,10 @@ public class ManagerForm extends javax.swing.JFrame {
                         .addGap(10, 10, 10)
                         .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel99)
-                            .addComponent(stSalary, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(stSalary, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel104)
+                            .addComponent(m)
+                            .addComponent(fe))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel100)
@@ -3145,7 +3156,8 @@ public class ManagerForm extends javax.swing.JFrame {
             c.setSalary(Integer.parseInt(stSalary.getText()));
             c.setDesignation(stCat.getSelectedItem().toString());
             if(c.staffIdValidation()&&c.nameValidator(stName.getText())&&c.emailValidator(stEmail.getText())){
-               this.c.getCshr().add(c);
+              // this.c.getCshr().add(c);
+              manager.addCashier(c);
                JOptionPane.showMessageDialog(null, "added");
             }
             else{
@@ -3168,13 +3180,24 @@ public class ManagerForm extends javax.swing.JFrame {
             w.setEmail(stEmail.getText());
             w.setSalary(Integer.parseInt(stSalary.getText()));
             w.setDesignation(stCat.getSelectedItem().toString());
-            if(c.staffIdValidation()&&c.nameValidator(stName.getText())&&c.emailValidator(stEmail.getText())){
-               this.c.getWkr().add(w);
+            if(w.staffIdValidation()&&w.nameValidator(stName.getText())&&w.emailValidator(stEmail.getText())){
+//               this.c.getWkr().add(w);
+               manager.addWorkers(w);
                JOptionPane.showMessageDialog(null, "added");
             }
             else{
                 JOptionPane.showMessageDialog(null, "notAdded");
             }
+        }
+       
+        staff.setRowCount(0);
+        for (Cashier s :l.getCashiers() ) {
+            Object [] obj = {s.getName(),s.getStaffId(),s.getDesignation(),s.getSalary(),s.getEmail(),s.getPassword(),s.getGender(),s.getPhone(),s.getCnic()};
+            staff.addRow(obj);
+        }
+        for (workers s :l.getWorkers() ) {
+            Object [] obj = {s.getName(),s.getStaffId(),s.getDesignation(),s.getSalary(),s.getEmail(),"",s.getGender(),s.getPhone(),s.getCnic()};
+            staff.addRow(obj);
         }
         stCnic.setText("");
         stName.setText("");
@@ -3370,6 +3393,19 @@ public class ManagerForm extends javax.swing.JFrame {
     private void jButton2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton2KeyPressed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2KeyPressed
+
+    private void staffTabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_staffTabelMouseClicked
+        // TODO add your handling code here:
+        stfRow = staffTabel.getSelectedRow();
+        stfCol = staffTabel.getColumnCount();
+        stName.setText(staff.getValueAt(shoRow, 0).toString());  
+        stId.setText(staff.getValueAt(shoRow, 1).toString());
+        stSalary.setText(staff.getValueAt(shoRow, 3).toString());
+        stEmail.setText(staff.getValueAt(shoRow,4).toString());
+        stPass.setText(staff.getValueAt(shoRow, 5).toString());
+        stPhone.setText(staff.getValueAt(shoRow, 7).toString());
+        stCnic.setText(staff.getValueAt(shoRow, 8).toString());
+    }//GEN-LAST:event_staffTabelMouseClicked
 
     /**
      * @param args the command line arguments
