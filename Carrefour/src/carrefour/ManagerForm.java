@@ -3194,7 +3194,7 @@ public class ManagerForm extends javax.swing.JFrame {
             if(c.staffIdValidation()&&c.nameValidator(stName.getText())&&c.emailValidator(stEmail.getText())){
               // this.c.getCshr().add(c);
               manager.addCashier(c);
-               JOptionPane.showMessageDialog(null, "added");
+              // JOptionPane.showMessageDialog(null, "added");
             }
             else{
                 JOptionPane.showMessageDialog(null, "notAdded");
@@ -3219,7 +3219,7 @@ public class ManagerForm extends javax.swing.JFrame {
             if(w.staffIdValidation()&&w.nameValidator(stName.getText())&&w.emailValidator(stEmail.getText())){
 //               this.c.getWkr().add(w);
                manager.addWorkers(w);
-               JOptionPane.showMessageDialog(null, "added");
+              //JOptionPane.showMessageDialog(null, "added");
             }
             else{
                 JOptionPane.showMessageDialog(null, "notAdded");
@@ -3416,10 +3416,148 @@ public class ManagerForm extends javax.swing.JFrame {
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
+        workers w=new workers();
+        Cashier c=new Cashier();
+        String gender;
+        String a= stCat.getSelectedItem().toString();
+        if(a.equals("Cashier")){ 
+            //cashier adding
+            stPass.setEnabled(true);
+            m.setActionCommand("M");
+            fe.setActionCommand("F");
+            gender = buttonGroup1.getSelection().getActionCommand();
+            c.setGender(gender.charAt(0));
+            c.setName(stName.getText());
+            c.setCnic(stCnic.getText());
+            c.setStaffId(stId.getText());
+            c.setPassword(stPass.getText());
+            c.setPhone(stPhone.getText());
+            c.setEmail(stEmail.getText());
+            c.setSalary(Integer.parseInt(stSalary.getText()));
+            c.setDesignation(stCat.getSelectedItem().toString());
+            if(c.staffIdValidation()&&c.nameValidator(stName.getText())&&c.emailValidator(stEmail.getText())){
+              // this.c.getCshr().add(c);
+              manager.editCashier(c);
+               //JOptionPane.showMessageDialog(null, "added");
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "not edited");
+            }
+            
+        }
+        else{
+            //worker adding
+            stPass.setEnabled(false);
+            m.setActionCommand("M");
+            fe.setActionCommand("F");
+            gender = buttonGroup1.getSelection().getActionCommand();
+            w.setGender(gender.charAt(0));
+            w.setName(stName.getText());
+            w.setCnic(stCnic.getText());
+            w.setStaffId(stId.getText());
+            
+            w.setPhone(stPhone.getText());
+            w.setEmail(stEmail.getText());
+            w.setSalary(Integer.parseInt(stSalary.getText()));
+            w.setDesignation(stCat.getSelectedItem().toString());
+            if(w.staffIdValidation()&&w.nameValidator(stName.getText())&&w.emailValidator(stEmail.getText())){
+//               this.c.getWkr().add(w);
+               manager.editWorkers(w);
+               //JOptionPane.showMessageDialog(null, "added");
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "not edited");
+            }    
+        }
+        staff.setRowCount(0);
+        for (Cashier s :l.getCashiers() ) {
+            Object [] obj = {s.getName(),s.getStaffId(),s.getDesignation(),s.getSalary(),s.getEmail(),s.getPassword(),s.getGender(),s.getPhone(),s.getCnic()};
+            staff.addRow(obj);
+        }
+        for (workers s :l.getWorkers() ) {
+            Object [] obj = {s.getName(),s.getStaffId(),s.getDesignation(),s.getSalary(),s.getEmail(),"",s.getGender(),s.getPhone(),s.getCnic()};
+            staff.addRow(obj);
+        }
+        stCnic.setText("");
+        stName.setText("");
+        stId.setText("");
+        stSalary.setText("");
+        stEmail.setText("");
+        stPass.setText("");
+        stPhone.setText("");
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
         // TODO add your handling code here:
+        workers w=new workers();
+        Cashier c=new Cashier();
+        String gender;
+        String a= stCat.getSelectedItem().toString();
+        if(a.equals("Cashier")){ 
+            //cashier adding
+            stPass.setEnabled(true);
+            m.setActionCommand("M");
+            fe.setActionCommand("F");
+            gender = buttonGroup1.getSelection().getActionCommand();
+            c.setGender(gender.charAt(0));
+            c.setName(stName.getText());
+            c.setCnic(stCnic.getText());
+            c.setStaffId(stId.getText());
+            c.setPassword(stPass.getText());
+            c.setPhone(stPhone.getText());
+            c.setEmail(stEmail.getText());
+            c.setSalary(Integer.parseInt(stSalary.getText()));
+            c.setDesignation(stCat.getSelectedItem().toString());
+            if(c.staffIdValidation()&&c.nameValidator(stName.getText())&&c.emailValidator(stEmail.getText())){
+              // this.c.getCshr().add(c);
+              manager.deleteCashier(c);
+               //JOptionPane.showMessageDialog(null, "added");
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "not deleted");
+            }
+            
+        }
+        else{
+            //worker adding
+            stPass.setEnabled(false);
+            m.setActionCommand("M");
+            fe.setActionCommand("F");
+            gender = buttonGroup1.getSelection().getActionCommand();
+            w.setGender(gender.charAt(0));
+            w.setName(stName.getText());
+            w.setCnic(stCnic.getText());
+            w.setStaffId(stId.getText());
+            
+            w.setPhone(stPhone.getText());
+            w.setEmail(stEmail.getText());
+            w.setSalary(Integer.parseInt(stSalary.getText()));
+            w.setDesignation(stCat.getSelectedItem().toString());
+            if(w.staffIdValidation()&&w.nameValidator(stName.getText())&&w.emailValidator(stEmail.getText())){
+//               this.c.getWkr().add(w);
+               manager.deleteWorkers(w);
+               //JOptionPane.showMessageDialog(null, "added");
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "not deleted");
+            }    
+        }
+        staff.setRowCount(0);
+        for (Cashier s :l.getCashiers() ) {
+            Object [] obj = {s.getName(),s.getStaffId(),s.getDesignation(),s.getSalary(),s.getEmail(),s.getPassword(),s.getGender(),s.getPhone(),s.getCnic()};
+            staff.addRow(obj);
+        }
+        for (workers s :l.getWorkers() ) {
+            Object [] obj = {s.getName(),s.getStaffId(),s.getDesignation(),s.getSalary(),s.getEmail(),"",s.getGender(),s.getPhone(),s.getCnic()};
+            staff.addRow(obj);
+        }
+        stCnic.setText("");
+        stName.setText("");
+        stId.setText("");
+        stSalary.setText("");
+        stEmail.setText("");
+        stPass.setText("");
+        stPhone.setText("");
     }//GEN-LAST:event_jButton20ActionPerformed
 
     private void stEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stEmailActionPerformed

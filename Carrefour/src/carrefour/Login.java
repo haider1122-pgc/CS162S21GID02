@@ -211,8 +211,14 @@ public class Login {
     }
     public boolean deleteWorker(workers w)
     {
-        if (workers.remove(w)) {
-            return true;
+        int index = 0;
+        for (workers worker : workers) {
+            if(worker.getStaffId().equals(w.getStaffId()) )
+            {
+                workers.remove(index);
+                return true;
+            }
+            index++;
         }
         return false;
     }
@@ -230,7 +236,7 @@ public class Login {
     {
         int index = 0;
         for (Cashier worker : cashiers) {
-            if(worker.getStaffId().equals(w.getStaffId()) && worker.getLogin().equals(w.getLogin()))
+            if(worker.getStaffId().equals(w.getStaffId()) )
             {
                 cashiers.set(index, w);
                 return true;
@@ -242,8 +248,14 @@ public class Login {
     }
     public boolean deletCashier(Cashier w)
     {
-        if (cashiers.remove(w)) {
-            return true;
+       int index = 0;
+        for (Cashier worker : cashiers) {
+            if(worker.getStaffId().equals(w.getStaffId()) )
+            {
+                cashiers.remove(index);
+                return true;
+            }
+            index++;
         }
         return false;
     }
