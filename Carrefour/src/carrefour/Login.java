@@ -32,7 +32,7 @@ public class Login {
     private Set<clientRequest> clientRequestSet = new HashSet<>();
     private Set<managerRequest> managerRequestsSet = new HashSet<>();
     private List<workers> workers = new ArrayList<>();
-    private List<Cashier> cashiers = new LinkedList<Cashier>();
+    private List<Cashier> cashiers = new LinkedList<>();
     
     
 
