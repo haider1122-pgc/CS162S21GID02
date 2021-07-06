@@ -1623,6 +1623,9 @@ public class LoginPage extends javax.swing.JFrame {
     private void verifyGmailMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_verifyGmailMouseClicked
         // TODO add your handling code here:
         shop.setRowCount(0);
+        if(verificationField.getText().equals("")){
+            JOptionPane.showMessageDialog(null, "Invalid OTP Please Enter Again..");
+        }
         for (Shops s :f.availAbleShops() ) {
             Object [] obj = {s.getShopId(),s.getShopType(),s.getFloorNumber(),s.getArea(), s.getShopRent(),s.getShopRent()};
             shop.addRow(obj);

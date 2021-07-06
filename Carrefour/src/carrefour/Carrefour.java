@@ -101,12 +101,7 @@ public class Carrefour {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-//        clientRequestForm c = new clientRequestForm();
- //       c.setVisible(true);
-       
-        // TODO code application logic here
-//        ManagerForm m = new ManagerForm();
-//        m.setVisible(true);
+
         try{
         // TODO code application logic here
          UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel"); 
@@ -114,14 +109,11 @@ public class Carrefour {
         {
             System.out.println("Hellp1");
         }
-//
-//        ClientForm cf = new ClientForm();
-//        cf.setVisible(true);
+
         LoginPage l = new LoginPage();
         l.setVisible(true);
-//        ManagerForm w = new ManagerForm();
-//        w.setVisible(true);
 
+        
     }
     
 }
